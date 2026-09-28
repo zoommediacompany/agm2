@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apply to WILD</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/application.css') }}">
+</head>
+<body class="public-shell">
+  <main class="form-panel">
+    <header class="form-header">
+      <a class="back-link" href="{{ url_for('home') }}">&larr; Back to WILD</a>
+      <p class="eyebrow">Start your journey</p>
+      <h1>Apply to WILD</h1>
+      <p class="intro">Tell us a little about yourself and the experience you want to pursue.</p>
+      <p class="required-note"><span aria-hidden="true">*</span> Required fields</p>
+    </header>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% for category, message in messages %}<p class="alert {{ category }}">{{ message }}</p>{% endfor %}
+    {% endwith %}
+
+    <form method="post" enctype="multipart/form-data" class="application-form">
+      <fieldset>
+        <legend>Your details</legend>
+        <div class="field-grid">
+          <div class="field"><label for="name">Full name <span aria-hidden="true">*</span></label><input id="name" name="name" type="text" autocomplete="name" required value="{{ request.form.get('name', '') }}"></div>
+          <div class="field"><label for="email">Email address <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" inputmode="email" required value="{{ request.form.get('email', '') }}"></div>
+          <div class="field"><label for="phone">Phone number <span aria-hidden="true">*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required value="{{ request.form.get('phone', '') }}"><small>Include your country code, for example +256.</small></div>
+          <div class="field"><label for="program">Program of interest <span aria-hidden="true">*</span></label><select id="program" name="program" required><option value="">Select a program</option>{% for option in ['Study Abroad', 'Cultural Exchange', 'Educational Travel'] %}<option {% if request.form.get('program') == option %}selected{% endif %}>{{ option }}</option>{% endfor %}</select></div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Supporting document</legend>
+        <div class="field"><label for="resume">Upload a document <span class="optional">optional</span></label><input id="resume" name="resume" type="file" accept=".pdf,.doc,.docx"><small>PDF, DOC, or DOCX up to 8 MB.</small></div>
+      </fieldset>
+      <div class="consent-row"><input id="privacy_consent" name="privacy_consent" type="checkbox" required {% if request.form.get('privacy_consent') %}checked{% endif %}><label for="privacy_consent">I agree that WILD may use the information in this form to assess and respond to my application. <span aria-hidden="true">*</span></label></div>
+      <p class="privacy-note">We only use your details for this application process and retain them according to our privacy policy. You may request access or deletion by contacting WILD.</p>
+      <button type="submit">Submit application <span>&rarr;</span></button>
+    </form>
+  </main>
+</body>
+</html>

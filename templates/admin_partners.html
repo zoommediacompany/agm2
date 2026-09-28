@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>WILD | Partners</title><link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}"></head>
+<body class="dashboard-page">
+  <aside class="sidebar"><div class="brand-mark">WILD</div><p class="sidebar-label">Management</p><nav><a href="{{ url_for('admin_dashboard') }}"><span>▦</span> Applications</a><a class="nav-active" href="{{ url_for('admin_partners') }}"><span>◇</span> Partners</a><a href="{{ url_for('home') }}"><span>↗</span> View website</a></nav><a class="logout" href="{{ url_for('admin_logout') }}">Sign out</a></aside>
+  <main class="dashboard-main">
+    <header class="dashboard-header"><div><p class="eyebrow">Management portal</p><h1>Partners</h1><p class="muted">Add and maintain the organisations WILD can introduce to participants.</p></div></header>
+    {% with messages = get_flashed_messages(with_categories=true) %}{% for category, message in messages %}<p class="alert {{ category }}">{{ message }}</p>{% endfor %}{% endwith %}
+    <section class="partner-layout">
+      <form class="partner-form" method="post" enctype="multipart/form-data"><h2>Add a partner</h2><label>Organisation name<input name="name" type="text" required value="{{ request.form.get('name', '') }}"></label><label>Partner type<select name="partner_type" required><option value="">Choose a type</option>{% for item in ['University', 'Company', 'NGO', 'Hospital', 'Research institution', 'Startup', 'Cultural organisation'] %}<option {% if request.form.get('partner_type') == item %}selected{% endif %}>{{ item }}</option>{% endfor %}</select></label><label>Country<input name="country" type="text" required value="{{ request.form.get('country', 'Uganda') }}"></label><label>Website <span class="optional">optional</span><input name="website" type="url" placeholder="https://" value="{{ request.form.get('website', '') }}"></label><label>Description <span class="optional">optional</span><textarea name="description" rows="4">{{ request.form.get('description', '') }}</textarea></label><label>Partner logo <span class="optional">optional</span><input name="logo" type="file" accept=".png,.jpg,.jpeg,.webp,.svg"><small>PNG, JPG, WEBP, or SVG up to 8 MB.</small></label><button type="submit">Save partner <span>→</span></button></form>
+      <section class="partner-list"><div class="list-heading"><h2>Partner directory</h2><strong>{{ partners|length }}</strong></div>{% if partners %}<div class="partner-items">{% for partner in partners %}<article class="partner-item"><div><h3>{{ partner['name'] }}</h3><p>{{ partner['partner_type'] }} · {{ partner['country'] }}</p>{% if partner['website'] %}<a href="{{ partner['website'] }}" target="_blank" rel="noopener">{{ partner['website'] }} ↗</a>{% endif %}</div><small>{{ partner['created_at'][:10] }}</small></article>{% endfor %}</div>{% else %}<div class="empty-state"><span>◇</span><h2>No partners added</h2><p>Approved organisations will appear here.</p></div>{% endif %}</section>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,1964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    name="description"
+    content="WILD creates trusted access to extraordinary African expeditions and meaningful experiences, connecting international travelers and institutions with carefully selected African organizations, experts and opportunities."
+  />
+
+  <meta name="theme-color" content="#020617" />
+
+  <title>WILD | Extraordinary African Access | The African Access Company</title>
+
+  <!-- ========================================================= -->
+  <!-- FONTS -->
+  <!-- ========================================================= -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- ========================================================= -->
+  <!-- TAILWIND -->
+  <!-- ========================================================= -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["DM Sans", "sans-serif"],
+            display: ["Playfair Display", "serif"],
+          },
+
+          colors: {
+            wild: {
+              navy: "#071426",
+              blue: "#2563EB",
+              green: "#16803C",
+              gold: "#D6A84F",
+              cream: "#F7F5EF",
+            },
+          },
+
+          boxShadow: {
+            premium:
+              "0 25px 80px rgba(2, 6, 23, 0.12)",
+          },
+
+          animation: {
+            float:
+              "float 6s ease-in-out infinite",
+            fadeUp:
+              "fadeUp .8s ease-out both",
+          },
+
+          keyframes: {
+            float: {
+              "0%, 100%": {
+                transform: "translateY(0)",
+              },
+              "50%": {
+                transform: "translateY(-10px)",
+              },
+            },
+
+            fadeUp: {
+              "0%": {
+                opacity: "0",
+                transform: "translateY(20px)",
+              },
+              "100%": {
+                opacity: "1",
+                transform: "translateY(0)",
+              },
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  />
+
+  <style>
+        body {
+      font-family: "DM Sans", sans-serif;
+    }
+
+    .hero-title {
+      text-wrap: balance;
+    }
+
+    .destination-card img {
+      transition:
+        transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+
+    .destination-card:hover img {
+      transform: scale(1.07);
+    }
+
+    .mega-menu {
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(10px);
+      transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        visibility 0.2s ease;
+    }
+
+    .mega-parent:hover .mega-menu,
+    .mega-parent:focus-within .mega-menu {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .mobile-submenu {
+      display: none;
+    }
+
+    .mobile-submenu.open {
+      display: block;
+    }
+
+    .no-scroll {
+      overflow: hidden;
+    }
+
+    @keyframes sliderFlash {
+      0% { opacity: 0; }
+      15% { opacity: 0.35; }
+      100% { opacity: 0; }
+    }
+
+    .slider-flash-active {
+      animation: sliderFlash 0.5s ease-out forwards;
+    }
+
+    .hero-photo-slide {
+      opacity: 0;
+      transition: opacity .8s ease, transform 6s ease;
+      transform: scale(1.02);
+    }
+
+    .hero-photo-slide.is-active {
+      opacity: 1;
+      transform: scale(1.06);
+    }
+
+    .hero-photo-flash.is-active {
+      animation: sliderFlash .55s ease-out;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero-photo-slide { transition: opacity .2s ease; transform: none !important; }
+      .hero-photo-flash { display: none; }
+    }
+  </style>
+</head>
+
+<body class="bg-white text-slate-900 antialiased">
+
+<header
+    id="site-header"
+    class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur-xl"
+  >
+
+    <div
+      class="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
+    >
+
+      <!-- LOGO -->
+
+      <a
+        href="/"
+        class="group flex items-center gap-3"
+        aria-label="WILD Home"
+      >
+
+        <div
+          class="flex h-11 w-11 items-center justify-center rounded-xl bg-wild-navy text-sm font-bold tracking-tight text-white shadow-lg transition group-hover:scale-105"
+        >
+          WILD
+        </div>
+
+        <div class="hidden sm:block">
+
+          <div
+            class="text-lg font-bold tracking-tight text-wild-navy"
+          >
+            WILD
+          </div>
+
+          <div
+            class="text-[9px] font-bold uppercase tracking-[0.22em] text-slate-500"
+          >
+            The African Access Company
+          </div>
+
+        </div>
+
+      </a>
+
+
+      <!-- ===================================================== -->
+      <!-- DESKTOP NAVIGATION -->
+      <!-- ===================================================== -->
+
+      <nav
+        class="hidden lg:block"
+        aria-label="Main navigation"
+      >
+
+        <ul class="flex items-center">
+
+          <!-- EXPEDITIONS -->
+
+          <li class="mega-parent relative">
+
+            <button
+              type="button"
+              class="flex items-center gap-1 rounded-lg px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950"
+            >
+              Expeditions
+
+              <svg
+                class="h-4 w-4 transition-transform duration-200 group-hover:rotate-180"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.8"
+                  d="m6 9 6 6 6-6"
+                />
+              </svg>
+            </button>
+
+            <!-- MEGA MENU -->
+
+            <div
+              class="mega-menu absolute left-0 top-full z-50 w-[720px] pt-4"
+            >
+
+              <div
+                class="overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-2xl"
+              >
+
+                <div class="grid grid-cols-3 gap-7">
+
+                  <!-- COLUMN 1 -->
+
+                  <div>
+
+                    <div
+                      class="mb-4 text-[11px] font-bold uppercase tracking-[0.2em] text-blue-600"
+                    >
+                      Wildlife
+                    </div>
+
+                    <a
+                      href="/expeditions"
+                      class="group block rounded-xl p-3 transition hover:bg-slate-50"
+                    >
+
+                      <div
+                        class="flex items-center gap-3"
+                      >
+
+                        <span
+                          class="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-50"
+                        >
+                          <i class="fa-solid fa-paw" aria-hidden="true"></i>
+                        </span>
+
+                        <div>
+                          <div class="font-bold">
+                            Wildlife Safaris
+                          </div>
+
+                          <p class="mt-1 text-xs text-slate-500">
+                            Gorillas, chimpanzees and savannah species.
+                          </p>
+                        </div>
+
+                      </div>
+
+                    </a>
+
+                    <a
+                      href="/expeditions"
+                      class="group mt-2 block rounded-xl p-3 transition hover:bg-slate-50"
+                    >
+
+                      <div
+                        class="flex items-center gap-3"
+                      >
+
+                        <span
+                          class="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-50"
+                        >
+                          <i class="fa-solid fa-camera" aria-hidden="true"></i>
+                        </span>
+
+                        <div>
+                          <div class="font-bold">
+                            Photography
+                          </div>
+
+                          <p class="mt-1 text-xs text-slate-500">
+                            Documentary and wildlife photography.
+                          </p>
+                        </div>
+
+                      </div>
+
+                    </a>
+
+                  </div>
+
+
+                  <!-- COLUMN 2 -->
+
+                  <div>
+
+                    <div
+                      class="mb-4 text-[11px] font-bold uppercase tracking-[0.2em] text-blue-600"
+                    >
+                      Adventure
+                    </div>
+
+                    <a
+                      href="/expeditions"
+                      class="group block rounded-xl p-3 transition hover:bg-slate-50"
+                    >
+
+                      <div
+                        class="flex items-center gap-3"
+                      >
+
+                        <span
+                          class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-50"
+                        >
+                          <i class="fa-solid fa-mountain" aria-hidden="true"></i>
+                        </span>
+
+                        <div>
+                          <div class="font-bold">
+                            Mountain Adventures
+                          </div>
+
+                          <p class="mt-1 text-xs text-slate-500">
+                            Rwenzori and Virunga ranges.
+                          </p>
+                        </div>
+
+                      </div>
+
+                    </a>
+
+                    <a
+                      href="/expeditions"
+                      class="group mt-2 block rounded-xl p-3 transition hover:bg-slate-50"
+                    >
+
+                      <div
+                        class="flex items-center gap-3"
+                      >
+
+                        <span
+                          class="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-50"
+                        >
+                          <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+                        </span>
+
+                        <div>
+                          <div class="font-bold">
+                            Conservation
+                          </div>
+
+                          <p class="mt-1 text-xs text-slate-500">
+                            Field research and impact programs.
+                          </p>
+                        </div>
+
+                      </div>
+
+                    </a>
+
+                  </div>
+
+
+                  <!-- COLUMN 3 -->
+
+                  <div>
+
+                    <div
+                      class="mb-4 text-[11px] font-bold uppercase tracking-[0.2em] text-blue-600"
+                    >
+                      Culture
+                    </div>
+
+                    <a
+                      href="/expeditions"
+                      class="group block rounded-xl p-3 transition hover:bg-slate-50"
+                    >
+
+                      <div
+                        class="flex items-center gap-3"
+                      >
+
+                        <span
+                          class="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-50"
+                        >
+                          <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+                        </span>
+
+                        <div>
+                          <div class="font-bold">
+                            Cultural Immersion
+                          </div>
+
+                          <p class="mt-1 text-xs text-slate-500">
+                            Food, history and community connections.
+                          </p>
+                        </div>
+
+                      </div>
+
+                    </a>
+
+                    <a
+                      href="/expeditions"
+                      class="group mt-2 block rounded-xl p-3 transition hover:bg-slate-50"
+                    >
+
+                      <div
+                        class="flex items-center gap-3"
+                      >
+
+                        <span
+                          class="flex h-10 w-10 items-center justify-center rounded-lg bg-rose-50"
+                        >
+                          <i class="fa-solid fa-compass" aria-hidden="true"></i>
+                        </span>
+
+                        <div>
+                          <div class="font-bold">
+                            Private Journeys
+                          </div>
+
+                          <p class="mt-1 text-xs text-slate-500">
+                            Bespoke expeditions for individuals.
+                          </p>
+                        </div>
+
+                      </div>
+
+                    </a>
+
+                  </div>
+
+
+                  <!-- FEATURED -->
+
+                  <div
+                    class="relative col-span-3 overflow-hidden rounded-2xl bg-wild-navy p-6 text-white"
+                  >
+
+                    <div
+                      class="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-blue-500/20 blur-2xl"
+                    ></div>
+
+                    <div class="relative">
+
+                      <div
+                        class="text-[10px] font-bold uppercase tracking-[0.2em] text-blue-300"
+                      >
+                        Featured
+                      </div>
+
+                      <h3
+                        class="mt-3 text-xl font-bold"
+                      >
+                        Into the mist
+                      </h3>
+
+                      <p
+                        class="mt-3 text-sm leading-6 text-slate-300"
+                      >
+                        Gorilla trekking in Bwindi's ancient forests.
+                      </p>
+
+                      <a
+                        href="/expeditions"
+                        class="mt-5 inline-flex items-center gap-2 text-sm font-bold text-white hover:text-blue-300"
+                      >
+                        Explore expeditions
+                        <span>→</span>
+                      </a>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+
+                <div
+                  class="mt-6 border-t border-slate-100 pt-5"
+                >
+
+                  <div
+                    class="flex items-center justify-between"
+                  >
+
+                    <span
+                      class="text-xs text-slate-500"
+                    >
+                      Can't find what you're looking for?
+                    </span>
+
+                    <a
+                      href="/contact"
+                      class="text-xs font-bold text-blue-600"
+                    >
+                      Talk to WILD →
+                    </a>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </li>
+
+
+          <!-- EXCHANGE -->
+
+          <li class="mega-parent relative">
+
+            <button
+              type="button"
+              class="flex items-center gap-1 rounded-lg px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950"
+            >
+              Exchange
+
+              <svg
+                class="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.8"
+                  d="m6 9 6 6 6-6"
+                />
+              </svg>
+
+            </button>
+
+
+            <div
+              class="mega-menu absolute left-0 top-full z-50 w-80 pt-4"
+            >
+
+              <div
+                class="rounded-2xl border border-slate-200 bg-white p-3 shadow-2xl"
+              >
+
+                <a
+                  href="/exchange"
+                  class="block rounded-xl p-4 transition hover:bg-slate-50"
+                >
+                  <div class="font-bold">
+                    University Programs
+                  </div>
+
+                  <p class="mt-1 text-sm text-slate-500">
+                    Field learning and faculty-led exchange.
+                  </p>
+                </a>
+
+
+                <a
+                  href="/exchange"
+                  class="block rounded-xl p-4 transition hover:bg-slate-50"
+                >
+                  <div class="font-bold">
+                    Research Access
+                  </div>
+
+                  <p class="mt-1 text-sm text-slate-500">
+                    Field-based research coordination.
+                  </p>
+                </a>
+
+
+                <a
+                  href="/exchange"
+                  class="block rounded-xl p-4 transition hover:bg-slate-50"
+                >
+                  <div class="font-bold">
+                    Global Health
+                  </div>
+
+                  <p class="mt-1 text-sm text-slate-500">
+                    Structured health and care programs.
+                  </p>
+                </a>
+
+              </div>
+
+            </div>
+
+          </li>
+
+
+          <!-- BUILD MY WILD -->
+
+          <li>
+
+            <a
+              href="/build-my-wild"
+              class="block rounded-lg px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950"
+            >
+              Build My Wild
+            </a>
+
+          </li>
+
+
+          <!-- WHY WILD -->
+
+          <li class="mega-parent relative">
+
+            <button
+              type="button"
+              class="flex items-center gap-1 rounded-lg px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950"
+            >
+              Why WILD
+
+              <svg
+                class="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.8"
+                  d="m6 9 6 6 6-6"
+                />
+              </svg>
+
+            </button>
+
+
+            <div
+              class="mega-menu absolute left-0 top-full z-50 w-72 pt-4"
+            >
+
+              <div
+                class="rounded-2xl border border-slate-200 bg-white p-3 shadow-2xl"
+              >
+
+                <a
+                  href="/why-wild"
+                  class="block rounded-xl p-4 transition hover:bg-slate-50"
+                >
+                  <div class="font-bold">
+                    The WILD Standard
+                  </div>
+
+                  <p class="mt-1 text-sm text-slate-500">
+                    Our approach to trusted access.
+                  </p>
+                </a>
+
+
+                <a
+                  href="/why-wild"
+                  class="block rounded-xl p-4 transition hover:bg-slate-50"
+                >
+                  <div class="font-bold">
+                    WILD Verified
+                  </div>
+
+                  <p class="mt-1 text-sm text-slate-500">
+                    Partner verification and safety.
+                  </p>
+                </a>
+
+
+                <a
+                  href="/why-wild"
+                  class="block rounded-xl p-4 transition hover:bg-slate-50"
+                >
+                  <div class="font-bold">
+                    Responsible Access
+                  </div>
+
+                  <p class="mt-1 text-sm text-slate-500">
+                    Our impact and ethics framework.
+                  </p>
+                </a>
+
+              </div>
+
+            </div>
+
+          </li>
+
+
+          <!-- JOURNAL -->
+
+          <li>
+
+            <a
+              href="/journal"
+              class="block rounded-lg px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950"
+            >
+              Journal
+            </a>
+
+          </li>
+
+
+          <!-- ABOUT -->
+
+          <li class="order-first">
+
+            <a
+              href="/about"
+              class="block rounded-lg px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950"
+            >
+              About
+            </a>
+
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+      <!-- ===================================================== -->
+      <!-- DESKTOP ACTIONS -->
+      <!-- ===================================================== -->
+
+      <div class="hidden items-center gap-2 lg:flex">
+
+        <a
+          href="/contact"
+          class="rounded-xl px-4 py-2.5 text-sm font-bold text-slate-700 transition hover:bg-slate-50"
+        >
+          Contact
+        </a>
+
+        <a
+          href="/build-my-wild"
+          class="rounded-xl bg-amber-400 px-5 py-3 text-sm font-bold text-slate-950 shadow-lg shadow-amber-400/20 transition hover:bg-amber-300"
+        >
+          Start your WILD
+        </a>
+
+      </div>
+
+
+      <!-- MOBILE BUTTON -->
+
+      <button
+        id="mobile-menu-button"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        class="rounded-xl border border-slate-200 p-2.5 text-slate-700 lg:hidden"
+      >
+
+        <svg
+          id="menu-open-icon"
+          class="h-6 w-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.8"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+
+
+        <svg
+          id="menu-close-icon"
+          class="hidden h-6 w-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.8"
+            d="M6 6l12 12M6 18L18 6"
+          />
+        </svg>
+
+      </button>
+
+
+          <div
+            id="mobile-menu"
+            class="absolute top-full left-0 right-0 bg-white shadow-lg border-t border-slate-100 hidden lg:hidden"
+          >
+
+              <div class="flex flex-col px-4 pb-6">
+
+              <!-- EXPEDITIONS -->
+
+              <div class="border-b border-slate-100">
+
+                <button
+                  type="button"
+                  data-mobile-toggle="expeditions-mobile"
+                  class="mobile-toggle flex w-full items-center justify-between py-4 text-left font-semibold"
+                >
+
+                  <span>Expeditions</span>
+
+                  <svg
+                    class="mobile-arrow h-5 w-5 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.8"
+                      d="m6 9 6 6 6-6"
+                    />
+                  </svg>
+
+                </button>
+
+                <div
+                  id="expeditions-mobile"
+                  class="mobile-submenu pb-4"
+                >
+
+                  <a
+                    href="/expeditions"
+                    class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
+                  >
+                    Wildlife Safaris
+                  </a>
+
+                  <a
+                    href="/expeditions"
+                    class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
+                  >
+                    Photography
+                  </a>
+
+                  <a
+                    href="/expeditions"
+                    class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
+                  >
+                    Mountain Adventures
+                  </a>
+
+                  <a
+                    href="/expeditions"
+                    class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
+                  >
+                    Cultural Immersion
+                  </a>
+
+                  <a
+                    href="/expeditions"
+                    class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
+                  >
+                    Private Journeys
+                  </a>
+
+                </div>
+
+              </div>
+
+
+              <!-- EXCHANGE -->
+
+              <div class="border-b border-slate-100">
+
+                <button
+                  type="button"
+                  data-mobile-toggle="exchange-mobile"
+                  class="mobile-toggle flex w-full items-center justify-between py-4 text-left font-semibold"
+                >
+
+                  <span>Exchange</span>
+
+                  <svg
+                    class="mobile-arrow h-5 w-5 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.8"
+                      d="m6 9 6 6 6-6"
+                    />
+                  </svg>
+
+                </button>
+
+
+                <div
+                  id="exchange-mobile"
+                  class="mobile-submenu pb-4"
+                >
+
+                  <a
+                    href="/exchange"
+                    class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
+                  >
+                    University Programs
+                  </a>
+
+                  <a
+                    href="/exchange"
+                    class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
+                  >
+                    Research Access
+                  </a>
+
+                  <a
+                    href="/exchange"
+                    class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
+                  >
+                    Global Health
+                  </a>
+
+                </div>
+
+              </div>
+
+
+              <!-- BUILD MY WILD -->
+
+              <a
+                href="/build-my-wild"
+                class="block border-b border-slate-100 py-4 font-semibold"
+              >
+                Build My Wild
+              </a>
+
+
+              <!-- WHY WILD -->
+
+              <div class="border-b border-slate-100">
+
+                <button
+                  type="button"
+                  data-mobile-toggle="why-wild-mobile"
+                  class="mobile-toggle flex w-full items-center justify-between py-4 text-left font-semibold"
+                >
+
+                  <span>Why WILD</span>
+
+                  <svg
+                    class="mobile-arrow h-5 w-5 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.8"
+                      d="m6 9 6 6 6-6"
+                    />
+                  </svg>
+
+                </button>
+
+
+                <div
+                  id="why-wild-mobile"
+                  class="mobile-submenu pb-4"
+                >
+
+                  <a
+                    href="/why-wild"
+                    class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
+                  >
+                    The WILD Standard
+                  </a>
+
+                  <a
+                    href="/why-wild"
+                    class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
+                  >
+                    WILD Verified
+                  </a>
+
+                  <a
+                    href="/why-wild"
+                    class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
+                  >
+                    Responsible Access
+                  </a>
+
+                </div>
+
+              </div>
+
+
+              <!-- JOURNAL -->
+
+              <a
+                href="/journal"
+                class="block border-b border-slate-100 py-4 font-semibold"
+              >
+                Journal
+              </a>
+
+
+              <!-- ABOUT -->
+
+              <a
+                href="/about"
+                class="block border-b border-slate-100 py-4 font-semibold"
+              >
+                About
+              </a>
+
+
+              <!-- MOBILE ACTIONS -->
+
+              <div class="grid grid-cols-2 gap-3 pt-5">
+
+                <a
+                  href="/contact"
+                  class="rounded-xl border border-slate-200 px-4 py-3 text-center text-sm font-bold"
+                >
+                  Contact
+                </a>
+
+                <a
+                  href="/build-my-wild"
+                  class="rounded-xl bg-amber-400 px-4 py-3 text-center text-sm font-bold text-slate-950"
+                >
+                  Start your WILD
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+      </div>
+
+   </header>
+
+  <main id="main-content">
+
+     <section class="relative overflow-hidden bg-wild-navy text-white">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(22,128,60,.45),transparent_38%)]"></div>
+      <div class="relative mx-auto grid max-w-7xl gap-12 px-4 py-24 sm:px-6 lg:grid-cols-[1.1fr_.9fr] lg:items-center lg:px-8 lg:py-32">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.22em] text-amber-300">The African Access Company</p>
+          <h1 class="hero-title mt-5 max-w-4xl text-5xl font-extrabold leading-[1.04] tracking-tight sm:text-6xl lg:text-7xl">Extraordinary African access. Carefully designed. Responsibly delivered.</h1>
+          <p class="mt-7 max-w-2xl text-lg leading-8 text-slate-300">WILD creates trusted access to extraordinary African expeditions and meaningful experiences, connecting international travelers and institutions with carefully selected African organizations, experts and opportunities—and managing the complexity to make those connections exceptional.</p>
+          <div class="mt-9 flex flex-col gap-3 sm:flex-row"><a href="/expeditions" class="rounded-xl bg-amber-400 px-6 py-4 text-center font-bold text-slate-950 transition hover:bg-amber-300">Explore expeditions <span class="ml-3">→</span></a><a href="/build-my-wild" class="rounded-xl border border-white/30 px-6 py-4 text-center font-bold text-white transition hover:bg-white/10">Build my wild <span class="ml-3">→</span></a></div>
+        </div>
+        <div class="relative min-h-[390px] overflow-hidden rounded-2xl border border-white/20 bg-slate-900 shadow-2xl lg:min-h-[470px]" id="hero-photo-slider" tabindex="0" aria-label="WILD experiences photo gallery"><div class="hero-photo-slide is-active absolute inset-0"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=85" alt="Students collaborating with local professionals" class="h-full w-full object-cover" /></div><div class="hero-photo-slide absolute inset-0"><img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85" alt="Mountain gorillas in Bwindi forest" class="h-full w-full object-cover" loading="lazy" /></div><div class="hero-photo-slide absolute inset-0"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=85" alt="Traveller overlooking African landscape" class="h-full w-full object-cover" loading="lazy" /></div><div class="hero-photo-slide absolute inset-0"><img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=85" alt="Local guide with visitors" class="h-full w-full object-cover" loading="lazy" /></div><div class="hero-photo-slide absolute inset-0"><img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1200&q=85" alt="Students taking part in a community field experience" class="h-full w-full object-cover" loading="lazy" /></div><div class="hero-photo-slide absolute inset-0"><img src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?auto=format&fit=crop&w=1200&q=85" alt="Traveller taking in an African landscape" class="h-full w-full object-cover" loading="lazy" /></div><div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div><div class="hero-photo-flash pointer-events-none absolute inset-0 z-10 bg-white opacity-0"></div><div class="absolute inset-x-0 bottom-0 h-24 w-full bg-gradient-to-t from-wild-navy via-wild-navy/95 to-transparent"></div><div class="absolute inset-x-0 bottom-0 flex justify-center gap-2 pb-6"><div class="hero-photo-dots flex gap-2"><span class="h-2 w-7 rounded-full bg-amber-400"></span><span class="h-2 w-2 rounded-full bg-white/60"></span><span class="h-2 w-2 rounded-full bg-white/60"></span><span class="h-2 w-2 rounded-full bg-white/60"></span><span class="h-2 w-2 rounded-full bg-white/60"></span><span class="h-2 w-2 rounded-full bg-white/60"></span></div></div></div>
+    </section>
+
+<section
+      id="programs"
+      class="bg-slate-50 py-24"
+    >
+
+      <div
+        class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+      >
+
+        <div
+          class="flex flex-col justify-between gap-7 md:flex-row md:items-end"
+        >
+
+          <div class="max-w-3xl">
+
+            <div
+              class="flex items-center gap-3"
+            >
+
+              <span
+                class="h-px w-10 bg-blue-600"
+              ></span>
+
+              <p
+                class="text-sm font-bold uppercase tracking-[0.2em] text-blue-600"
+              >
+                What We Do
+              </p>
+
+            </div>
+
+
+            <h2
+              class="mt-4 text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl"
+            >
+              Experiences that go beyond the classroom.
+            </h2>
+
+            <p
+              class="mt-5 max-w-2xl text-lg leading-8 text-slate-600"
+            >
+              WILD combines education, travel, culture and
+              discovery to create experiences that have a
+              lasting impact.
+            </p>
+
+          </div>
+
+
+          <a
+            href="/contact"
+            class="font-bold text-slate-950 transition hover:text-blue-600"
+          >
+            Talk to WILD →
+          </a>
+
+        </div>
+
+
+        <!-- PROGRAM CARDS -->
+
+        <div
+          class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+        >
+
+
+          <!-- CARD -->
+
+          <article
+            class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-premium"
+          >
+
+            <div
+              class="relative h-56 overflow-hidden bg-blue-700"
+            >
+
+              <img
+                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=85"
+                alt="Students on an educational field trip"
+                class="h-full w-full object-cover"
+                loading="lazy"
+              />
+
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+
+              <span
+                class="absolute bottom-5 left-5 rounded-full bg-white/90 px-3 py-1.5 text-xs font-bold text-blue-700"
+              >
+                Education
+              </span>
+
+            </div>
+
+
+            <div class="p-6">
+
+              <h3
+                class="text-xl font-bold text-slate-950"
+              >
+                Global Study Programs
+              </h3>
+
+              <p
+                class="mt-3 leading-7 text-slate-500"
+              >
+                Give students opportunities to learn,
+                collaborate and grow in new environments.
+              </p>
+
+              <a
+                href="/contact"
+                class="mt-5 inline-flex font-bold text-blue-600"
+              >
+                Learn more →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- CARD -->
+
+          <article
+            class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-premium"
+          >
+
+            <div
+              class="relative h-56 overflow-hidden bg-emerald-700"
+            >
+
+              <img
+                src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&w=800&q=85"
+                alt="Mountain gorilla in Uganda"
+                class="h-full w-full object-cover"
+                loading="lazy"
+              />
+
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+
+              <span
+                class="absolute bottom-5 left-5 rounded-full bg-white/90 px-3 py-1.5 text-xs font-bold text-emerald-700"
+              >
+                Conservation
+              </span>
+
+            </div>
+
+
+            <div class="p-6">
+
+              <h3
+                class="text-xl font-bold text-slate-950"
+              >
+                Cultural & Wildlife Experiences
+              </h3>
+
+              <p
+                class="mt-3 leading-7 text-slate-500"
+              >
+                Learn about Uganda's communities,
+                biodiversity, conservation and heritage.
+              </p>
+
+              <a
+                href="/destinations"
+                class="mt-5 inline-flex font-bold text-blue-600"
+              >
+                Explore →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- CARD -->
+
+          <article
+            class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-premium"
+          >
+
+            <div
+              class="relative h-56 overflow-hidden bg-orange-700"
+            >
+
+              <img
+                src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=800&q=85"
+                alt="Sipi Falls in Uganda"
+                class="h-full w-full object-cover"
+                loading="lazy"
+              />
+
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+
+              <span
+                class="absolute bottom-5 left-5 rounded-full bg-white/90 px-3 py-1.5 text-xs font-bold text-orange-700"
+              >
+                Adventure
+              </span>
+
+            </div>
+
+
+            <div class="p-6">
+
+              <h3
+                class="text-xl font-bold text-slate-950"
+              >
+                Educational Travel
+              </h3>
+
+              <p
+                class="mt-3 leading-7 text-slate-500"
+              >
+                Explore remarkable destinations through
+                carefully planned educational journeys.
+              </p>
+
+              <a
+                href="/destinations"
+                class="mt-5 inline-flex font-bold text-blue-600"
+              >
+                Explore →
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+        <div class="mt-16 grid gap-4 md:grid-cols-12 md:grid-rows-2">
+          <figure class="group relative min-h-[280px] overflow-hidden rounded-2xl md:col-span-5 md:row-span-2"><img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85" alt="Students collaborating with professional colleagues" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy"><figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/85 to-transparent px-6 pb-6 pt-16 text-white"><strong>Professional exchange</strong><span class="mt-1 block text-sm text-slate-200">Learn directly from African organisations.</span></figcaption></figure>
+          <figure class="group relative min-h-[135px] overflow-hidden rounded-2xl md:col-span-4"><img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1000&q=85" alt="Students attending a seminar" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy"><figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/85 to-transparent px-5 pb-5 pt-12 text-white"><strong>University learning</strong></figcaption></figure>
+          <figure class="group relative min-h-[135px] overflow-hidden rounded-2xl md:col-span-3"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=85" alt="Students learning in a healthcare environment" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy"><figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/85 to-transparent px-5 pb-5 pt-12 text-white"><strong>Health and care</strong></figcaption></figure>
+          <figure class="group relative min-h-[135px] overflow-hidden rounded-2xl md:col-span-4"><img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1000&q=85" alt="Students taking part in a community field experience" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy"><figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/85 to-transparent px-5 pb-5 pt-12 text-white"><strong>Field experience</strong></figcaption></figure>
+          <figure class="group relative min-h-[135px] overflow-hidden rounded-2xl md:col-span-3"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=85" alt="International students working together" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy"><figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/85 to-transparent px-5 pb-5 pt-12 text-white"><strong>Shared perspective</strong></figcaption></figure>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="border-y border-slate-200 bg-white py-16" aria-label="Why WILD">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl">
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-emerald-700">Africa, professionally connected</p>
+          <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl">Meaningful opportunities, properly supported.</h2>
+          <p class="mt-4 text-lg leading-8 text-slate-600">WILD connects international students, professionals, researchers, universities and travellers with trusted opportunities across Africa, starting in Uganda.</p>
+        </div>
+        <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="border-l-2 border-amber-500 pl-4"><h3 class="font-bold text-slate-950">Verified partners</h3><p class="mt-2 text-sm leading-6 text-slate-500">Hosts and collaborators reviewed before matching.</p></div>
+          <div class="border-l-2 border-amber-500 pl-4"><h3 class="font-bold text-slate-950">Local support</h3><p class="mt-2 text-sm leading-6 text-slate-500">A reliable point of contact before and during your stay.</p></div>
+          <div class="border-l-2 border-amber-500 pl-4"><h3 class="font-bold text-slate-950">Structured programs</h3><p class="mt-2 text-sm leading-6 text-slate-500">Clear objectives, preparation and supervision.</p></div>
+          <div class="border-l-2 border-amber-500 pl-4"><h3 class="font-bold text-slate-950">Safety & quality</h3><p class="mt-2 text-sm leading-6 text-slate-500">Thoughtful planning, safeguarding and emergency support.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="students" class="bg-slate-50 py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl"><p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-600">Exchange</p><h2 class="mt-4 text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl">Your African experience starts here.</h2><p class="mt-5 text-lg leading-8 text-slate-600">From your first question to your arrival in Uganda, WILD helps you move forward with clarity.</p></div>
+        <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"><div class="border-t border-slate-300 pt-5"><span class="text-sm font-bold text-amber-600">01</span><h3 class="mt-3 text-xl font-bold text-slate-950">Choose</h3><p class="mt-2 leading-7 text-slate-500">Find a program that matches your interests.</p></div><div class="border-t border-slate-300 pt-5"><span class="text-sm font-bold text-amber-600">02</span><h3 class="mt-3 text-xl font-bold text-slate-950">Apply</h3><p class="mt-2 leading-7 text-slate-500">Share your goals, timing and background.</p></div><div class="border-t border-slate-300 pt-5"><span class="text-sm font-bold text-amber-600">03</span><h3 class="mt-3 text-xl font-bold text-slate-950">Match</h3><p class="mt-2 leading-7 text-slate-500">We connect you with a suitable host or program.</p></div><div class="border-t border-slate-300 pt-5"><span class="text-sm font-bold text-amber-600">04</span><h3 class="mt-3 text-xl font-bold text-slate-950">Prepare</h3><p class="mt-2 leading-7 text-slate-500">Receive pre-departure information and orientation.</p></div><div class="border-t border-slate-300 pt-5"><span class="text-sm font-bold text-amber-600">05</span><h3 class="mt-3 text-xl font-bold text-slate-950">Arrive</h3><p class="mt-2 leading-7 text-slate-500">WILD coordinates your arrival and local support.</p></div><div class="border-t border-slate-300 pt-5"><span class="text-sm font-bold text-amber-600">06</span><h3 class="mt-3 text-xl font-bold text-slate-950">Experience</h3><p class="mt-2 leading-7 text-slate-500">Complete your program and explore Africa responsibly.</p></div></div>
+        <a href="/build-my-wild" class="mt-10 inline-flex rounded-xl bg-blue-600 px-6 py-4 font-bold text-white shadow-lg shadow-blue-600/20 transition hover:bg-blue-700">Start your wild <span class="ml-3">→</span></a>
+      </div>
+    </section>
+
+    <section id="universities" class="bg-wild-navy py-24 text-white">
+      <div class="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[1.1fr_.9fr] lg:items-center lg:px-8">
+        <div><p class="text-sm font-bold uppercase tracking-[0.2em] text-amber-300">For universities</p><h2 class="mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">Give your students meaningful, professionally managed experiences in Africa.</h2><p class="mt-6 max-w-2xl text-lg leading-8 text-slate-300">WILD helps universities arrange internships, field experiences, cultural immersion, industry visits, research experiences and travel extensions through one local partner.</p><a href="/contact" class="mt-9 inline-flex rounded-xl bg-white px-6 py-4 font-bold text-slate-950 transition hover:bg-amber-50">Partner with WILD <span class="ml-3">→</span></a></div>
+        <div class="grid gap-3 sm:grid-cols-2"><div class="border border-white/15 bg-white/5 p-5"><span class="text-amber-300">✓</span><p class="mt-3 font-bold">One local partner</p></div><div class="border border-white/15 bg-white/5 p-5"><span class="text-amber-300">✓</span><p class="mt-3 font-bold">Verified African hosts</p></div><div class="border border-white/15 bg-white/5 p-5"><span class="text-amber-300">✓</span><p class="mt-3 font-bold">Student support</p></div><div class="border border-white/15 bg-white/5 p-5"><span class="text-amber-300">✓</span><p class="mt-3 font-bold">Structured programs</p></div><div class="border border-white/15 bg-white/5 p-5"><span class="text-amber-300">✓</span><p class="mt-3 font-bold">Safety procedures</p></div><div class="border border-white/15 bg-white/5 p-5"><span class="text-amber-300">✓</span><p class="mt-3 font-bold">Custom academic objectives</p></div></div>
+      </div>
+    </section>
+
+    <section id="travel" class="py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div class="flex flex-col justify-between gap-6 md:flex-row md:items-end"><div class="max-w-3xl"><p class="text-sm font-bold uppercase tracking-[0.2em] text-emerald-700">Expeditions</p><h2 class="mt-4 text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl">Travel with purpose.</h2><p class="mt-5 text-lg leading-8 text-slate-600">Add a considered extension to your program, or plan a private African experience around culture, wildlife, adventure, photography or wellness.</p></div><a href="/expeditions" class="font-bold text-blue-600">Explore expeditions →</a></div><div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4"><div class="border border-slate-200 bg-slate-50 p-6"><p class="text-sm font-bold text-amber-700">Experience extension</p><h3 class="mt-4 text-xl font-bold text-slate-950">3-day city & culture</h3><p class="mt-3 text-sm leading-6 text-slate-500">Continue your journey beyond the program with a thoughtfully planned itinerary.</p></div><div class="border border-slate-200 bg-slate-50 p-6"><p class="text-sm font-bold text-amber-700">Experience extension</p><h3 class="mt-4 text-xl font-bold text-slate-950">5-day wildlife</h3><p class="mt-3 text-sm leading-6 text-slate-500">Continue your journey beyond the program with a thoughtfully planned itinerary.</p></div><div class="border border-slate-200 bg-slate-50 p-6"><p class="text-sm font-bold text-amber-700">Experience extension</p><h3 class="mt-4 text-xl font-bold text-slate-950">7-day adventure</h3><p class="mt-3 text-sm leading-6 text-slate-500">Continue your journey beyond the program with a thoughtfully planned itinerary.</p></div><div class="border border-slate-200 bg-slate-50 p-6"><p class="text-sm font-bold text-amber-700">Experience extension</p><h3 class="mt-4 text-xl font-bold text-slate-950">10-14 day custom</h3><p class="mt-3 text-sm leading-6 text-slate-500">Continue your journey beyond the program with a thoughtfully planned itinerary.</p></div></div></div>
+    </section>
+
+    <section id="destinations" class="bg-emerald-50 py-20"><div class="mx-auto flex max-w-7xl flex-col justify-between gap-8 px-4 sm:px-6 md:flex-row md:items-center lg:px-8"><div><p class="text-sm font-bold uppercase tracking-[0.2em] text-emerald-800">Launch destination</p><h2 class="mt-3 text-4xl font-extrabold tracking-tight text-slate-950">Start in Uganda. Discover Africa.</h2><p class="mt-4 max-w-2xl text-lg leading-8 text-slate-600">The Pearl of Africa is WILD's launch country: a place for ambitious learning, generous hospitality, remarkable biodiversity and real connection.</p></div><a href="/destinations" class="rounded-xl bg-emerald-800 px-6 py-4 font-bold text-white transition hover:bg-emerald-900">Explore Uganda <span class="ml-3">→</span></a></div></section>
+
+    <section id="safety" class="py-24"><div class="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[.8fr_1.2fr] lg:px-8"><div><p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-600">Safety & quality</p><h2 class="mt-4 text-4xl font-extrabold tracking-tight text-slate-950">Your safety matters.</h2><p class="mt-5 leading-8 text-slate-600">Every WILD experience is planned with preparation, communication and responsible local support in mind.</p></div><div class="grid gap-4 sm:grid-cols-2"><div class="border-b border-slate-200 pb-4"><h3 class="font-bold text-slate-950">Host verification</h3><p class="mt-2 text-sm leading-6 text-slate-500">A considered part of planning and program monitoring.</p></div><div class="border-b border-slate-200 pb-4"><h3 class="font-bold text-slate-950">Accommodation checks</h3><p class="mt-2 text-sm leading-6 text-slate-500">A considered part of planning and program monitoring.</p></div><div class="border-b border-slate-200 pb-4"><h3 class="font-bold text-slate-950">Transport planning</h3><p class="mt-2 text-sm leading-6 text-slate-500">A considered part of planning and program monitoring.</p></div><div class="border-b border-slate-200 pb-4"><h3 class="font-bold text-slate-950">Participant preparation</h3><p class="mt-2 text-sm leading-6 text-slate-500">A considered part of planning and program monitoring.</p></div><div class="border-b border-slate-200 pb-4"><h3 class="font-bold text-slate-950">Emergency support</h3><p class="mt-2 text-sm leading-6 text-slate-500">A considered part of planning and program monitoring.</p></div><div class="border-b border-slate-200 pb-4"><h3 class="font-bold text-slate-950">Safeguarding & supervision</h3><p class="mt-2 text-sm leading-6 text-slate-500">A considered part of planning and program monitoring.</p></div><p class="sm:col-span-2 border-l-4 border-amber-500 bg-amber-50 p-5 text-sm leading-6 text-slate-700"><strong>Medical programs:</strong> WILD does not authorize participants to perform activities beyond their legal qualifications, permissions or supervision requirements.</p></div></div></section>
+
+    <section id="about" class="border-t border-slate-200 bg-slate-50 py-20"><div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8"><p class="text-sm font-bold uppercase tracking-[0.2em] text-amber-700">About WILD</p><h2 class="mt-4 text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl">Connecting Africa with the world.</h2><p class="mt-6 text-lg leading-8 text-slate-600">WILD is building a trusted network connecting international students, universities, professionals, researchers and travellers with African institutions, organisations and experiences.</p><div class="mt-10 grid gap-6 text-left sm:grid-cols-2"><div class="border-t-2 border-emerald-700 pt-4"><h3 class="font-bold">Our vision</h3><p class="mt-2 text-slate-600">To become Africa’s most trusted international mobility and experience network.</p></div><div class="border-t-2 border-emerald-700 pt-4"><h3 class="font-bold">Our mission</h3><p class="mt-2 text-slate-600">To make Africa professionally accessible, academically valuable, safely navigable and genuinely discoverable.</p></div></div></div></section>
+
+<section
+      id="apply"
+      class="relative overflow-hidden bg-blue-600"
+    >
+
+      <div
+        class="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-white/10 blur-3xl"
+      ></div>
+
+      <div
+        class="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8"
+      >
+
+        <div
+          class="flex flex-col justify-between gap-8 md:flex-row md:items-center"
+        >
+
+          <div class="max-w-2xl">
+
+            <div
+              class="text-sm font-bold uppercase tracking-[0.2em] text-blue-100"
+            >
+              Start your journey
+            </div>
+
+            <h2
+              class="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl"
+            >
+              Ready to experience the world differently?
+            </h2>
+
+            <p
+              class="mt-4 text-lg leading-8 text-blue-100"
+            >
+              Whether you're a student, university or
+              organization, WILD can help you create an
+              experience worth remembering.
+            </p>
+
+          </div>
+
+
+          <div
+            class="flex flex-col gap-3 sm:flex-row"
+          >
+
+            <a
+              href="/contact"
+              class="rounded-xl bg-white px-6 py-4 text-center font-bold text-blue-700 shadow-lg transition hover:bg-blue-50"
+            >
+              Get Started
+            </a>
+
+            <a
+              href="/contact"
+              class="rounded-xl border border-white/30 px-6 py-4 text-center font-bold text-white transition hover:bg-white/10"
+            >
+              Talk to WILD
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="border-t border-slate-200 bg-white py-14" aria-labelledby="partner-network-title">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col justify-between gap-5 md:flex-row md:items-end"><div><p class="text-sm font-bold uppercase tracking-[0.2em] text-emerald-700">Our partner network</p><h2 id="partner-network-title" class="mt-3 text-3xl font-extrabold tracking-tight text-slate-950">Connected to people doing meaningful work.</h2></div><p class="max-w-md text-sm leading-6 text-slate-500">We work with tourism, education and host organisations to build experiences with local context.</p></div>
+        <div class="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+          <a href="/contact" aria-label="Uganda Explore partner enquiry" class="group flex min-h-[92px] flex-col justify-between border border-slate-200 bg-slate-50 p-4 transition hover:-translate-y-1 hover:border-emerald-700 hover:bg-white"><img src="https://www.google.com/s2/favicons?domain=ugandaexplore.com&sz=128" alt="Uganda Explore logo" class="h-9 max-w-[130px] object-contain object-left" loading="lazy" onerror="this.hidden=true; this.nextElementSibling.hidden=false"><span hidden class="text-2xl font-black tracking-tight text-emerald-800">UE</span><span class="text-sm font-bold text-slate-700 group-hover:text-emerald-800">Uganda Explore</span></a>
+          <a href="/contact" aria-label="Vumbula Uganda partner enquiry" class="group flex min-h-[92px] flex-col justify-between border border-slate-200 bg-slate-50 p-4 transition hover:-translate-y-1 hover:border-emerald-700 hover:bg-white"><img src="https://www.google.com/s2/favicons?domain=vumbula.com&sz=128" alt="Vumbula Uganda logo" class="h-9 max-w-[130px] object-contain object-left" loading="lazy" onerror="this.hidden=true; this.nextElementSibling.hidden=false"><span hidden class="text-2xl font-black tracking-tight text-amber-700">VU</span><span class="text-sm font-bold text-slate-700 group-hover:text-emerald-800">Vumbula Uganda</span></a>
+          <a href="/contact" aria-label="Makerere University partner enquiry" class="group flex min-h-[92px] flex-col justify-between border border-slate-200 bg-slate-50 p-4 transition hover:-translate-y-1 hover:border-emerald-700 hover:bg-white"><img src="https://www.google.com/s2/favicons?domain=mak.ac.ug&sz=128" alt="Makerere University logo" class="h-9 max-w-[130px] object-contain object-left" loading="lazy" onerror="this.hidden=true; this.nextElementSibling.hidden=false"><span hidden class="text-2xl font-black tracking-tight text-red-800">MU</span><span class="text-sm font-bold text-slate-700 group-hover:text-emerald-800">Makerere University</span></a>
+          <a href="/contact" aria-label="Kyambogo University partner enquiry" class="group flex min-h-[92px] flex-col justify-between border border-slate-200 bg-slate-50 p-4 transition hover:-translate-y-1 hover:border-emerald-700 hover:bg-white"><img src="https://www.google.com/s2/favicons?domain=kyu.ac.ug&sz=128" alt="Kyambogo University logo" class="h-9 max-w-[130px] object-contain object-left" loading="lazy" onerror="this.hidden=true; this.nextElementSibling.hidden=false"><span hidden class="text-2xl font-black tracking-tight text-blue-800">KU</span><span class="text-sm font-bold text-slate-700 group-hover:text-emerald-800">Kyambogo University</span></a>
+          <a href="/contact" aria-label="Uganda host organisations partner enquiry" class="group flex min-h-[92px] flex-col justify-between border border-slate-200 bg-slate-50 p-4 transition hover:-translate-y-1 hover:border-emerald-700 hover:bg-white"><img src="https://www.google.com/s2/favicons?domain=utb.go.ug&sz=128" alt="Uganda Tourism Board logo" class="h-9 max-w-[130px] object-contain object-left" loading="lazy" onerror="this.hidden=true; this.nextElementSibling.hidden=false"><span hidden class="text-2xl font-black tracking-tight text-slate-700">UTB</span><span class="text-sm font-bold text-slate-700 group-hover:text-emerald-800">Host organisations</span></a>
+          <a href="/contact" aria-label="University partners enquiry" class="group flex min-h-[92px] flex-col justify-between border border-slate-200 bg-slate-50 p-4 transition hover:-translate-y-1 hover:border-emerald-700 hover:bg-white"><img src="https://www.google.com/s2/favicons?domain=ucu.ac.ug&sz=128" alt="Uganda Christian University logo" class="h-9 max-w-[130px] object-contain object-left" loading="lazy" onerror="this.hidden=true; this.nextElementSibling.hidden=false"><span hidden class="text-2xl font-black tracking-tight text-emerald-800">UCU</span><span class="text-sm font-bold text-slate-700 group-hover:text-emerald-800">University partners</span></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+<footer
+    id="contact"
+    class="bg-slate-950 text-white"
+  >
+
+    <div
+      class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8"
+    >
+
+      <div
+        class="grid gap-12 md:grid-cols-2 lg:grid-cols-5"
+      >
+
+
+        <!-- BRAND -->
+
+        <div
+          class="lg:col-span-2"
+        >
+
+          <a
+            href="/"
+            class="inline-flex items-center gap-3"
+          >
+
+            <div
+              class="flex h-11 w-11 items-center justify-center rounded-xl bg-white text-sm font-extrabold text-slate-950"
+            >
+
+            WILD
+              </div>
+
+            <div>
+
+              <div
+                class="font-extrabold"
+              >
+
+            WILD
+                </div>
+
+              <div
+                class="text-[9px] uppercase tracking-[0.2em] text-slate-500"
+              >
+                The African Access Company
+              </div>
+
+            </div>
+
+          </a>
+
+
+          <p
+            class="mt-6 max-w-md leading-7 text-slate-400"
+          >
+            Connecting students, universities and
+            communities through meaningful education,
+            travel and global experiences.
+          </p>
+
+
+          <!-- SOCIAL -->
+
+          <div
+            class="mt-6 flex gap-3"
+          >
+
+            <a
+              href="#"
+              aria-label="LinkedIn"
+              class="flex h-10 w-10 items-center justify-center rounded-lg bg-white/5 text-sm font-bold transition hover:bg-white/10"
+            >
+              in
+            </a>
+
+            <a
+              href="#"
+              aria-label="Instagram"
+              class="flex h-10 w-10 items-center justify-center rounded-lg bg-white/5 text-sm font-bold transition hover:bg-white/10"
+            >
+              ig
+            </a>
+
+            <a
+              href="#"
+              aria-label="Facebook"
+              class="flex h-10 w-10 items-center justify-center rounded-lg bg-white/5 text-sm font-bold transition hover:bg-white/10"
+            >
+              f
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- EXPEDITIONS -->
+
+        <div>
+
+          <h3 class="font-bold">
+            Expeditions
+          </h3>
+
+          <ul
+            class="mt-5 space-y-3 text-sm text-slate-400"
+          >
+
+            <li>
+              <a href="/expeditions" class="hover:text-white">
+                All Expeditions
+              </a>
+            </li>
+
+            <li>
+              <a href="/expeditions" class="hover:text-white">
+                Wildlife Safaris
+              </a>
+            </li>
+
+            <li>
+              <a href="/expeditions" class="hover:text-white">
+                Photography
+              </a>
+            </li>
+
+            <li>
+              <a href="/expeditions" class="hover:text-white">
+                Cultural Adventures
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- EXCHANGE -->
+
+        <div>
+
+          <h3 class="font-bold">
+            Exchange
+          </h3>
+
+          <ul
+            class="mt-5 space-y-3 text-sm text-slate-400"
+          >
+
+            <li>
+              <a href="/exchange" class="hover:text-white">
+                University Programs
+              </a>
+            </li>
+
+            <li>
+              <a href="/exchange" class="hover:text-white">
+                Research Access
+              </a>
+            </li>
+
+            <li>
+              <a href="/exchange" class="hover:text-white">
+                Global Health
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- WHY WILD -->
+
+        <div>
+
+          <h3 class="font-bold">
+            Why WILD
+          </h3>
+
+          <ul
+            class="mt-5 space-y-3 text-sm text-slate-400"
+          >
+
+            <li>
+              <a href="/why-wild" class="hover:text-white">
+                The WILD Standard
+              </a>
+            </li>
+
+            <li>
+              <a href="/why-wild" class="hover:text-white">
+                Safety & Standards
+              </a>
+            </li>
+
+            <li>
+              <a href="/about" class="hover:text-white">
+                About
+              </a>
+            </li>
+
+            <li>
+              <a href="/contact" class="hover:text-white">
+                Contact
+              </a>
+            </li>
+
+          </ul>
+
+      </div>
+
+
+      <!-- BOTTOM -->
+
+      <div
+        class="mt-14 flex flex-col justify-between gap-5 border-t border-white/10 pt-8 text-sm text-slate-500 md:flex-row"
+      >
+
+        <p>
+          © 2026 WILD. All rights reserved.
+        </p>
+
+        <div
+          class="flex flex-wrap gap-6"
+        >
+
+          <a
+            href="#"
+            class="hover:text-white"
+          >
+            Privacy Policy
+          </a>
+
+          <a
+            href="#"
+            class="hover:text-white"
+          >
+            Terms
+          </a>
+
+          <a
+            href="#"
+            class="hover:text-white"
+          >
+            Cookies
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+<!-- JAVASCRIPT -->
+  <!-- ========================================================= -->
+
+  <script>
+
+    const mobileMenuButton =
+      document.getElementById(
+        "mobile-menu-button"
+      );
+
+    const mobileMenu =
+      document.getElementById(
+        "mobile-menu"
+      );
+
+    const openIcon =
+      document.getElementById(
+        "menu-open-icon"
+      );
+
+    const closeIcon =
+      document.getElementById(
+        "menu-close-icon"
+      );
+
+
+    function toggleMobileMenu() {
+
+      const isOpen =
+        !mobileMenu.classList.contains("hidden");
+
+      mobileMenu.classList.toggle(
+        "hidden"
+      );
+
+      openIcon.classList.toggle(
+        "hidden"
+      );
+
+      closeIcon.classList.toggle(
+        "hidden"
+      );
+
+      mobileMenuButton.setAttribute(
+        "aria-expanded",
+        String(!isOpen)
+      );
+
+      document.body.classList.toggle(
+        "no-scroll",
+        !isOpen
+      );
+
+    }
+
+
+    mobileMenuButton.addEventListener(
+      "click",
+      toggleMobileMenu
+    );
+
+
+    // =========================================================
+    // MOBILE SUBMENUS
+    // =========================================================
+
+    document
+      .querySelectorAll(".mobile-toggle")
+      .forEach((button) => {
+
+        button.addEventListener(
+          "click",
+          () => {
+
+            const targetId =
+              button.dataset.mobileToggle;
+
+            const submenu =
+              document.getElementById(
+                targetId
+              );
+
+            const arrow =
+              button.querySelector(
+                ".mobile-arrow"
+              );
+
+            submenu.classList.toggle(
+              "open"
+            );
+
+            arrow.classList.toggle(
+              "rotate-180"
+            );
+
+          }
+        );
+
+      });
+
+
+    // =========================================================
+    // CLOSE MOBILE MENU AFTER NAVIGATION
+    // =========================================================
+
+    document
+      .querySelectorAll(
+        "#mobile-menu a"
+      )
+      .forEach((link) => {
+
+        link.addEventListener(
+          "click",
+          () => {
+
+            mobileMenu.classList.add(
+              "hidden"
+            );
+
+            openIcon.classList.remove(
+              "hidden"
+            );
+
+            closeIcon.classList.add(
+              "hidden"
+            );
+
+            mobileMenuButton.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+            document.body.classList.remove(
+              "no-scroll"
+            );
+
+          }
+        );
+
+      });
+
+
+    // =========================================================
+    // ESCAPE KEY
+    // =========================================================
+
+    document.addEventListener(
+      "keydown",
+      (event) => {
+
+        if (
+          event.key === "Escape" &&
+          !mobileMenu.classList.contains(
+            "hidden"
+          )
+        ) {
+
+          mobileMenu.classList.add(
+            "hidden"
+          );
+
+          openIcon.classList.remove(
+            "hidden"
+          );
+
+          closeIcon.classList.add(
+            "hidden"
+          );
+
+          mobileMenuButton.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+          document.body.classList.remove(
+            "no-scroll"
+          );
+
+        }
+
+      }
+    );
+
+    const heroPhotoSlider = document.getElementById('hero-photo-slider');
+    const heroPhotoSlides = Array.from(document.querySelectorAll('.hero-photo-slide'));
+    const heroPhotoDots = Array.from(document.querySelectorAll('.hero-photo-dots span'));
+    const heroPhotoFlash = document.querySelector('.hero-photo-flash');
+    let activeHeroPhoto = 0;
+    let heroPhotoTimer;
+
+    function showHeroPhoto(index) {
+      activeHeroPhoto = (index + heroPhotoSlides.length) % heroPhotoSlides.length;
+      heroPhotoSlides.forEach((slide, slideIndex) => slide.classList.toggle('is-active', slideIndex === activeHeroPhoto));
+      heroPhotoDots.forEach((dot, dotIndex) => {
+        dot.classList.toggle('w-7', dotIndex === activeHeroPhoto);
+        dot.classList.toggle('w-2', dotIndex !== activeHeroPhoto);
+        dot.classList.toggle('bg-amber-400', dotIndex === activeHeroPhoto);
+        dot.classList.toggle('bg-white/60', dotIndex !== activeHeroPhoto);
+      });
+      heroPhotoFlash.classList.remove('is-active');
+      void heroPhotoFlash.offsetWidth;
+      heroPhotoFlash.classList.add('is-active');
+    }
+
+    function startHeroPhotoTimer() {
+      window.clearInterval(heroPhotoTimer);
+      heroPhotoTimer = window.setInterval(() => showHeroPhoto(activeHeroPhoto + 1), 5000);
+    }
+
+    heroPhotoSlider.addEventListener('mouseenter', () => window.clearInterval(heroPhotoTimer));
+    heroPhotoSlider.addEventListener('mouseleave', startHeroPhotoTimer);
+    heroPhotoSlider.addEventListener('focusin', () => window.clearInterval(heroPhotoTimer));
+    heroPhotoSlider.addEventListener('focusout', startHeroPhotoTimer);
+    heroPhotoSlider.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowLeft') { showHeroPhoto(activeHeroPhoto - 1); startHeroPhotoTimer(); }
+      if (event.key === 'ArrowRight') { showHeroPhoto(activeHeroPhoto + 1); startHeroPhotoTimer(); }
+    });
+    startHeroPhotoTimer();
+
+  </script>
+
+</body>
+</html>
