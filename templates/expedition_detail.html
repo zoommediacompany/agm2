@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="{{ expedition.description }}" />
+  <meta name="theme-color" content="#071426" />
+  <title>{{ expedition.title }} | WILD AFRICA ACCESS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["DM Sans", "sans-serif"],
+            display: ["Playfair Display", "serif"],
+          },
+          colors: {
+            wild: {
+              navy: "#071426",
+              blue: "#2563EB",
+              green: "#16803C",
+              gold: "#D6A84F",
+              cream: "#F7F5EF",
+            },
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body { font-family: "DM Sans", sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-slate-900 antialiased">
+  <header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur-xl">
+    <div class="mx-auto flex min-h-[76px] max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">
+      <a href="/" class="flex items-center gap-3" aria-label="WILD AFRICA ACCESS home">
+        <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-wild-navy text-sm font-bold text-white">WILD</span>
+        <span>
+          <span class="block font-bold tracking-tight text-wild-navy">WILD AFRICA ACCESS</span>
+          <span class="hidden text-[9px] uppercase tracking-[0.2em] text-slate-500 sm:block">The African Access Company</span>
+        </span>
+      </a>
+      <nav aria-label="Main navigation" class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm font-semibold sm:gap-x-6">
+        <details class="group relative">
+          <summary class="cursor-pointer list-none text-wild-navy">Expeditions <span aria-hidden="true">⌄</span></summary>
+          <ul class="absolute right-0 z-50 mt-3 grid min-w-56 gap-1 rounded-xl border border-slate-200 bg-white p-3 text-sm shadow-xl sm:left-0 sm:right-auto">
+            {% for slug, page in expedition_pages %}
+            <li><a href="{{ url_for('expedition_detail', slug=slug) }}" class="block rounded-lg px-3 py-2 hover:bg-slate-50">{{ page.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </details>
+        <a href="/destinations" class="text-slate-700 transition hover:text-wild-green">Destinations</a>
+        <a href="/about" class="text-slate-700 transition hover:text-wild-green">About</a>
+        <a href="/contact" class="text-slate-700 transition hover:text-wild-green">Contact</a>
+        <a href="/build-my-wild" class="rounded-lg bg-amber-300 px-4 py-2 font-bold text-wild-navy transition hover:bg-amber-200">Build My Wild</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="relative isolate overflow-hidden bg-wild-navy text-white" aria-labelledby="expedition-title">
+      <img src="{{ url_for('image_file', filename=expedition.image) }}" alt="{{ expedition.image_alt }}" class="absolute inset-0 h-full w-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/65 to-slate-950/20"></div>
+      <div class="relative mx-auto flex min-h-[520px] max-w-7xl items-end px-4 py-16 sm:px-6 lg:min-h-[600px] lg:px-8 lg:py-24">
+        <div class="max-w-3xl">
+          <a href="/expeditions" class="text-sm font-semibold text-amber-200 hover:text-white">← All expeditions</a>
+          <p class="mt-8 text-sm font-bold uppercase tracking-[0.22em] text-amber-300">{{ expedition.eyebrow }}</p>
+          <h1 id="expedition-title" class="mt-4 font-display text-5xl font-bold leading-tight sm:text-6xl">{{ expedition.title }}</h1>
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-200">{{ expedition.description }}</p>
+          <a href="/contact" class="mt-8 inline-flex rounded-xl bg-amber-300 px-6 py-4 font-bold text-wild-navy transition hover:bg-amber-200">{{ expedition.cta }} <span class="ml-3" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-wild-cream px-4 py-20 sm:px-6 lg:px-8">
+      <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-wild-green">A thoughtful starting point</p>
+          <h2 class="mt-4 font-display text-3xl text-wild-navy sm:text-4xl">Begin with what matters to you.</h2>
+        </div>
+        <div>
+          <p class="text-lg leading-8 text-slate-700">{{ expedition.intro }}</p>
+          <p class="mt-5 leading-7 text-slate-600">WILD AFRICA ACCESS starts with Uganda. Every experience is subject to local conditions, partner availability and any applicable permissions; we confirm practical arrangements with you before plans are finalised.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-4 py-20 sm:px-6 lg:px-8" aria-labelledby="possibilities-title">
+      <div class="mx-auto max-w-7xl">
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-wild-green">Explore the possibilities</p>
+        <h2 id="possibilities-title" class="mt-4 font-display text-3xl text-wild-navy sm:text-4xl">Plan with care and local context.</h2>
+        <div class="mt-10 grid gap-5 md:grid-cols-3">
+          {% for heading, detail in expedition.highlights %}
+          <article class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
+            <span class="text-sm font-bold text-wild-green">0{{ loop.index }}</span>
+            <h3 class="mt-4 text-xl font-bold text-wild-navy">{{ heading }}</h3>
+            <p class="mt-3 leading-7 text-slate-600">{{ detail }}</p>
+          </article>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-wild-navy px-4 py-16 text-white sm:px-6 lg:px-8">
+      <div class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-amber-300">Take the next step</p>
+          <h2 class="mt-3 font-display text-3xl sm:text-4xl">Tell us what you have in mind.</h2>
+          <p class="mt-3 max-w-2xl leading-7 text-slate-300">Share your interests and timing. We’ll discuss possible options and confirm what is available.</p>
+        </div>
+        <a href="/contact" class="shrink-0 rounded-xl bg-amber-300 px-6 py-4 font-bold text-wild-navy transition hover:bg-amber-200">Contact WILD <span class="ml-2" aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <nav class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8" aria-label="Other expedition types">
+      <h2 class="font-bold text-wild-navy">Explore other journeys</h2>
+      <ul class="mt-4 flex flex-wrap gap-3">
+        {% for slug, page in expedition_pages if page.title != expedition.title %}
+        <li><a href="{{ url_for('expedition_detail', slug=slug) }}" class="inline-flex rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-wild-green hover:text-wild-green">{{ page.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </main>
+
+  <footer class="bg-wild-navy px-4 py-10 text-white sm:px-6 lg:px-8">
+    <div class="mx-auto flex max-w-7xl flex-col justify-between gap-5 sm:flex-row sm:items-center">
+      <a href="/" class="font-bold">WILD AFRICA ACCESS <span class="font-normal text-slate-400">· Africa, accessed differently.</span></a>
+      <nav aria-label="Footer navigation" class="flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-300">
+        <a href="/expeditions" class="hover:text-white">Expeditions</a>
+        <a href="/destinations" class="hover:text-white">Destinations</a>
+        <a href="/safety" class="hover:text-white">Safety</a>
+        <a href="/contact" class="hover:text-white">Contact</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

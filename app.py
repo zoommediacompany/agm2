@@ -6,7 +6,7 @@ import psycopg2
 from psycopg2.extras import RealDictCursor
 from pathlib import Path
 
-from flask import Flask, Response, flash, g, redirect, render_template, request, send_file, send_from_directory, session, url_for
+from flask import Flask, Response, abort, flash, g, redirect, render_template, request, send_file, send_from_directory, session, url_for
 from werkzeug.utils import secure_filename
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -113,6 +113,106 @@ def expeditions():
     return send_file(BASE_DIR / "pages" / "programs.html")
 
 
+EXPEDITION_PAGES = {
+    "wildlife-safaris": {
+        "title": "Wildlife Safaris",
+        "eyebrow": "Wildlife",
+        "description": "Explore possible wildlife experiences in Uganda, from forest encounters to savannah landscapes. Sightings, permits and access depend on availability and are confirmed before plans are made.",
+        "image": "JDR_1668a.jpg",
+        "image_alt": "Mountain gorilla in a forest",
+        "intro": "Start with the wildlife and habitats that interest you. We can discuss possible gorilla trekking, chimpanzee tracking, birding and savannah experiences, along with seasonal conditions and practical requirements.",
+        "highlights": [
+            ("Forest wildlife", "Ask about possible gorilla and chimpanzee experiences, subject to permits, local rules and confirmed availability."),
+            ("Savannah and birdlife", "Discuss wildlife viewing and birding possibilities that suit your interests, timing and travel pace."),
+            ("Responsible encounters", "Plan around established guidance that respects animal welfare, habitat and community priorities."),
+        ],
+        "cta": "Ask about wildlife experiences",
+    },
+    "photography": {
+        "title": "Photography",
+        "eyebrow": "Photography",
+        "description": "Shape a photography-focused journey around wildlife, landscapes, conservation or everyday life, with respect for people, place and wildlife.",
+        "image": "JDR_1668a.jpg",
+        "image_alt": "Mountain gorilla in a forest",
+        "intro": "Tell us what you want to photograph, the equipment or support you need, and how you like to work. We can discuss possible locations, timing, access requirements and respectful photography practices.",
+        "highlights": [
+            ("Wildlife and landscapes", "Explore possible settings and seasonal considerations without promising sightings or conditions."),
+            ("People-first storytelling", "Seek consent, respect privacy and follow community guidance when photographing people and cultural life."),
+            ("Practical planning", "Discuss group size, pace, equipment, transport and any permits or permissions that may be required."),
+        ],
+        "cta": "Discuss a photography journey",
+    },
+    "mountain-adventures": {
+        "title": "Mountain Adventures",
+        "eyebrow": "Adventure",
+        "description": "Explore possible hikes and mountain journeys in Uganda and the wider region, matched to your experience, interests and preparation.",
+        "image": "african-white-water-rafting-adventure.jpg",
+        "image_alt": "Travellers taking part in an outdoor adventure in Africa",
+        "intro": "Share the kind of challenge you have in mind, your previous experience and your available dates. We can discuss possible routes, preparation, fitness expectations, local guidance and conditions before any arrangements are confirmed.",
+        "highlights": [
+            ("Choose your pace", "Discuss route ideas and activity levels that fit your group and experience."),
+            ("Prepare responsibly", "Review equipment, fitness, weather, altitude and other practical considerations with the relevant local operator."),
+            ("Confirm the details", "Routes, guides, permits and availability are subject to local conditions and confirmation."),
+        ],
+        "cta": "Plan a mountain adventure",
+    },
+    "conservation": {
+        "title": "Conservation",
+        "eyebrow": "Learning and conservation",
+        "description": "Ask about conservation learning and field experiences where a suitable host, clear participant role and appropriate supervision can be confirmed.",
+        "image": "uganda-community-cultural-experience-volunteers.jpg",
+        "image_alt": "Travelers and local community members gathered outdoors in Uganda",
+        "intro": "Conservation experiences should support locally defined priorities. Tell us about your interests, skills and learning goals so we can explore whether an appropriate host opportunity exists. Participation is never guaranteed and depends on the host's requirements.",
+        "highlights": [
+            ("Locally defined priorities", "Any proposed activity should respond to the needs and guidance of its local host."),
+            ("Clear roles and supervision", "Responsibilities, safeguarding and supervision must be agreed before participation."),
+            ("Learning with care", "Discuss realistic learning goals and how to participate without disrupting ongoing work."),
+        ],
+        "cta": "Enquire about conservation learning",
+    },
+    "cultural-immersion": {
+        "title": "Cultural Immersion",
+        "eyebrow": "Culture and connection",
+        "description": "Explore food, history, art and everyday life through respectful exchange shaped with local hosts and communities.",
+        "image": "uganda-community-cultural-experience-volunteers.jpg",
+        "image_alt": "Travelers and local community members gathered outdoors in Uganda",
+        "intro": "Tell us which aspects of culture and community life you hope to learn about. We can discuss possible introductions and activities with local hosts, guided by consent, context and the wishes of the people involved.",
+        "highlights": [
+            ("Learn through exchange", "Explore possibilities around food, history, arts and everyday life with local context."),
+            ("Follow community guidance", "Activities and photography should respect local customs, consent and privacy."),
+            ("Build time for connection", "Plan at a thoughtful pace that leaves room for conversation and learning."),
+        ],
+        "cta": "Discuss a cultural experience",
+    },
+    "private-journeys": {
+        "title": "Private Journeys",
+        "eyebrow": "Made around you",
+        "description": "Bring your interests, dates and group together to explore whether a private journey can be arranged around your needs.",
+        "image": "african-white-water-rafting-team.jpg",
+        "image_alt": "Travelers enjoying a white-water rafting adventure",
+        "intro": "Share the experience you have in mind, who is travelling, your preferred timing and any practical needs. We will discuss suitable possibilities and clearly confirm what can be arranged before you commit.",
+        "highlights": [
+            ("Your interests first", "Combine wildlife, adventure, culture or photography ideas into a conversation about possible options."),
+            ("A pace for your group", "Discuss group size, accessibility needs, activity level and preferred travel rhythm."),
+            ("Clear confirmation", "Availability, inclusions, costs and logistics are confirmed individually before booking."),
+        ],
+        "cta": "Start planning a private journey",
+    },
+}
+
+
+@app.route("/expeditions/<slug>")
+def expedition_detail(slug):
+    expedition = EXPEDITION_PAGES.get(slug)
+    if expedition is None:
+        abort(404)
+    return render_template(
+        "expedition_detail.html",
+        expedition=expedition,
+        expedition_pages=list(EXPEDITION_PAGES.items()),
+    )
+
+
 @app.route("/universities")
 def universities():
     return send_file(BASE_DIR / "pages" / "universities.html")
@@ -125,7 +225,10 @@ def exchange():
 
 @app.route("/build-my-wild")
 def build_my_wild():
-    return send_file(BASE_DIR / "pages" / "travel.html")
+    return render_template(
+        "build_my_wild.html",
+        expedition_pages=list(EXPEDITION_PAGES.items()),
+    )
 
 
 @app.route("/students")
@@ -135,12 +238,12 @@ def students():
 
 @app.route("/travel")
 def travel():
-    return send_file(BASE_DIR / "pages" / "travel.html")
+    return render_template("travel.html")
 
 
 @app.route("/about")
 def about():
-    return send_file(BASE_DIR / "pages" / "about.html")
+    return render_template("about.html")
 
 
 @app.route("/contact")

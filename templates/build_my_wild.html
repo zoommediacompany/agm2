@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Build a thoughtful African journey around your interests, timing and travel style with WILD AFRICA ACCESS." />
+  <meta name="theme-color" content="#071426" />
+  <title>Build My Wild | WILD AFRICA ACCESS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["DM Sans", "sans-serif"],
+            display: ["Playfair Display", "serif"],
+          },
+          colors: {
+            wild: {
+              navy: "#071426",
+              blue: "#2563EB",
+              green: "#16803C",
+              gold: "#D6A84F",
+              cream: "#F7F5EF",
+            },
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-wild-cream font-sans text-wild-navy antialiased">
+  <header class="relative z-20 border-b border-slate-200 bg-white">
+    <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-4 sm:px-6 lg:px-8">
+      <a href="/" class="flex items-center gap-3" aria-label="WILD AFRICA ACCESS home">
+        <span class="grid h-11 w-11 place-items-center rounded-xl bg-wild-navy text-sm font-extrabold text-white">WILD</span>
+        <span>
+          <span class="block font-extrabold tracking-tight">WILD AFRICA ACCESS</span>
+          <span class="hidden text-[9px] uppercase tracking-[0.2em] text-slate-500 sm:block">The African Access Company</span>
+        </span>
+      </a>
+      <nav aria-label="Main navigation" class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm font-semibold sm:gap-x-6">
+        <details class="group relative">
+          <summary class="cursor-pointer list-none hover:text-wild-green">Expeditions <span aria-hidden="true">⌄</span></summary>
+          <ul class="absolute left-0 z-30 mt-3 grid min-w-56 gap-1 rounded-xl border border-slate-200 bg-white p-3 shadow-xl">
+            {% for slug, expedition in expedition_pages %}
+            <li><a href="{{ url_for('expedition_detail', slug=slug) }}" class="block rounded-lg px-3 py-2 hover:bg-slate-50">{{ expedition.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </details>
+        <a href="/travel" class="hidden text-slate-700 hover:text-wild-green sm:inline">Travel</a>
+        <a href="/about" class="hidden text-slate-700 hover:text-wild-green sm:inline">About</a>
+        <a href="/contact" class="hidden text-slate-700 hover:text-wild-green sm:inline">Contact</a>
+        <a href="/apply" class="rounded-lg bg-amber-300 px-4 py-2 font-bold transition hover:bg-amber-200">Send an enquiry</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="overflow-hidden bg-wild-navy text-white">
+      <div class="mx-auto grid max-w-7xl lg:min-h-[640px] lg:grid-cols-[1fr_0.9fr]">
+        <div class="flex flex-col justify-center px-5 py-16 sm:px-8 lg:px-12 lg:py-20">
+          <p class="text-xs font-bold uppercase tracking-[0.25em] text-amber-300">Your journey, thoughtfully considered</p>
+          <h1 class="mt-6 max-w-2xl font-display text-5xl leading-[1.08] sm:text-6xl">Africa begins with a question.</h1>
+          <p class="mt-6 max-w-xl text-lg leading-8 text-slate-300">What would you love to experience, learn or understand? Start there. We’ll help you explore what could make sense in Uganda, with local context and practical details confirmed along the way.</p>
+          <div class="mt-9 flex flex-wrap gap-3">
+            <a href="#your-ideas" class="rounded-full bg-amber-300 px-6 py-3 font-bold text-wild-navy transition hover:bg-amber-200">Shape your idea <span aria-hidden="true">↓</span></a>
+            <a href="/apply" class="rounded-full border border-white/30 px-6 py-3 font-bold text-white transition hover:bg-white/10">Start an enquiry <span aria-hidden="true">→</span></a>
+          </div>
+          <p class="mt-8 text-xs leading-5 text-slate-400">An enquiry starts a conversation. It does not confirm availability, a booking or a particular experience.</p>
+        </div>
+        <div class="relative min-h-[340px] overflow-hidden sm:min-h-[440px] lg:min-h-full">
+          <img src="/images/african-white-water-rafting-team.jpg" alt="Travelers working together on a white-water rafting journey" class="absolute inset-0 h-full w-full object-cover" fetchpriority="high" />
+          <div class="absolute inset-0 bg-gradient-to-t from-wild-navy/70 via-transparent to-transparent lg:bg-gradient-to-r lg:from-wild-navy/30 lg:via-transparent lg:to-transparent"></div>
+          <div class="absolute bottom-6 left-5 right-5 rounded-2xl border border-white/20 bg-wild-navy/75 p-5 backdrop-blur-sm sm:bottom-8 sm:left-8 sm:right-8">
+            <p class="text-xs font-bold uppercase tracking-[0.2em] text-amber-300">A good place to begin</p>
+            <p class="mt-2 font-display text-2xl">Curiosity first. Details next.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="your-ideas" class="px-4 py-20 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:gap-16">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[0.22em] text-wild-green">01 / What draws you in?</p>
+            <h2 class="mt-4 font-display text-4xl leading-tight sm:text-5xl">Pick a thread to follow.</h2>
+          </div>
+          <div>
+            <p class="max-w-2xl leading-7 text-slate-600">Your starting point can be a place, a question, a landscape or a feeling. Explore a few directions below; you do not need to have the whole trip figured out.</p>
+            <div class="mt-7 grid gap-3 sm:grid-cols-2">
+              {% for slug, expedition in expedition_pages %}
+              <a href="{{ url_for('expedition_detail', slug=slug) }}" class="group flex min-h-24 items-center justify-between gap-4 rounded-xl border border-slate-200 bg-white px-5 py-4 transition hover:border-wild-green hover:shadow-md">
+                <span>
+                  <span class="block font-bold group-hover:text-wild-green">{{ expedition.title }}</span>
+                  <span class="mt-1 block text-sm leading-5 text-slate-500">{{ expedition.eyebrow }}</span>
+                </span>
+                <span class="text-xl text-wild-green transition group-hover:translate-x-1" aria-hidden="true">↗</span>
+              </a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-y border-slate-200 bg-white px-4 py-20 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="max-w-2xl">
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-wild-green">02 / How it takes shape</p>
+          <h2 class="mt-4 font-display text-4xl leading-tight sm:text-5xl">A conversation, not a catalogue.</h2>
+        </div>
+        <div class="mt-12 grid gap-8 md:grid-cols-3">
+          <article class="border-t-2 border-amber-400 pt-5">
+            <span class="font-display text-4xl text-slate-300">01</span>
+            <h3 class="mt-4 text-xl font-bold">Tell us what matters</h3>
+            <p class="mt-3 leading-7 text-slate-600">Share your interests, who is travelling, when you hope to go and what you want the experience to feel like.</p>
+          </article>
+          <article class="border-t-2 border-amber-400 pt-5">
+            <span class="font-display text-4xl text-slate-300">02</span>
+            <h3 class="mt-4 text-xl font-bold">Explore what is possible</h3>
+            <p class="mt-3 leading-7 text-slate-600">We’ll discuss relevant local context, practical needs and whether suitable hosts or arrangements can be confirmed.</p>
+          </article>
+          <article class="border-t-2 border-amber-400 pt-5">
+            <span class="font-display text-4xl text-slate-300">03</span>
+            <h3 class="mt-4 text-xl font-bold">Confirm before you commit</h3>
+            <p class="mt-3 leading-7 text-slate-600">Timing, access, availability, responsibilities and costs are clarified with you before any plan is agreed.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-4 py-20 sm:px-6 lg:px-8">
+      <div class="mx-auto grid max-w-7xl overflow-hidden rounded-3xl bg-[#e8e4d8] lg:grid-cols-[1fr_0.8fr]">
+        <div class="p-7 sm:p-10 lg:p-14">
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-wild-green">03 / A few helpful details</p>
+          <h2 class="mt-4 font-display text-3xl leading-tight sm:text-4xl">Bring the rough draft.</h2>
+          <p class="mt-5 leading-7 text-slate-600">A first enquiry can be simple. The more context you share, the easier it is to have a useful conversation.</p>
+          <ul class="mt-7 space-y-4 text-slate-700">
+            <li class="flex gap-3"><span class="font-bold text-wild-green">→</span><span>Your interests or the reason for travelling</span></li>
+            <li class="flex gap-3"><span class="font-bold text-wild-green">→</span><span>Possible dates and how flexible they are</span></li>
+            <li class="flex gap-3"><span class="font-bold text-wild-green">→</span><span>Who is coming and any access or pace considerations</span></li>
+            <li class="flex gap-3"><span class="font-bold text-wild-green">→</span><span>Questions you would like answered before deciding</span></li>
+          </ul>
+        </div>
+        <div class="flex flex-col justify-between bg-wild-navy p-7 text-white sm:p-10 lg:p-14">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-[0.22em] text-amber-300">Good to know</span>
+            <h3 class="mt-5 font-display text-3xl">Uganda is our starting point.</h3>
+            <p class="mt-5 leading-7 text-slate-300">Experiences depend on local conditions, partner availability, permissions and suitability. We’ll be clear about what is known and what still needs confirmation.</p>
+          </div>
+          <a href="/apply" class="mt-10 inline-flex items-center justify-center gap-3 rounded-xl bg-amber-300 px-6 py-4 text-center font-bold text-wild-navy transition hover:bg-amber-200">Start your enquiry <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-wild-navy text-white">
+    <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
+        <div class="lg:col-span-2">
+          <a href="/" class="font-extrabold tracking-tight">WILD AFRICA ACCESS</a>
+          <p class="mt-4 max-w-sm text-sm leading-6 text-slate-300">The African Access Company. Helping people navigate meaningful experiences and opportunities in Africa, starting in Uganda.</p>
+        </div>
+        <nav aria-label="Explore">
+          <h2 class="font-bold">Explore</h2>
+          <ul class="mt-4 space-y-3 text-sm text-slate-300">
+            <li><a href="/expeditions" class="hover:text-white">Expeditions</a></li>
+            <li><a href="/travel" class="hover:text-white">Travel with WILD</a></li>
+            <li><a href="/destinations" class="hover:text-white">Destinations</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Programs">
+          <h2 class="font-bold">Programs</h2>
+          <ul class="mt-4 space-y-3 text-sm text-slate-300">
+            <li><a href="/exchange" class="hover:text-white">Exchange</a></li>
+            <li><a href="/students" class="hover:text-white">For students</a></li>
+            <li><a href="/universities" class="hover:text-white">For universities</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Company">
+          <h2 class="font-bold">Company</h2>
+          <ul class="mt-4 space-y-3 text-sm text-slate-300">
+            <li><a href="/about" class="hover:text-white">About us</a></li>
+            <li><a href="/safety" class="hover:text-white">Safety</a></li>
+            <li><a href="/contact" class="hover:text-white">Contact</a></li>
+            <li><a href="/apply" class="hover:text-white">Send an enquiry</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="mt-10 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-slate-400 sm:flex-row sm:justify-between">
+        <p>© 2026 WILD AFRICA ACCESS. All rights reserved.</p>
+        <p>Africa, accessed differently.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
