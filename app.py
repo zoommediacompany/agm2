@@ -6,7 +6,7 @@ import psycopg2
 from psycopg2.extras import RealDictCursor
 from pathlib import Path
 
-from flask import Flask, Response, flash, g, redirect, render_template, request, send_file, session, url_for
+from flask import Flask, Response, flash, g, redirect, render_template, request, send_file, send_from_directory, session, url_for
 from werkzeug.utils import secure_filename
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -96,6 +96,11 @@ def admin_required(view):
 @app.route("/")
 def home():
     return send_file(BASE_DIR / "pages" / "travel.html")
+
+
+@app.route("/images/<path:filename>")
+def image_file(filename):
+    return send_from_directory(BASE_DIR / "images", filename)
 
 
 @app.route("/programs")
