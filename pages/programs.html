@@ -9,12 +9,12 @@
 
   <meta
     name="description"
-    content="Explore wildlife, photography, adventure, conservation, culture and private journey enquiries with WILD AFRICA ACCESS."
+    content="Explore wildlife, photography, adventure, conservation, culture and private journey enquiries with Vild."
   />
 
   <meta name="theme-color" content="#020617" />
 
-  <title>Expeditions | WILD AFRICA ACCESS</title>
+  <title>Expeditions | Vild</title>
 
   <!-- ========================================================= -->
   <!-- FONTS -->
@@ -131,6 +131,29 @@
       transform: translateY(0);
     }
 
+    .expedition-menu {
+      left: 50%;
+      width: min(720px, calc(100vw - 2rem));
+      transform: translate(-50%, 10px);
+    }
+
+    .mega-parent:hover .expedition-menu,
+    .mega-parent:focus-within .expedition-menu {
+      transform: translate(-50%, 0);
+    }
+
+    .destination-menu {
+      position: fixed;
+      top: 76px;
+      left: 50vw;
+      transform: translate(-50%, 10px);
+    }
+
+    .mega-parent:hover .destination-menu,
+    .mega-parent:focus-within .destination-menu {
+      transform: translate(-50%, 0);
+    }
+
     .mobile-submenu {
       display: none;
     }
@@ -147,15 +170,15 @@
   </style>
 </head>
 
-<body class="bg-white text-slate-900 antialiased">
+<body class="bg-white text-slate-900 antialiased overflow-x-clip">
 
 <header
     id="site-header"
-    class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur-xl"
+    class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 lg:backdrop-blur-xl"
   >
 
     <div
-      class="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
+      class="mx-auto grid h-[76px] max-w-7xl grid-cols-[auto_1fr_auto] items-center px-4 sm:px-6 lg:px-8"
     >
 
       <!-- LOGO -->
@@ -163,7 +186,7 @@
       <a
         href="/"
         class="group flex items-center gap-3"
-        aria-label="WILD AFRICA ACCESS home"
+        aria-label="Vild home"
       >
 
         <div
@@ -177,7 +200,7 @@
           <div
             class="text-lg font-bold tracking-tight text-wild-navy"
           >
-            WILD AFRICA ACCESS
+            Vild
           </div>
 
           <div
@@ -196,13 +219,23 @@
       <!-- ===================================================== -->
 
       <nav
-        class="hidden lg:block"
+        class="relative hidden justify-self-center lg:block"
         aria-label="Main navigation"
       >
 
-        <ul class="flex items-center">
+        <ul class="flex items-center justify-center">
 
-          <!-- EXPEDITIONS -->
+          <!-- DESTINATIONS -->
+<li class="mega-parent">
+  <button type="button" class="flex items-center gap-1 rounded-lg px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950">Destinations</button>
+  <div class="destination-menu mega-menu z-50 w-[min(1200px,calc(100vw-2rem))] pt-4"><div class="grid grid-cols-5 gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-2xl">
+<a href="/destinations/uganda" class="group overflow-hidden rounded-xl border border-slate-200 bg-white transition hover:-translate-y-0.5 hover:shadow-lg"><div class="h-24 overflow-hidden"><img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Magherita_Peak_on_Mountain_Rwenzori.jpg" alt="Margherita Peak in the Rwenzori Mountains" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" /></div><div class="p-3"><h3 class="font-bold text-slate-900">Uganda &#x1F1FA;&#x1F1EC;</h3><p class="mt-1 text-xs leading-5 text-slate-600">Kampala &middot; Entebbe &middot; Rwenzori</p><p class="mt-1 text-[9px] leading-4 text-slate-500">Peak image: Rebeccananonof / Wikimedia Commons (CC0)</p></div></a><a href="/destinations/kenya" class="group overflow-hidden rounded-xl border border-slate-200 bg-white transition hover:-translate-y-0.5 hover:shadow-lg"><div class="h-24 overflow-hidden"><img src="/images/desitationscover.JPG" alt="East African savannah and wildlife" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" /></div><div class="p-3"><h3 class="font-bold text-slate-900">Kenya &#x1F1F0;&#x1F1EA;</h3><p class="mt-1 text-xs leading-5 text-slate-600">Nairobi &middot; Mombasa &middot; Maasai Mara</p></div></a>
+<a href="/destinations/tanzania" class="group overflow-hidden rounded-xl border border-slate-200 bg-white transition hover:-translate-y-0.5 hover:shadow-lg"><div class="h-24 overflow-hidden"><img src="/images/JDR_1501.JPG" alt="African wildlife landscape" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" /></div><div class="p-3"><h3 class="font-bold text-slate-900">Tanzania &#x1F1F9;&#x1F1FF;</h3><p class="mt-1 text-xs leading-5 text-slate-600">Arusha &middot; Dar es Salaam &middot; Mwanza</p></div></a>
+<a href="/destinations/rwanda" class="group overflow-hidden rounded-xl border border-slate-200 bg-white transition hover:-translate-y-0.5 hover:shadow-lg"><div class="h-24 overflow-hidden"><img src="/images/JDR_1668a.jpg" alt="Mountain gorilla in a forest" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" /></div><div class="p-3"><h3 class="font-bold text-slate-900">Rwanda &#x1F1F7;&#x1F1FC;</h3><p class="mt-1 text-xs leading-5 text-slate-600">Kigali &middot; Musanze &middot; Rubavu</p></div></a>
+<a href="/destinations/zanzibar" class="group overflow-hidden rounded-xl border border-slate-200 bg-white transition hover:-translate-y-0.5 hover:shadow-lg"><div class="h-24 overflow-hidden"><img src="/images/JDR_3403A.jpg" alt="East African landscape" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" /></div><div class="p-3"><h3 class="font-bold text-slate-900">Zanzibar &#x1F1F9;&#x1F1FF;</h3><p class="mt-1 text-xs leading-5 text-slate-600">Stone Town &middot; Nungwi &middot; Paje</p></div></a>
+</div></div>
+</li>
+<!-- EXPEDITIONS -->
 
           <li class="mega-parent relative">
 
@@ -230,7 +263,7 @@
             <!-- MEGA MENU -->
 
             <div
-              class="mega-menu absolute left-0 top-full z-50 w-[720px] pt-4"
+              class="mega-menu expedition-menu absolute top-full z-50 pt-4"
             >
 
               <div
@@ -266,7 +299,7 @@
 
                         <div>
                           <div class="font-bold">
-                            Wildlife Safaris
+                            Gorilla safaris
                           </div>
 
                           <p class="mt-1 text-xs text-slate-500">
@@ -295,7 +328,7 @@
 
                         <div>
                           <div class="font-bold">
-                            Photography
+                            Photography Tours
                           </div>
 
                           <p class="mt-1 text-xs text-slate-500">
@@ -408,7 +441,7 @@
 
                         <div>
                           <div class="font-bold">
-                            Cultural Immersion
+                            Cultural exchange
                           </div>
 
                           <p class="mt-1 text-xs text-slate-500">
@@ -437,7 +470,7 @@
 
                         <div>
                           <div class="font-bold">
-                            Private Journeys
+                            Private tours
                           </div>
 
                           <p class="mt-1 text-xs text-slate-500">
@@ -515,7 +548,7 @@
                       href="/contact"
                       class="text-xs font-bold text-blue-600"
                     >
-                      Talk to WILD →
+                      Contact Vild →
                     </a>
 
                   </div>
@@ -611,22 +644,7 @@
 
           </li>
 
-
-          <!-- BUILD MY WILD -->
-
-          <li>
-
-            <a
-              href="/build-my-wild"
-              class="block rounded-lg px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950"
-            >
-              Build My Wild
-            </a>
-
-          </li>
-
-
-          <!-- WHY WILD -->
+<!-- WHY WILD -->
 
           <li class="mega-parent relative">
 
@@ -634,7 +652,7 @@
               type="button"
               class="flex items-center gap-1 rounded-lg px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950"
             >
-              Why WILD
+              Why Vild
 
               <svg
                 class="h-4 w-4"
@@ -666,11 +684,11 @@
                   class="block rounded-xl p-4 transition hover:bg-slate-50"
                 >
                   <div class="font-bold">
-                    The WILD Standard
+                    The Vild Standard
                   </div>
 
                   <p class="mt-1 text-sm text-slate-500">
-                    Why WILD AFRICA ACCESS.
+                    Why Vild.
                   </p>
                 </a>
 
@@ -680,7 +698,7 @@
                   class="block rounded-xl p-4 transition hover:bg-slate-50"
                 >
                   <div class="font-bold">
-                    WILD Verified
+                    Vild Verified
                   </div>
 
                   <p class="mt-1 text-sm text-slate-500">
@@ -755,10 +773,10 @@
         </a>
 
         <a
-          href="/build-my-wild"
+          href="/contact"
           class="rounded-xl bg-amber-400 px-5 py-3 text-sm font-bold text-slate-950 shadow-lg shadow-amber-400/20 transition hover:bg-amber-300"
         >
-          Build My Wild
+          Get a Quote
         </a>
 
       </div>
@@ -771,7 +789,7 @@
         type="button"
         aria-label="Open navigation menu"
         aria-expanded="false"
-        class="rounded-xl border border-slate-200 p-2.5 text-slate-700 lg:hidden"
+        class="justify-self-end rounded-xl border border-slate-200 p-2.5 text-slate-700 lg:hidden"
       >
 
         <svg
@@ -808,14 +826,20 @@
       </button>
 
 
-          <div
-            id="mobile-menu"
-            class="absolute top-full left-0 right-0 bg-white shadow-lg border-t border-slate-100 hidden lg:hidden"
-          >
+          <button id="mobile-menu-backdrop" type="button" aria-label="Close navigation menu" class="fixed inset-0 z-[60] hidden bg-slate-950/40 opacity-0 transition-opacity duration-300 lg:hidden"></button>
+          <div id="mobile-menu" aria-label="Mobile navigation" aria-hidden="true" inert class="fixed inset-y-0 right-0 z-[70] w-[min(88vw,24rem)] translate-x-full overflow-y-auto bg-white shadow-2xl transition-transform duration-300 ease-out lg:hidden">
 
+              <div class="sticky top-0 z-10 flex items-center justify-between border-b border-slate-100 bg-white px-5 py-4"><span class="font-bold text-wild-navy">Menu</span><button id="mobile-menu-close" type="button" aria-label="Close navigation menu" class="grid h-10 w-10 place-items-center rounded-lg border border-slate-200 text-wild-navy"><svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M6 6l12 12M6 18L18 6" /></svg></button></div>
               <div class="flex flex-col px-4 pb-6">
 
-              <!-- EXPEDITIONS -->
+              <!-- DESTINATIONS -->
+<div class="border-b border-slate-100 py-3"><p class="font-semibold">Destinations</p><div class="mt-3 grid grid-cols-2 gap-2">
+<a href="/destinations/uganda" class="overflow-hidden rounded-lg border border-slate-200 bg-white"><img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Magherita_Peak_on_Mountain_Rwenzori.jpg" alt="Margherita Peak in the Rwenzori Mountains" class="h-16 w-full object-cover" loading="lazy" /><span class="block px-2 pt-2 text-xs font-bold text-slate-900">Uganda &#x1F1FA;&#x1F1EC;</span><span class="block px-2 pb-2 text-[10px] leading-4 text-slate-600">Kampala &middot; Entebbe &middot; Rwenzori</span><span class="block px-2 pb-2 text-[9px] leading-3 text-slate-500">Peak image: Rebeccananonof / Wikimedia Commons (CC0)</span></a><a href="/destinations/kenya" class="overflow-hidden rounded-lg border border-slate-200 bg-white"><img src="/images/desitationscover.JPG" alt="East African savannah and wildlife" class="h-16 w-full object-cover" loading="lazy" /><span class="block px-2 pt-2 text-xs font-bold text-slate-900">Kenya &#x1F1F0;&#x1F1EA;</span><span class="block px-2 pb-2 text-[10px] leading-4 text-slate-600">Nairobi &middot; Mombasa &middot; Maasai Mara</span></a>
+<a href="/destinations/tanzania" class="overflow-hidden rounded-lg border border-slate-200 bg-white"><img src="/images/JDR_1501.JPG" alt="African wildlife landscape" class="h-16 w-full object-cover" loading="lazy" /><span class="block px-2 pt-2 text-xs font-bold text-slate-900">Tanzania &#x1F1F9;&#x1F1FF;</span><span class="block px-2 pb-2 text-[10px] leading-4 text-slate-600">Arusha &middot; Dar es Salaam &middot; Mwanza</span></a>
+<a href="/destinations/rwanda" class="overflow-hidden rounded-lg border border-slate-200 bg-white"><img src="/images/JDR_1668a.jpg" alt="Mountain gorilla in a forest" class="h-16 w-full object-cover" loading="lazy" /><span class="block px-2 pt-2 text-xs font-bold text-slate-900">Rwanda &#x1F1F7;&#x1F1FC;</span><span class="block px-2 pb-2 text-[10px] leading-4 text-slate-600">Kigali &middot; Musanze &middot; Rubavu</span></a>
+<a href="/destinations/zanzibar" class="overflow-hidden rounded-lg border border-slate-200 bg-white"><img src="/images/JDR_3403A.jpg" alt="East African landscape" class="h-16 w-full object-cover" loading="lazy" /><span class="block px-2 pt-2 text-xs font-bold text-slate-900">Zanzibar &#x1F1F9;&#x1F1FF;</span><span class="block px-2 pb-2 text-[10px] leading-4 text-slate-600">Stone Town &middot; Nungwi &middot; Paje</span></a>
+</div></div>
+<!-- EXPEDITIONS -->
 
               <div class="border-b border-slate-100">
 
@@ -852,14 +876,14 @@
                     href="/expeditions/wildlife-safaris"
                     class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
                   >
-                    Wildlife Safaris
+                    Gorilla safaris
                   </a>
 
                   <a
                     href="/expeditions/photography"
                     class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
                   >
-                    Photography
+                    Photography Tours
                   </a>
 
                   <a
@@ -877,14 +901,14 @@
                     href="/expeditions/cultural-immersion"
                     class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
                   >
-                    Cultural Immersion
+                    Cultural exchange
                   </a>
 
                   <a
                     href="/expeditions/private-journeys"
                     class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
                   >
-                    Private Journeys
+                    Private tours
                   </a>
 
                 </div>
@@ -955,10 +979,10 @@
               <!-- BUILD MY WILD -->
 
               <a
-                href="/build-my-wild"
+                href="/contact"
                 class="block border-b border-slate-100 py-4 font-semibold"
               >
-                Build My Wild
+                Get a Quote
               </a>
 
 
@@ -972,7 +996,7 @@
                   class="mobile-toggle flex w-full items-center justify-between py-4 text-left font-semibold"
                 >
 
-                  <span>Why WILD</span>
+                  <span>Why Vild</span>
 
                   <svg
                     class="mobile-arrow h-5 w-5 transition-transform"
@@ -1000,14 +1024,14 @@
                     href="/why-wild"
                     class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
                   >
-                    The WILD Standard
+                    The Vild Standard
                   </a>
 
                   <a
                     href="/why-wild"
                     class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
                   >
-                    WILD Verified
+                    Vild Verified
                   </a>
 
                   <a
@@ -1054,10 +1078,10 @@
                 </a>
 
                 <a
-                  href="/build-my-wild"
+                  href="/contact"
                   class="rounded-xl bg-amber-400 px-4 py-3 text-center text-sm font-bold text-slate-950"
                 >
-                  Build My Wild
+                  Get a Quote
                 </a>
 
               </div>
@@ -1110,7 +1134,7 @@
              <span class="text-3xl">✦</span>
              <h3 class="mt-5 text-xl font-bold text-slate-950">Photography</h3>
              <p class="mt-3 leading-7 text-slate-500">Discuss wildlife, documentary, landscape, conservation and cultural photography, with respect for privacy and wildlife.</p>
-             <a href="/expeditions/photography" class="mt-5 inline-flex font-bold text-emerald-800 hover:text-emerald-600">Explore photography <span class="ml-2" aria-hidden="true">→</span></a>
+             <a href="/expeditions/photography" class="mt-5 inline-flex font-bold text-emerald-800 hover:text-emerald-600">Explore photography <span class="ml-2" aria-hidden="true">→</span></a><a href="/expeditions/photography" class="group mt-2 block rounded-xl p-3 transition hover:bg-slate-50">Photography Tours</a>
            </article>
 
            <article class="border-t-4 border-emerald-700 bg-white p-8 transition hover:-translate-y-1 hover:shadow-lg">
@@ -1131,14 +1155,14 @@
              <span class="text-3xl">◎</span>
              <h3 class="mt-5 text-xl font-bold text-slate-950">Cultural Immersion</h3>
              <p class="mt-3 leading-7 text-slate-500">Explore food, history, art, music and everyday life through respectful exchange. People and communities are partners, not attractions.</p>
-             <a href="/expeditions/cultural-immersion" class="mt-5 inline-flex font-bold text-emerald-800 hover:text-emerald-600">Explore cultural immersion <span class="ml-2" aria-hidden="true">→</span></a>
+             <a href="/expeditions/cultural-immersion" class="mt-5 inline-flex font-bold text-emerald-800 hover:text-emerald-600">Explore cultural immersion <span class="ml-2" aria-hidden="true">→</span></a><a href="/expeditions/cultural-immersion" class="group mt-2 block rounded-xl p-3 transition hover:bg-slate-50">Cultural exchange</a>
            </article>
 
            <article class="border-t-4 border-emerald-700 bg-white p-8 transition hover:-translate-y-1 hover:shadow-lg">
              <span class="text-3xl">↗</span>
              <h3 class="mt-5 text-xl font-bold text-slate-950">Private Journeys</h3>
              <p class="mt-3 leading-7 text-slate-500">Share your dates, interests, group size, activity level and budget range to discuss whether a private journey can be arranged.</p>
-             <a href="/expeditions/private-journeys" class="mt-5 inline-flex font-bold text-emerald-800 hover:text-emerald-600">Explore private journeys <span class="ml-2" aria-hidden="true">→</span></a>
+             <a href="/expeditions/private-journeys" class="mt-5 inline-flex font-bold text-emerald-800 hover:text-emerald-600">Explore private journeys <span class="ml-2" aria-hidden="true">→</span></a><a href="/expeditions/private-journeys" class="group mt-2 block rounded-xl p-3 transition hover:bg-slate-50">Private tours</a>
            </article>
          </div>
        </div>
@@ -1151,17 +1175,17 @@
   <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
     <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-5">
       <div class="lg:col-span-2">
-        <a href="/" class="inline-flex items-center gap-3" aria-label="WILD AFRICA ACCESS home">
+        <a href="/" class="inline-flex items-center gap-3" aria-label="Vild home">
           <span class="grid h-11 w-11 place-items-center rounded-xl bg-white text-sm font-extrabold text-wild-navy">WILD</span>
           <span>
-            <span class="block font-extrabold">WILD AFRICA ACCESS</span>
+            <span class="block font-extrabold">Vild</span>
             <span class="block text-[9px] uppercase tracking-[0.2em] text-slate-400">The African Access Company · Africa, accessed differently.</span>
           </span>
         </a>
         <p class="mt-6 max-w-md leading-7 text-slate-300">We help travellers, students, universities, researchers and organisations navigate meaningful opportunities in Africa, starting in Uganda.</p>
         <div class="mt-7 flex flex-wrap gap-3">
           <a href="/build-my-wild" class="rounded-full bg-amber-300 px-5 py-3 text-sm font-bold text-wild-navy transition hover:bg-amber-200">Build your journey <span aria-hidden="true">→</span></a>
-          <a href="/contact" class="rounded-full border border-white/30 px-5 py-3 text-sm font-bold text-white transition hover:bg-white/10">Contact WILD</a>
+          <a href="/contact" class="rounded-full border border-white/30 px-5 py-3 text-sm font-bold text-white transition hover:bg-white/10">Contact Vild</a>
         </div>
       </div>
       <nav aria-label="Explore">
@@ -1192,7 +1216,7 @@
       </nav>
     </div>
     <div class="mt-14 flex flex-col justify-between gap-4 border-t border-white/10 pt-7 text-sm text-slate-400 sm:flex-row sm:items-center">
-      <p>© 2026 WILD AFRICA ACCESS. All rights reserved.</p>
+      <p>© 2026 Vild. All rights reserved.</p>
       <p>Africa, accessed differently.</p>
     </div>
   </div>
@@ -1224,40 +1248,39 @@
       );
 
 
-    function toggleMobileMenu() {
+    const mobileMenuBackdrop = document.getElementById("mobile-menu-backdrop");
+    const mobileMenuClose = document.getElementById("mobile-menu-close");
 
-      const isOpen =
-        !mobileMenu.classList.contains("hidden");
+    function setMobileMenuOpen(isOpen) {
+      mobileMenu.classList.toggle("translate-x-full", !isOpen);
+      mobileMenu.inert = !isOpen;
+      mobileMenu.setAttribute("aria-hidden", String(!isOpen));
+      mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
+      mobileMenuButton.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+      openIcon.classList.toggle("hidden", isOpen);
+      closeIcon.classList.toggle("hidden", !isOpen);
+      document.body.classList.toggle("no-scroll", isOpen);
 
-      mobileMenu.classList.toggle(
-        "hidden"
-      );
-
-      openIcon.classList.toggle(
-        "hidden"
-      );
-
-      closeIcon.classList.toggle(
-        "hidden"
-      );
-
-      mobileMenuButton.setAttribute(
-        "aria-expanded",
-        String(!isOpen)
-      );
-
-      document.body.classList.toggle(
-        "no-scroll",
-        !isOpen
-      );
-
+      if (isOpen) {
+        mobileMenuBackdrop.classList.remove("hidden");
+        requestAnimationFrame(() => mobileMenuBackdrop.classList.remove("opacity-0"));
+      } else {
+        mobileMenuBackdrop.classList.add("opacity-0");
+        window.setTimeout(() => {
+          if (mobileMenuButton.getAttribute("aria-expanded") === "false") {
+            mobileMenuBackdrop.classList.add("hidden");
+          }
+        }, 300);
+      }
     }
 
+    function toggleMobileMenu() {
+      setMobileMenuOpen(mobileMenuButton.getAttribute("aria-expanded") !== "true");
+    }
 
-    mobileMenuButton.addEventListener(
-      "click",
-      toggleMobileMenu
-    );
+    mobileMenuButton.addEventListener("click", toggleMobileMenu);
+    mobileMenuBackdrop.addEventListener("click", () => setMobileMenuOpen(false));
+    mobileMenuClose.addEventListener("click", () => setMobileMenuOpen(false));
 
 
     // =========================================================
@@ -1300,86 +1323,16 @@
 
 
     // =========================================================
-    // CLOSE MOBILE MENU AFTER NAVIGATION
-    // =========================================================
+        mobileMenu.addEventListener("click", (event) => {
+      if (event.target.closest("a")) setMobileMenuOpen(false);
+    });
 
-    document
-      .querySelectorAll(
-        "#mobile-menu a"
-      )
-      .forEach((link) => {
-
-        link.addEventListener(
-          "click",
-          () => {
-
-            mobileMenu.classList.add(
-              "hidden"
-            );
-
-            openIcon.classList.remove(
-              "hidden"
-            );
-
-            closeIcon.classList.add(
-              "hidden"
-            );
-
-            mobileMenuButton.setAttribute(
-              "aria-expanded",
-              "false"
-            );
-
-            document.body.classList.remove(
-              "no-scroll"
-            );
-
-          }
-        );
-
-      });
-
-
-    // =========================================================
-    // ESCAPE KEY
-    // =========================================================
-
-    document.addEventListener(
-      "keydown",
-      (event) => {
-
-        if (
-          event.key === "Escape" &&
-          !mobileMenu.classList.contains(
-            "hidden"
-          )
-        ) {
-
-          mobileMenu.classList.add(
-            "hidden"
-          );
-
-          openIcon.classList.remove(
-            "hidden"
-          );
-
-          closeIcon.classList.add(
-            "hidden"
-          );
-
-          mobileMenuButton.setAttribute(
-            "aria-expanded",
-            "false"
-          );
-
-          document.body.classList.remove(
-            "no-scroll"
-          );
-
-        }
-
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && mobileMenuButton.getAttribute("aria-expanded") === "true") {
+        setMobileMenuOpen(false);
+        mobileMenuButton.focus();
       }
-    );
+    });
 
       </script>
 

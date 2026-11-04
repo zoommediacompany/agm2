@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Build a thoughtful African journey around your interests, timing and travel style with WILD AFRICA ACCESS." />
+  <meta name="description" content="Build a thoughtful African journey around your interests, timing and travel style with Vild." />
   <meta name="theme-color" content="#071426" />
-  <title>Build My Wild | WILD AFRICA ACCESS</title>
+  <title>Build My Wild | Vild</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
@@ -32,17 +32,17 @@
     };
   </script>
 </head>
-<body class="bg-wild-cream font-sans text-wild-navy antialiased">
+<body class="bg-wild-cream font-sans text-wild-navy antialiased overflow-x-clip">
   <header class="relative z-20 border-b border-slate-200 bg-white">
     <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-4 sm:px-6 lg:px-8">
-      <a href="/" class="flex items-center gap-3" aria-label="WILD AFRICA ACCESS home">
+      <a href="/" class="flex items-center gap-3" aria-label="Vild home">
         <span class="grid h-11 w-11 place-items-center rounded-xl bg-wild-navy text-sm font-extrabold text-white">WILD</span>
         <span>
-          <span class="block font-extrabold tracking-tight">WILD AFRICA ACCESS</span>
+          <span class="block font-extrabold tracking-tight">Vild</span>
           <span class="hidden text-[9px] uppercase tracking-[0.2em] text-slate-500 sm:block">The African Access Company</span>
         </span>
       </a>
-      <nav aria-label="Main navigation" class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm font-semibold sm:gap-x-6">
+      <nav aria-label="Main navigation" class="hidden items-center gap-x-5 text-sm font-semibold lg:flex">
         <details class="group relative">
           <summary class="cursor-pointer list-none hover:text-wild-green">Expeditions <span aria-hidden="true">⌄</span></summary>
           <ul class="absolute left-0 z-30 mt-3 grid min-w-56 gap-1 rounded-xl border border-slate-200 bg-white p-3 shadow-xl">
@@ -56,7 +56,14 @@
         <a href="/contact" class="hidden text-slate-700 hover:text-wild-green sm:inline">Contact</a>
         <a href="/apply" class="rounded-lg bg-amber-300 px-4 py-2 font-bold transition hover:bg-amber-200">Send an enquiry</a>
       </nav>
-    </div>
+      <details class="group relative ml-auto lg:hidden" data-mobile-drawer>
+  <summary class="grid h-11 w-11 cursor-pointer list-none place-items-center rounded-lg border border-slate-200 text-wild-navy" aria-label="Open navigation menu"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16" /></svg></summary>
+  <button type="button" data-mobile-close aria-label="Close navigation menu" class="fixed inset-0 z-[60] hidden bg-slate-950/40 group-open:block"></button>
+  <nav data-mobile-panel aria-label="Mobile navigation" aria-hidden="true" inert class="fixed inset-y-0 right-0 z-[70] h-dvh w-[min(88vw,24rem)] translate-x-full overflow-y-auto bg-white p-5 text-sm font-semibold shadow-2xl transition-transform duration-300 ease-out group-open:translate-x-0">
+    <div class="sticky top-0 z-10 flex items-center justify-between border-b border-slate-100 bg-white pb-4"><span class="font-bold text-wild-navy">Menu</span><button type="button" data-mobile-close aria-label="Close navigation menu" class="grid h-10 w-10 place-items-center rounded-lg border border-slate-200 text-wild-navy"><svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M6 6l12 12M6 18L18 6" /></svg></button></div>
+    <a href="/expeditions" class="block border-b border-slate-100 py-4">Expeditions</a><a href="/travel" class="block border-b border-slate-100 py-4">Travel</a><a href="/about" class="block border-b border-slate-100 py-4">About Vild</a><a href="/contact" class="block border-b border-slate-100 py-4">Contact</a><a href="/apply" class="mt-5 block rounded-lg bg-amber-300 px-4 py-3 text-center font-bold text-wild-navy">Send an enquiry</a>
+  </nav>
+</details></div>
   </header>
 
   <main id="main-content">
@@ -163,7 +170,7 @@
     <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
       <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
         <div class="lg:col-span-2">
-          <a href="/" class="font-extrabold tracking-tight">WILD AFRICA ACCESS</a>
+          <a href="/" class="font-extrabold tracking-tight">Vild</a>
           <p class="mt-4 max-w-sm text-sm leading-6 text-slate-300">The African Access Company. Helping people navigate meaningful experiences and opportunities in Africa, starting in Uganda.</p>
         </div>
         <nav aria-label="Explore">
@@ -193,10 +200,29 @@
         </nav>
       </div>
       <div class="mt-10 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-slate-400 sm:flex-row sm:justify-between">
-        <p>© 2026 WILD AFRICA ACCESS. All rights reserved.</p>
+        <p>© 2026 Vild. All rights reserved.</p>
         <p>Africa, accessed differently.</p>
       </div>
     </div>
   </footer>
+<script>
+document.querySelectorAll("[data-mobile-drawer]").forEach((drawer) => {
+  const panel = drawer.querySelector("[data-mobile-panel]");
+  const closeButtons = drawer.querySelectorAll("[data-mobile-close]");
+  const syncDrawerState = () => {
+    panel.inert = !drawer.open;
+    panel.setAttribute("aria-hidden", String(!drawer.open));
+    document.body.classList.toggle("overflow-hidden", drawer.open);
+  };
+  drawer.addEventListener("toggle", syncDrawerState);
+  closeButtons.forEach((button) => button.addEventListener("click", () => { drawer.open = false; }));
+  panel.addEventListener("click", (event) => {
+    if (event.target.closest("a")) drawer.open = false;
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && drawer.open) drawer.open = false;
+  });
+});
+</script>
 </body>
 </html>

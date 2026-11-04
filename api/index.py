@@ -274,6 +274,92 @@ def destinations():
     return send_file(BASE_DIR / "pages" / "destinations.html")
 
 
+DESTINATION_PAGES = {
+    "uganda": {
+        "title": "Uganda",
+        "flag": "&#x1F1FA;&#x1F1EC;",
+        "eyebrow": "Pearl of Africa",
+        "description": "Explore Uganda's forests, wildlife, mountains and cities. Start with the places and experiences that interest you; routes and availability are confirmed individually.",
+        "image": "JDR_3685A.jpg",
+        "image_alt": "Mountain landscape in East Africa",
+        "places": ["Kampala", "Entebbe", "Bwindi", "Kibale", "Queen Elizabeth", "Murchison Falls", "Kidepo", "Rwenzori"],
+        "highlights": [
+            ("Forest and wildlife", "Discuss possible gorilla, chimpanzee and other wildlife experiences, subject to permits, local rules and confirmed availability."),
+            ("Mountains and landscapes", "Share your interest in the Rwenzori and other landscapes, along with your experience, activity level and timing."),
+            ("Cities and culture", "Explore questions about Kampala, Entebbe, local history, food and community life with context from local hosts."),
+        ],
+    },
+    "kenya": {
+        "title": "Kenya",
+        "flag": "&#x1F1F0;&#x1F1EA;",
+        "eyebrow": "East African landscapes",
+        "description": "From Nairobi and the coast to the Maasai Mara, Kenya offers many different landscapes and perspectives. Tell us what draws you to the country and what you hope to learn or experience.",
+        "image": "desitationscover.JPG",
+        "image_alt": "East African savannah landscape",
+        "places": ["Nairobi", "Mombasa", "Maasai Mara"],
+        "highlights": [
+            ("Nairobi", "Consider city, culture, conservation and institutional interests as starting points for an enquiry."),
+            ("Mombasa", "Explore coastal history, Swahili culture and Indian Ocean connections with local context."),
+            ("Maasai Mara", "Ask about wildlife and landscape interests; sightings, access, seasons and arrangements require individual confirmation."),
+        ],
+    },
+    "tanzania": {
+        "title": "Tanzania",
+        "flag": "&#x1F1F9;&#x1F1FF;",
+        "eyebrow": "Places and perspectives",
+        "description": "Tanzania connects mainland cities, highland regions and remarkable natural landscapes. Share the places you have in mind and we can discuss what may be possible.",
+        "image": "JDR_1501.JPG",
+        "image_alt": "Wildlife and landscape in East Africa",
+        "places": ["Arusha", "Dar es Salaam", "Mwanza"],
+        "highlights": [
+            ("Arusha", "Discuss regional travel interests, landscape and wildlife possibilities, subject to local conditions and availability."),
+            ("Dar es Salaam", "Explore city, coastal and cultural interests, including the connections that shape life along the coast."),
+            ("Mwanza", "Share your interest in Lake Victoria, local communities and the surrounding region."),
+        ],
+    },
+    "rwanda": {
+        "title": "Rwanda",
+        "flag": "&#x1F1F7;&#x1F1FC;",
+        "eyebrow": "Highlands and connection",
+        "description": "Explore Rwanda through its highland landscapes, cities and communities. Tell us what you hope to discover and we will clarify local arrangements and availability.",
+        "image": "JDR_1668a.jpg",
+        "image_alt": "Mountain gorilla in a forest",
+        "places": ["Kigali", "Musanze", "Rubavu"],
+        "highlights": [
+            ("Kigali", "Consider city history, culture and contemporary life as part of your interests."),
+            ("Musanze", "Ask about highland landscapes and possible wildlife experiences; permits and access must be confirmed."),
+            ("Rubavu", "Explore Lake Kivu and the western region through local context and practical planning."),
+        ],
+    },
+    "zanzibar": {
+        "title": "Zanzibar",
+        "flag": "&#x1F1F9;&#x1F1FF;",
+        "eyebrow": "Island life and history",
+        "description": "Zanzibar brings together island landscapes, coastal communities and a layered history shaped by the Indian Ocean. Share the experiences and places you are curious about.",
+        "image": "JDR_3403A.jpg",
+        "image_alt": "Coastal landscape in East Africa",
+        "places": ["Stone Town", "Nungwi", "Paje"],
+        "highlights": [
+            ("Stone Town", "Explore historic streets, architecture, food and the island's many cultural influences."),
+            ("Nungwi", "Discuss coastal and marine interests with attention to local guidance and environmental care."),
+            ("Paje", "Share your interest in beach life, coastal communities and the activities that may be available."),
+        ],
+    },
+}
+
+
+@app.route("/destinations/<slug>")
+def destination_detail(slug):
+    destination = DESTINATION_PAGES.get(slug)
+    if destination is None:
+        abort(404)
+    return render_template(
+        "destination_detail.html",
+        destination=destination,
+        destinations=DESTINATION_PAGES,
+    )
+
+
 @app.route("/journal")
 def journal():
     return send_file(BASE_DIR / "pages" / "safety.html")
