@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -22,67 +23,11 @@
   </script>
   <style>
     body { font-family: "DM Sans", sans-serif; }
-    .desktop-destinations:not([open]) .destination-menu { display: none; }
-    .desktop-destinations[open] .destination-menu { display: grid; }
   </style>
+  <link rel="stylesheet" href="/static/css/site-theme.css">
 </head>
 <body class="overflow-x-clip bg-wild-cream font-sans text-wild-navy antialiased">
-  <header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 lg:backdrop-blur-xl">
-    <div class="mx-auto grid min-h-[76px] max-w-7xl grid-cols-[1fr_auto] items-center px-4 sm:px-6 lg:grid-cols-[auto_1fr_auto] lg:px-8">
-      <a href="/" class="group flex items-center gap-3" aria-label="Vild home">
-        <span class="grid h-11 w-11 place-items-center rounded-xl bg-wild-navy text-sm font-bold text-white">WILD</span>
-        <span>
-          <span class="block font-bold tracking-tight">Vild</span>
-          <span class="hidden text-[9px] uppercase tracking-[0.2em] text-slate-500 sm:block">The African Access Company</span>
-        </span>
-      </a>
-      <nav aria-label="Main navigation" class="hidden items-center justify-self-center gap-1 text-sm font-semibold lg:flex">
-        <details class="desktop-destinations relative">
-          <summary class="cursor-pointer list-none rounded-lg px-3 py-3 hover:bg-slate-50">Destinations <span aria-hidden="true">⌄</span></summary>
-          <div class="destination-menu fixed left-1/2 top-[76px] z-50 w-[min(1200px,calc(100vw-2rem))] -translate-x-1/2 grid-cols-5 gap-3 rounded-xl border border-slate-200 bg-white p-4 shadow-xl">
-            {% for slug, item in destinations.items() %}
-            <a href="/destinations/{{ slug }}" class="overflow-hidden rounded-xl border border-slate-200 bg-white transition hover:-translate-y-0.5 hover:shadow-lg">
-              <img src="/images/{{ item.image }}" alt="{{ item.image_alt }}" class="h-24 w-full object-cover" loading="lazy">
-              <span class="block p-3 font-bold">{{ item.title }} {{ item.flag|safe }}</span>
-            </a>
-            {% endfor %}
-          </div>
-        </details>
-        <a href="/expeditions" class="rounded-lg px-3 py-3 hover:bg-slate-50">Expeditions</a>
-        <a href="/exchange" class="rounded-lg px-3 py-3 hover:bg-slate-50">Exchange programs</a>
-        <a href="/about" class="rounded-lg px-3 py-3 hover:bg-slate-50">About Vild</a>
-        <a href="/contact" class="rounded-lg px-3 py-3 hover:bg-slate-50">Contact Us</a>
-      </nav>
-      <a href="/contact" class="hidden justify-self-end rounded-xl bg-amber-300 px-4 py-2.5 text-sm font-bold transition hover:bg-amber-200 lg:block">Get a Quote</a>
-      <details class="mobile-drawer group relative justify-self-end lg:hidden" data-mobile-drawer>
-        <summary class="grid h-11 w-11 cursor-pointer list-none place-items-center rounded-lg border border-slate-200" aria-label="Open navigation menu">
-          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-        </summary>
-        <button type="button" data-mobile-close aria-label="Close navigation menu" class="fixed inset-0 z-[60] hidden bg-slate-950/40 group-open:block"></button>
-        <nav data-mobile-panel aria-label="Mobile navigation" aria-hidden="true" inert class="fixed inset-y-0 right-0 z-[70] h-dvh w-[min(88vw,24rem)] translate-x-full overflow-y-auto bg-white p-5 text-sm font-semibold shadow-2xl transition-transform duration-300 ease-out group-open:translate-x-0">
-          <div class="sticky top-0 z-10 flex items-center justify-between border-b border-slate-100 bg-white pb-4">
-            <span class="font-bold">Menu</span>
-            <button type="button" data-mobile-close aria-label="Close navigation menu" class="grid h-10 w-10 place-items-center rounded-lg border border-slate-200">
-              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M6 6l12 12M6 18L18 6"></path></svg>
-            </button>
-          </div>
-          <details class="border-b border-slate-100 py-3">
-            <summary class="cursor-pointer list-none py-2">Destinations <span class="float-right" aria-hidden="true">⌄</span></summary>
-            <div class="mt-2 grid gap-1 pl-3 text-slate-600">
-              {% for slug, item in destinations.items() %}
-              <a href="/destinations/{{ slug }}" class="py-2">{{ item.title }} {{ item.flag|safe }}</a>
-              {% endfor %}
-            </div>
-          </details>
-          <a href="/expeditions" class="block border-b border-slate-100 py-4">Expeditions</a>
-          <a href="/exchange" class="block border-b border-slate-100 py-4">Exchange programs</a>
-          <a href="/about" class="block border-b border-slate-100 py-4">About Vild</a>
-          <a href="/contact" class="block border-b border-slate-100 py-4">Contact Us</a>
-          <a href="/contact" class="mt-5 block rounded-lg bg-amber-300 px-4 py-3 text-center font-bold">Get a Quote</a>
-        </nav>
-      </details>
-    </div>
-  </header>
+  {% include "partials/site_navigation.html" %}
 
   <main>
     <section class="relative isolate overflow-hidden bg-wild-navy text-white" aria-labelledby="destination-title">

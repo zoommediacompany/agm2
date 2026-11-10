@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -31,63 +32,10 @@
       },
     };
   </script>
+  <link rel="stylesheet" href="/static/css/site-theme.css" />
 </head>
 <body class="bg-wild-cream font-sans text-wild-navy antialiased overflow-x-clip">
-  <header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 lg:backdrop-blur-xl">
-    <div class="mx-auto grid h-[76px] max-w-7xl grid-cols-[1fr_auto] items-center px-4 sm:px-6 lg:grid-cols-[auto_1fr_auto] lg:px-8">
-      <a href="/" class="group flex items-center gap-3" aria-label="Vild home">
-        <span class="grid h-11 w-11 place-items-center rounded-xl bg-wild-navy text-sm font-extrabold text-white shadow-lg transition group-hover:scale-105">WILD</span>
-        <span>
-          <span class="block font-extrabold tracking-tight">Vild</span>
-          <span class="hidden text-[9px] uppercase tracking-[0.2em] text-slate-500 sm:block">The African Access Company</span>
-        </span>
-      </a>
-
-      <nav aria-label="Main navigation" class="relative hidden justify-self-center lg:block">
-        <ul class="flex items-center gap-1 text-sm font-semibold">
-          <li>
-            <details class="group hidden sm:inline">
-<summary class="cursor-pointer list-none rounded-lg px-3 py-3 text-slate-700 transition hover:bg-slate-50 hover:text-wild-green">Destinations <span aria-hidden="true">&#8964;</span></summary>
-<div class="fixed left-1/2 top-[76px] z-50 grid w-[min(1200px,calc(100vw-2rem))] -translate-x-1/2 grid-cols-5 gap-3 rounded-xl border border-slate-200 bg-white p-4 text-sm shadow-xl"><a href="/destinations/uganda" class="group overflow-hidden rounded-xl border border-slate-200 bg-white transition hover:-translate-y-0.5 hover:shadow-lg"><div class="h-24 overflow-hidden"><img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Magherita_Peak_on_Mountain_Rwenzori.jpg" alt="Margherita Peak in the Rwenzori Mountains" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" /></div><div class="p-3"><h3 class="font-bold text-slate-900">Uganda &#x1F1FA;&#x1F1EC;</h3><p class="mt-1 text-xs leading-5 text-slate-600">Kampala &middot; Entebbe &middot; Rwenzori</p><p class="mt-1 text-[9px] leading-4 text-slate-500">Peak image: Rebeccananonof / Wikimedia Commons (CC0)</p></div></a><a href="/destinations/kenya" class="group overflow-hidden rounded-xl border border-slate-200 bg-white transition hover:-translate-y-0.5 hover:shadow-lg"><div class="h-24 overflow-hidden"><img src="/images/desitationscover.JPG" alt="East African savannah and wildlife" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" /></div><div class="p-3"><h3 class="font-bold text-slate-900">Kenya &#x1F1F0;&#x1F1EA;</h3><p class="mt-1 text-xs leading-5 text-slate-600">Nairobi &middot; Mombasa &middot; Maasai Mara</p></div></a>
-<a href="/destinations/tanzania" class="group overflow-hidden rounded-xl border border-slate-200 bg-white transition hover:-translate-y-0.5 hover:shadow-lg"><div class="h-24 overflow-hidden"><img src="/images/JDR_1501.JPG" alt="African wildlife landscape" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" /></div><div class="p-3"><h3 class="font-bold text-slate-900">Tanzania &#x1F1F9;&#x1F1FF;</h3><p class="mt-1 text-xs leading-5 text-slate-600">Arusha &middot; Dar es Salaam &middot; Mwanza</p></div></a>
-<a href="/destinations/rwanda" class="group overflow-hidden rounded-xl border border-slate-200 bg-white transition hover:-translate-y-0.5 hover:shadow-lg"><div class="h-24 overflow-hidden"><img src="/images/JDR_1668a.jpg" alt="Mountain gorilla in a forest" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" /></div><div class="p-3"><h3 class="font-bold text-slate-900">Rwanda &#x1F1F7;&#x1F1FC;</h3><p class="mt-1 text-xs leading-5 text-slate-600">Kigali &middot; Musanze &middot; Rubavu</p></div></a>
-<a href="/destinations/zanzibar" class="group overflow-hidden rounded-xl border border-slate-200 bg-white transition hover:-translate-y-0.5 hover:shadow-lg"><div class="h-24 overflow-hidden"><img src="/images/JDR_3403A.jpg" alt="East African landscape" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" /></div><div class="p-3"><h3 class="font-bold text-slate-900">Zanzibar &#x1F1F9;&#x1F1FF;</h3><p class="mt-1 text-xs leading-5 text-slate-600">Stone Town &middot; Nungwi &middot; Paje</p></div></a></div>
-</details>
-          </li>
-          <li><a href="/expeditions" class="block rounded-lg px-3 py-3 text-slate-700 transition hover:bg-slate-50 hover:text-wild-green">Expeditions</a></li>
-          <li><a href="/exchange" class="block rounded-lg px-3 py-3 text-slate-700 transition hover:bg-slate-50 hover:text-wild-green">Exchange programs</a></li>
-          <li><a href="/about" class="block rounded-lg px-3 py-3 text-slate-700 transition hover:bg-slate-50 hover:text-wild-green">About Vild</a></li>
-          <li><a href="/journal" class="block rounded-lg px-3 py-3 text-slate-700 transition hover:bg-slate-50 hover:text-wild-green">Blog</a></li>
-          <li><a href="/contact" class="block rounded-lg px-3 py-3 text-slate-700 transition hover:bg-slate-50 hover:text-wild-green">Contact Us</a></li>
-        </ul>
-      </nav>
-
-      <a href="/contact" class="hidden justify-self-end rounded-xl bg-amber-300 px-4 py-2.5 text-sm font-bold text-wild-navy transition hover:bg-amber-200 lg:block">Get a Quote</a>
-
-      <details class="group relative justify-self-end lg:hidden" data-mobile-drawer>
-        <summary class="grid h-11 w-11 cursor-pointer list-none place-items-center rounded-lg border border-slate-200 text-wild-navy" aria-label="Open navigation menu">
-          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16" /></svg>
-        </summary>
-        <button type="button" data-mobile-close aria-label="Close navigation menu" class="fixed inset-0 z-[60] hidden bg-slate-950/40 group-open:block"></button>
-        <nav data-mobile-panel aria-label="Mobile navigation" aria-hidden="true" inert class="fixed inset-y-0 right-0 z-[70] h-dvh w-[min(88vw,24rem)] translate-x-full overflow-y-auto bg-white p-4 text-sm font-semibold shadow-2xl transition-transform duration-300 ease-out group-open:translate-x-0">
-          <div class="sticky top-0 z-10 flex items-center justify-between border-b border-slate-100 bg-white pb-4"><span class="font-bold text-wild-navy">Menu</span><button type="button" data-mobile-close aria-label="Close navigation menu" class="grid h-10 w-10 place-items-center rounded-lg border border-slate-200 text-wild-navy"><svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M6 6l12 12M6 18L18 6" /></svg></button></div>
-          <details class="border-b border-slate-100 py-3">
-            <summary class="cursor-pointer list-none">Destinations <span class="float-right" aria-hidden="true">⌄</span></summary>
-            <div class="mt-3 grid grid-cols-2 gap-2"><a href="/destinations/uganda" class="overflow-hidden rounded-lg border border-slate-200 bg-white"><img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Magherita_Peak_on_Mountain_Rwenzori.jpg" alt="Margherita Peak in the Rwenzori Mountains" class="h-16 w-full object-cover" loading="lazy" /><span class="block px-2 pt-2 text-xs font-bold text-slate-900">Uganda &#x1F1FA;&#x1F1EC;</span><span class="block px-2 pb-2 text-[10px] leading-4 text-slate-600">Kampala &middot; Entebbe &middot; Rwenzori</span><span class="block px-2 pb-2 text-[9px] leading-3 text-slate-500">Peak image: Rebeccananonof / Wikimedia Commons (CC0)</span></a><a href="/destinations/kenya" class="overflow-hidden rounded-lg border border-slate-200 bg-white"><img src="/images/desitationscover.JPG" alt="East African savannah and wildlife" class="h-16 w-full object-cover" loading="lazy" /><span class="block px-2 pt-2 text-xs font-bold text-slate-900">Kenya &#x1F1F0;&#x1F1EA;</span><span class="block px-2 pb-2 text-[10px] leading-4 text-slate-600">Nairobi &middot; Mombasa &middot; Maasai Mara</span></a>
-<a href="/destinations/tanzania" class="overflow-hidden rounded-lg border border-slate-200 bg-white"><img src="/images/JDR_1501.JPG" alt="African wildlife landscape" class="h-16 w-full object-cover" loading="lazy" /><span class="block px-2 pt-2 text-xs font-bold text-slate-900">Tanzania &#x1F1F9;&#x1F1FF;</span><span class="block px-2 pb-2 text-[10px] leading-4 text-slate-600">Arusha &middot; Dar es Salaam &middot; Mwanza</span></a>
-<a href="/destinations/rwanda" class="overflow-hidden rounded-lg border border-slate-200 bg-white"><img src="/images/JDR_1668a.jpg" alt="Mountain gorilla in a forest" class="h-16 w-full object-cover" loading="lazy" /><span class="block px-2 pt-2 text-xs font-bold text-slate-900">Rwanda &#x1F1F7;&#x1F1FC;</span><span class="block px-2 pb-2 text-[10px] leading-4 text-slate-600">Kigali &middot; Musanze &middot; Rubavu</span></a>
-<a href="/destinations/zanzibar" class="overflow-hidden rounded-lg border border-slate-200 bg-white"><img src="/images/JDR_3403A.jpg" alt="East African landscape" class="h-16 w-full object-cover" loading="lazy" /><span class="block px-2 pt-2 text-xs font-bold text-slate-900">Zanzibar &#x1F1F9;&#x1F1FF;</span><span class="block px-2 pb-2 text-[10px] leading-4 text-slate-600">Stone Town &middot; Nungwi &middot; Paje</span></a></div>
-          </details>
-          <a href="/expeditions" class="block border-b border-slate-100 py-3">Expeditions</a>
-          <a href="/exchange" class="block border-b border-slate-100 py-3">Exchange programs</a>
-          <a href="/about" class="block border-b border-slate-100 py-3">About Vild</a>
-          <a href="/journal" class="block border-b border-slate-100 py-3">Blog</a>
-          <a href="/contact" class="block border-b border-slate-100 py-3">Contact Us</a>
-          <a href="/contact" class="mt-4 block rounded-lg bg-amber-300 px-4 py-3 text-center font-bold text-wild-navy">Get a Quote</a>
-        </nav>
-      </details>
-    </div>
-  </header>
+  {% include "partials/site_navigation.html" %}
 
   <main id="main-content">
     <section class="relative overflow-hidden bg-wild-navy text-white">
@@ -127,7 +75,7 @@
     <section id="our-purpose" class="px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
       <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20">
         <div>
-          <p class="text-xs font-bold uppercase tracking-[0.22em] text-wild-green">Why WILD exists</p>
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-wild-green">Why Vild exists</p>
           <h2 class="mt-4 font-display text-4xl leading-tight sm:text-5xl">Make meaningful access easier to navigate.</h2>
         </div>
         <div class="max-w-3xl">
@@ -267,24 +215,5 @@
       </div>
     </div>
   </footer>
-<script>
-document.querySelectorAll("[data-mobile-drawer]").forEach((drawer) => {
-  const panel = drawer.querySelector("[data-mobile-panel]");
-  const closeButtons = drawer.querySelectorAll("[data-mobile-close]");
-  const syncDrawerState = () => {
-    panel.inert = !drawer.open;
-    panel.setAttribute("aria-hidden", String(!drawer.open));
-    document.body.classList.toggle("overflow-hidden", drawer.open);
-  };
-  drawer.addEventListener("toggle", syncDrawerState);
-  closeButtons.forEach((button) => button.addEventListener("click", () => { drawer.open = false; }));
-  panel.addEventListener("click", (event) => {
-    if (event.target.closest("a")) drawer.open = false;
-  });
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && drawer.open) drawer.open = false;
-  });
-});
-</script>
 </body>
 </html>

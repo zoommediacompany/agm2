@@ -1,0 +1,476 @@
+:root {
+  color-scheme: light;
+  --vild-primary: #0b0b0d;
+  --vild-gold: #d4af72;
+  --vild-background: #f6f1e8;
+  --vild-forest: #1e2a23;
+  --vild-sand: #c8b99a;
+  --vild-surface: #fbf8f2;
+}
+
+body {
+  background-color: var(--vild-background) !important;
+  color: var(--vild-primary);
+}
+
+body.bg-white,
+body.bg-wild-cream,
+.bg-wild-cream {
+  background-color: var(--vild-background) !important;
+}
+
+.public-shell {
+  background:
+    radial-gradient(circle at 80% 10%, rgb(200 185 154 / 28%) 0, transparent 34%),
+    linear-gradient(135deg, var(--vild-background), #eee5d6) !important;
+}
+
+.form-panel {
+  background-color: rgb(251 248 242 / 96%) !important;
+  border-color: var(--vild-sand) !important;
+}
+
+.consent-row {
+  background-color: #eee5d6 !important;
+  border-color: var(--vild-sand) !important;
+}
+
+input,
+select {
+  background-color: var(--vild-surface);
+  border-color: var(--vild-sand);
+}
+
+.application-form > button,
+.button-link {
+  background-color: var(--vild-forest);
+}
+
+.application-form > button:hover,
+.button-link:hover {
+  background-color: var(--vild-primary);
+}
+
+.text-wild-navy,
+.text-slate-900,
+.text-slate-950 {
+  color: var(--vild-primary) !important;
+}
+
+.bg-wild-navy,
+.bg-slate-950 {
+  background-color: var(--vild-forest) !important;
+}
+
+.bg-white,
+[class~="bg-white/95"],
+[class~="bg-white/90"],
+[class~="bg-white/80"] {
+  background-color: var(--vild-surface) !important;
+}
+
+.rounded-xl.bg-white,
+.rounded-2xl.bg-white,
+.rounded-xl[class~="bg-white/90"],
+.rounded-2xl[class~="bg-white/90"] {
+  border-color: rgb(200 185 154 / 65%);
+  box-shadow: 0 12px 30px rgb(11 11 13 / 7%);
+}
+
+.bg-slate-50,
+[class~="hover:bg-slate-50"]:hover {
+  background-color: #eee5d6 !important;
+}
+
+.border-slate-100,
+.border-slate-200,
+.border-slate-200\/80 {
+  border-color: var(--vild-sand) !important;
+}
+
+.text-wild-green,
+[class~="hover:text-wild-green"]:hover {
+  color: var(--vild-forest) !important;
+}
+
+.bg-wild-green {
+  background-color: var(--vild-forest) !important;
+}
+
+.text-amber-300 {
+  color: var(--vild-gold) !important;
+}
+
+.bg-amber-50 {
+  background-color: #eee5d6 !important;
+}
+
+.bg-amber-300,
+.bg-amber-400 {
+  background-color: var(--vild-gold) !important;
+}
+
+.bg-amber-500 {
+  background-color: #c29a55 !important;
+}
+
+[class~="hover:bg-amber-200"]:hover,
+[class~="hover:bg-amber-300"]:hover,
+[class~="hover:bg-amber-400"]:hover {
+  background-color: #c29a55 !important;
+}
+
+[class~="hover:bg-amber-50"]:hover {
+  background-color: #e6dccb !important;
+}
+
+header,
+header[class~="bg-white/95"],
+header.bg-white {
+  background-color: var(--vild-background) !important;
+  border-color: var(--vild-sand) !important;
+}
+
+header nav[aria-label="Main navigation"]:not([data-mobile-panel]) a,
+header nav[aria-label="Main navigation"]:not([data-mobile-panel]) summary,
+header nav[aria-label="Main navigation"]:not([data-mobile-panel]) button {
+  color: var(--vild-primary);
+}
+
+footer,
+footer.bg-wild-navy,
+footer.bg-slate-950,
+footer[class~="bg-[#04101f]"] {
+  background-color: var(--vild-forest) !important;
+  color: var(--vild-background);
+}
+
+footer [class~="text-slate-300"],
+footer [class~="text-slate-400"],
+footer [class~="text-slate-500"] {
+  color: rgb(246 241 232 / 78%) !important;
+}
+
+footer [class~="border-white/10"],
+footer [class~="border-white/20"],
+footer [class~="border-slate-700"] {
+  border-color: rgb(200 185 154 / 38%) !important;
+}
+
+footer a:hover {
+  color: var(--vild-gold) !important;
+}
+
+header img.site-logo {
+  width: 76px;
+  height: 60px;
+  flex: none;
+  object-fit: contain;
+}
+
+footer img.site-logo {
+  width: 76px;
+  height: 60px;
+  flex: none;
+  object-fit: contain;
+}
+
+header nav[aria-label="Main navigation"]:not([data-mobile-panel]) {
+  align-items: center;
+  gap: 0.2rem;
+}
+
+header nav[aria-label="Main navigation"]:not([data-mobile-panel]) > ul > li > a,
+header nav[aria-label="Main navigation"]:not([data-mobile-panel]) > ul > li > summary,
+header nav[aria-label="Main navigation"]:not([data-mobile-panel]) > ul > li > button {
+  border-radius: 0.6rem;
+  white-space: nowrap;
+}
+
+header nav[aria-label="Main navigation"]:not([data-mobile-panel]) a:hover,
+header nav[aria-label="Main navigation"]:not([data-mobile-panel]) summary:hover,
+header nav[aria-label="Main navigation"]:not([data-mobile-panel]) button:hover {
+  color: var(--vild-forest) !important;
+}
+
+.mega-menu {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+}
+
+.mega-parent:hover > .mega-menu,
+.mega-parent:focus-within > .mega-menu {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mega-parent > .destination-menu {
+  position: fixed;
+  top: 76px;
+  left: 50vw;
+  transform: translate(-50%, 10px);
+}
+
+.mega-parent:hover > .destination-menu,
+.mega-parent:focus-within > .destination-menu {
+  transform: translate(-50%, 0);
+}
+
+.mega-parent > .expedition-menu {
+  position: fixed;
+  top: 60px;
+  left: 50vw;
+  width: min(820px, calc(100vw - 2rem));
+  transform: translate(-50%, 10px);
+}
+
+.mega-parent:hover > .expedition-menu,
+.mega-parent:focus-within > .expedition-menu {
+  transform: translate(-50%, 0);
+}
+
+.mega-menu {
+  max-height: calc(100vh - 5rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.expedition-menu-panel {
+  border-color: var(--vild-sand) !important;
+  background-color: var(--vild-surface) !important;
+  box-shadow: 0 24px 60px rgb(11 11 13 / 18%);
+}
+
+.expedition-menu-panel > .grid.grid-cols-3 > div {
+  min-width: 0;
+}
+
+.expedition-menu-panel .grid.grid-cols-3 {
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.expedition-menu-panel .mb-4 {
+  margin: 0.5rem 0 0.75rem;
+  color: var(--vild-forest) !important;
+}
+
+.expedition-menu-panel .text-blue-600 {
+  color: var(--vild-forest) !important;
+}
+
+.expedition-menu-panel a.group {
+  min-height: 76px;
+  padding: 0.7rem;
+}
+
+.expedition-menu-panel a.group:hover {
+  background-color: #eee5d6 !important;
+}
+
+.expedition-menu-panel a.group > div > span {
+  flex: none;
+  color: var(--vild-forest);
+}
+
+.expedition-menu-panel a.group > div > div {
+  min-width: 0;
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+
+.expedition-menu-featured {
+  min-height: 150px;
+  background-image:
+    linear-gradient(90deg, rgb(11 11 13 / 88%) 0%, rgb(30 42 35 / 68%) 55%, rgb(11 11 13 / 24%) 100%),
+    url("/images/JDR_1668a.jpg");
+  background-position: center 42%;
+  background-size: cover;
+}
+
+.expedition-menu-featured > div:first-child {
+  display: none;
+}
+
+.expedition-menu-featured .text-blue-300 {
+  color: var(--vild-gold) !important;
+}
+
+.expedition-menu-featured a:hover {
+  color: var(--vild-gold) !important;
+}
+
+.mega-parent > .exchange-menu {
+  position: fixed;
+  top: 60px;
+  left: 50vw;
+  width: min(820px, calc(100vw - 2rem));
+  transform: translate(-50%, 10px);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+}
+
+.mega-parent:hover > .exchange-menu,
+.mega-parent:focus-within > .exchange-menu {
+  transform: translate(-50%, 0);
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.exchange-menu-panel {
+  border-color: var(--vild-sand) !important;
+  background-color: var(--vild-surface) !important;
+  box-shadow: 0 24px 60px rgb(11 11 13 / 18%);
+}
+
+.exchange-menu-heading > p:first-child {
+  color: var(--vild-forest);
+}
+
+.exchange-menu-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(230px, 0.85fr);
+  gap: 1rem;
+}
+
+.exchange-menu-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.exchange-menu-card {
+  display: flex;
+  min-height: 92px;
+  align-items: flex-start;
+  gap: 0.75rem;
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  color: var(--vild-primary);
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.exchange-menu-card:hover,
+.exchange-menu-card:focus-visible {
+  background-color: #eee5d6;
+}
+
+.exchange-menu-card:focus-visible,
+.exchange-menu-featured a:focus-visible {
+  outline: 2px solid var(--vild-gold);
+  outline-offset: 2px;
+}
+
+.exchange-menu-icon {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex: none;
+  place-items: center;
+  border-radius: 0.65rem;
+  background-color: #eee5d6;
+  color: var(--vild-forest);
+}
+
+.exchange-menu-card strong,
+.exchange-menu-card small {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.exchange-menu-card > span:last-child {
+  min-width: 0;
+  flex: 1;
+}
+
+.exchange-menu-card strong {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+
+.exchange-menu-card small {
+  margin-top: 0.25rem;
+  color: #647064;
+  font-size: 0.7rem;
+  line-height: 1.15rem;
+}
+
+.exchange-menu-featured {
+  display: flex;
+  min-height: 196px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  color: var(--vild-background);
+  background-image:
+    linear-gradient(145deg, rgb(11 11 13 / 88%), rgb(30 42 35 / 72%)),
+    url("/images/uganda-community-cultural-experience-volunteers.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.exchange-menu-featured > p:first-child {
+  color: var(--vild-gold);
+}
+
+.exchange-menu-featured a:hover {
+  color: var(--vild-gold);
+}
+
+[data-mobile-panel] {
+  background-color: var(--vild-surface) !important;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  header nav[aria-label="Main navigation"]:not([data-mobile-panel]) {
+    gap: 0;
+  }
+
+  header nav[aria-label="Main navigation"]:not([data-mobile-panel]) a,
+  header nav[aria-label="Main navigation"]:not([data-mobile-panel]) summary,
+  header nav[aria-label="Main navigation"]:not([data-mobile-panel]) button {
+    padding-left: 0.45rem;
+    padding-right: 0.45rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 767px) {
+  main h1 {
+    font-size: clamp(2.15rem, 9.2vw, 2.85rem) !important;
+    line-height: 1.08 !important;
+    text-wrap: balance;
+  }
+
+  main h2 {
+    font-size: clamp(1.75rem, 7.6vw, 2.5rem) !important;
+    line-height: 1.12 !important;
+    text-wrap: balance;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  main h1 {
+    font-size: clamp(2.5rem, 5.5vw, 3.5rem) !important;
+    line-height: 1.08 !important;
+    text-wrap: balance;
+  }
+
+  main h2 {
+    font-size: clamp(2.25rem, 4.8vw, 3rem) !important;
+    line-height: 1.12 !important;
+    text-wrap: balance;
+  }
+}

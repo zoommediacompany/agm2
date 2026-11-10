@@ -1,0 +1,206 @@
+<header id="site-header" class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 lg:backdrop-blur-xl">
+  <div class="mx-auto grid h-[76px] max-w-7xl grid-cols-[auto_1fr_auto] items-center px-4 sm:px-6 lg:px-8">
+    <a href="/" class="flex items-center" aria-label="Vild home">
+      <img src="/images/Vild%20Africa%20logo%20cropped.png" alt="Vild" class="site-logo" />
+    </a>
+
+    <nav class="hidden justify-self-center lg:block" aria-label="Main navigation">
+      <ul class="flex items-center text-sm font-semibold">
+        <li><a href="/about" class="rounded-lg px-3 py-3 transition hover:bg-slate-50">About</a></li>
+        <li class="mega-parent relative">
+          <button type="button" class="flex items-center gap-1 rounded-lg px-3 py-3 transition hover:bg-slate-50" aria-haspopup="true">
+            Destinations
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="m6 9 6 6 6-6" /></svg>
+          </button>
+          <div class="destination-menu mega-menu z-50 w-[min(1200px,calc(100vw-2rem))] pt-4">
+            <div class="grid grid-cols-5 gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-2xl">
+              <a href="/destinations/uganda" class="group overflow-hidden rounded-xl border border-slate-200 bg-white transition hover:-translate-y-0.5 hover:shadow-lg">
+                <div class="h-24 overflow-hidden"><img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Magherita_Peak_on_Mountain_Rwenzori.jpg" alt="Margherita Peak in the Rwenzori Mountains" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" /></div>
+                <div class="p-3"><h3 class="font-bold text-slate-900">Uganda 🇺🇬</h3><p class="mt-1 text-xs leading-5 text-slate-600">Kampala · Entebbe · Rwenzori</p><p class="mt-1 text-[9px] leading-4 text-slate-500">Peak image: Rebeccananonof / Wikimedia Commons (CC0)</p></div>
+              </a>
+              <a href="/destinations/kenya" class="group overflow-hidden rounded-xl border border-slate-200 bg-white transition hover:-translate-y-0.5 hover:shadow-lg">
+                <div class="h-24 overflow-hidden"><img src="/images/desitationscover.JPG" alt="East African savannah and wildlife" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" /></div>
+                <div class="p-3"><h3 class="font-bold text-slate-900">Kenya 🇰🇪</h3><p class="mt-1 text-xs leading-5 text-slate-600">Nairobi · Mombasa · Maasai Mara</p></div>
+              </a>
+              <a href="/destinations/tanzania" class="group overflow-hidden rounded-xl border border-slate-200 bg-white transition hover:-translate-y-0.5 hover:shadow-lg">
+                <div class="h-24 overflow-hidden"><img src="/images/JDR_1501.JPG" alt="African wildlife landscape" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" /></div>
+                <div class="p-3"><h3 class="font-bold text-slate-900">Tanzania 🇹🇿</h3><p class="mt-1 text-xs leading-5 text-slate-600">Arusha · Dar es Salaam · Mwanza</p></div>
+              </a>
+              <a href="/destinations/rwanda" class="group overflow-hidden rounded-xl border border-slate-200 bg-white transition hover:-translate-y-0.5 hover:shadow-lg">
+                <div class="h-24 overflow-hidden"><img src="/images/JDR_1668a.jpg" alt="Mountain gorilla in a forest" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" /></div>
+                <div class="p-3"><h3 class="font-bold text-slate-900">Rwanda 🇷🇼</h3><p class="mt-1 text-xs leading-5 text-slate-600">Kigali · Musanze · Rubavu</p></div>
+              </a>
+              <a href="/destinations/zanzibar" class="group overflow-hidden rounded-xl border border-slate-200 bg-white transition hover:-translate-y-0.5 hover:shadow-lg">
+                <div class="h-24 overflow-hidden"><img src="/images/JDR_3403A.jpg" alt="East African landscape" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" /></div>
+                <div class="p-3"><h3 class="font-bold text-slate-900">Zanzibar 🇹🇿</h3><p class="mt-1 text-xs leading-5 text-slate-600">Stone Town · Nungwi · Paje</p></div>
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <li class="mega-parent relative">
+          <button type="button" class="flex items-center gap-1 rounded-lg px-3 py-3 transition hover:bg-slate-50" aria-haspopup="true">
+            Expeditions
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="m6 9 6 6 6-6" /></svg>
+          </button>
+          <div class="mega-menu expedition-menu absolute left-0 top-full z-50 w-[820px] pt-4">
+            <div class="expedition-menu-panel overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-2xl">
+              <div class="grid grid-cols-3 gap-7">
+                <div>
+                  <p class="mb-4 text-[11px] font-bold uppercase tracking-[0.2em] text-blue-600">Wildlife</p>
+                  <a href="/expeditions/wildlife-safaris" class="group block rounded-xl p-3 transition hover:bg-slate-50"><div class="flex items-center gap-3"><span class="flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-emerald-50"><i class="fa-solid fa-paw" aria-hidden="true"></i></span><div><strong class="font-bold">Gorilla Safaris</strong><p class="mt-1 text-xs text-slate-500">Explore gorilla trekking possibilities in Bwindi Forest.</p></div></div></a>
+                  <a href="/expeditions/wildlife-safaris" class="group mt-2 block rounded-xl p-3 transition hover:bg-slate-50"><div class="flex items-center gap-3"><span class="flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-emerald-50"><i class="fa-solid fa-binoculars" aria-hidden="true"></i></span><div><strong class="font-bold">Wildlife Safaris</strong><p class="mt-1 text-xs text-slate-500">Explore savannah wildlife and diverse species with local guidance.</p></div></div></a>
+                  <a href="/expeditions/photography" class="group mt-2 block rounded-xl p-3 transition hover:bg-slate-50"><div class="flex items-center gap-3"><span class="flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-amber-50"><i class="fa-solid fa-camera" aria-hidden="true"></i></span><div><strong class="font-bold">Photography Tours</strong><p class="mt-1 text-xs text-slate-500">Documentary and wildlife photography.</p></div></div></a>
+                </div>
+
+                <div>
+                  <p class="mb-4 text-[11px] font-bold uppercase tracking-[0.2em] text-blue-600">Adventure</p>
+                  <a href="/expeditions/mountain-adventures" class="group block rounded-xl p-3 transition hover:bg-slate-50"><div class="flex items-center gap-3"><span class="flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-blue-50"><i class="fa-solid fa-mountain" aria-hidden="true"></i></span><div><strong class="font-bold">Mountain Adventures</strong><p class="mt-1 text-xs text-slate-500">Rwenzori and Virunga ranges.</p></div></div></a>
+                  <a href="/expeditions/conservation" class="group mt-2 block rounded-xl p-3 transition hover:bg-slate-50"><div class="flex items-center gap-3"><span class="flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-indigo-50"><i class="fa-solid fa-leaf" aria-hidden="true"></i></span><div><strong class="font-bold">Conservation</strong><p class="mt-1 text-xs text-slate-500">Field research and impact programs.</p></div></div></a>
+                  <a href="/exchange" class="group mt-2 block rounded-xl p-3 transition hover:bg-slate-50"><div class="flex items-center gap-3"><span class="flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-amber-50"><i class="fa-solid fa-hands-holding-circle" aria-hidden="true"></i></span><div><strong class="font-bold">Volunteering Program</strong><p class="mt-1 text-xs text-slate-500">Explore locally guided exchange opportunities.</p></div></div></a>
+                </div>
+
+                <div>
+                  <p class="mb-4 text-[11px] font-bold uppercase tracking-[0.2em] text-blue-600">Culture</p>
+                  <a href="/expeditions/cultural-immersion" class="group block rounded-xl p-3 transition hover:bg-slate-50"><div class="flex items-center gap-3"><span class="flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-purple-50"><i class="fa-solid fa-utensils" aria-hidden="true"></i></span><div><strong class="font-bold">Cultural Exchange</strong><p class="mt-1 text-xs text-slate-500">Food, heritage and community-led experiences.</p></div></div></a>
+                  <a href="/expeditions/private-journeys" class="group mt-2 block rounded-xl p-3 transition hover:bg-slate-50"><div class="flex items-center gap-3"><span class="flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-rose-50"><i class="fa-solid fa-compass" aria-hidden="true"></i></span><div><strong class="font-bold">Private Tours</strong><p class="mt-1 text-xs text-slate-500">Bespoke expeditions for individuals.</p></div></div></a>
+                </div>
+                <aside class="expedition-menu-featured relative col-span-3 overflow-hidden rounded-2xl bg-wild-navy p-6 text-white">
+                  <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-blue-300">Featured</p>
+                  <h3 class="mt-2 text-2xl font-bold">Into the mist</h3>
+                  <p class="mt-2 text-sm text-slate-200">Gorilla trekking in Bwindi's ancient forests.</p>
+                  <a href="/expeditions" class="mt-4 inline-flex items-center gap-2 text-sm font-bold">Explore expeditions <span aria-hidden="true">→</span></a>
+                </aside>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="mega-parent relative">
+          <button type="button" class="flex items-center gap-1 rounded-lg px-3 py-3 transition hover:bg-slate-50" aria-haspopup="true">
+            Exchange Programs
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="m6 9 6 6 6-6" /></svg>
+          </button>
+          <div class="mega-menu exchange-menu absolute top-full z-50 pt-4">
+            <div class="exchange-menu-panel rounded-2xl border border-slate-200 bg-white p-6 shadow-2xl">
+              <div class="exchange-menu-heading">
+                <p class="text-[11px] font-bold uppercase tracking-[0.2em]">Learning through local connection</p>
+                <p class="mt-2 text-sm leading-6 text-slate-600">Explore thoughtful study, research and field-learning opportunities in Uganda.</p>
+              </div>
+              <div class="exchange-menu-layout mt-5">
+                <div class="exchange-menu-cards">
+                  <a href="/universities" class="exchange-menu-card"><span class="exchange-menu-icon"><i class="fa-solid fa-building-columns" aria-hidden="true"></i></span><span><strong>University partnerships</strong><small>Develop field learning and exchange ideas for your institution.</small></span></a>
+                  <a href="/students#student-pathways" class="exchange-menu-card"><span class="exchange-menu-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></span><span><strong>Student pathways</strong><small>Explore internships, study visits and locally grounded learning.</small></span></a>
+                  <a href="/students#student-pathways" class="exchange-menu-card"><span class="exchange-menu-icon"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></span><span><strong>Research access</strong><small>Discuss local coordination, field logistics and requirements.</small></span></a>
+                  <a href="/contact" class="exchange-menu-card"><span class="exchange-menu-icon"><i class="fa-solid fa-comments" aria-hidden="true"></i></span><span><strong>Faculty &amp; group enquiries</strong><small>Start a conversation about your group's goals and needs.</small></span></a>
+                </div>
+                <aside class="exchange-menu-featured">
+                  <p class="text-[10px] font-bold uppercase tracking-[0.2em]">Start with your goals</p>
+                  <h3 class="mt-3 text-xl font-bold">Make learning meaningful.</h3>
+                  <p class="mt-3 text-sm leading-6">Share your interests, timing and learning objectives. We'll discuss what may be possible and the requirements to confirm.</p>
+                  <a href="/exchange" class="mt-5 inline-flex items-center gap-2 text-sm font-bold">Explore exchange programs <span aria-hidden="true">→</span></a>
+                </aside>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="mega-parent relative">
+          <button type="button" class="flex items-center gap-1 rounded-lg px-3 py-3 transition hover:bg-slate-50" aria-haspopup="true">
+            Why Vild
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="m6 9 6 6 6-6" /></svg>
+          </button>
+          <div class="mega-menu absolute left-0 top-full z-50 w-72 pt-4">
+            <div class="rounded-2xl border border-slate-200 bg-white p-3 shadow-2xl">
+              <a href="/why-wild" class="block rounded-xl p-4 transition hover:bg-slate-50"><strong>The Vild Standard</strong><p class="mt-1 text-sm text-slate-500">Why Vild.</p></a>
+              <a href="/why-wild" class="block rounded-xl p-4 transition hover:bg-slate-50"><strong>Vild Verified</strong><p class="mt-1 text-sm text-slate-500">Partner verification and safety.</p></a>
+              <a href="/why-wild" class="block rounded-xl p-4 transition hover:bg-slate-50"><strong>Responsible Access</strong><p class="mt-1 text-sm text-slate-500">Our impact and ethics framework.</p></a>
+            </div>
+          </div>
+        </li>
+        <li><a href="/journal" class="rounded-lg px-3 py-3 transition hover:bg-slate-50">Blog</a></li>
+      </ul>
+    </nav>
+
+    <div class="hidden items-center gap-2 lg:flex">
+      <a href="/contact" class="rounded-xl px-4 py-2.5 text-sm font-bold transition hover:bg-slate-50">Contact</a>
+      <a href="/contact" class="rounded-xl bg-amber-300 px-5 py-3 text-sm font-bold text-wild-navy shadow-lg shadow-amber-400/20 transition hover:bg-amber-200">Get a Quote</a>
+    </div>
+
+    <details class="group relative justify-self-end lg:hidden" data-mobile-drawer>
+      <summary class="grid h-11 w-11 cursor-pointer list-none place-items-center rounded-xl border border-slate-200 text-wild-navy" aria-label="Open navigation menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16" /></svg>
+      </summary>
+      <button type="button" data-mobile-backdrop aria-label="Close navigation menu" class="fixed inset-0 z-[60] hidden bg-slate-950/40"></button>
+      <nav data-mobile-panel aria-label="Mobile navigation" aria-hidden="true" inert class="fixed inset-y-0 right-0 z-[70] h-dvh w-[min(88vw,24rem)] translate-x-full overflow-y-auto bg-white p-4 text-sm font-semibold shadow-2xl transition-transform duration-300 ease-out">
+        <div class="sticky top-0 z-10 flex items-center justify-between border-b border-slate-100 bg-white pb-4"><span class="font-bold text-wild-navy">Menu</span><button type="button" data-mobile-close aria-label="Close navigation menu" class="grid h-10 w-10 place-items-center rounded-lg border border-slate-200 text-wild-navy"><svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M6 6l12 12M6 18L18 6" /></svg></button></div>
+        <div class="flex flex-col pb-6">
+          <a href="/about" class="border-b border-slate-100 py-4">About</a>
+          <details class="border-b border-slate-100 py-3"><summary class="cursor-pointer list-none">Destinations <span class="float-right" aria-hidden="true">⌄</span></summary><div class="mt-3 grid grid-cols-2 gap-2">
+            <a href="/destinations/uganda" class="overflow-hidden rounded-lg border border-slate-200"><img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Magherita_Peak_on_Mountain_Rwenzori.jpg" alt="Margherita Peak in the Rwenzori Mountains" class="h-16 w-full object-cover" loading="lazy" /><span class="block p-2 text-xs font-bold">Uganda 🇺🇬</span></a>
+            <a href="/destinations/kenya" class="overflow-hidden rounded-lg border border-slate-200"><img src="/images/desitationscover.JPG" alt="East African savannah and wildlife" class="h-16 w-full object-cover" loading="lazy" /><span class="block p-2 text-xs font-bold">Kenya 🇰🇪</span></a>
+            <a href="/destinations/tanzania" class="overflow-hidden rounded-lg border border-slate-200"><img src="/images/JDR_1501.JPG" alt="African wildlife landscape" class="h-16 w-full object-cover" loading="lazy" /><span class="block p-2 text-xs font-bold">Tanzania 🇹🇿</span></a>
+            <a href="/destinations/rwanda" class="overflow-hidden rounded-lg border border-slate-200"><img src="/images/JDR_1668a.jpg" alt="Mountain gorilla in a forest" class="h-16 w-full object-cover" loading="lazy" /><span class="block p-2 text-xs font-bold">Rwanda 🇷🇼</span></a>
+            <a href="/destinations/zanzibar" class="overflow-hidden rounded-lg border border-slate-200"><img src="/images/JDR_3403A.jpg" alt="East African landscape" class="h-16 w-full object-cover" loading="lazy" /><span class="block p-2 text-xs font-bold">Zanzibar 🇹🇿</span></a>
+          </div></details>
+          <details class="border-b border-slate-100 py-3"><summary class="cursor-pointer list-none">Expeditions <span class="float-right" aria-hidden="true">⌄</span></summary><div class="mt-2 flex flex-col">
+            <a href="/expeditions/wildlife-safaris" class="rounded-lg px-3 py-2.5 text-slate-600 hover:bg-slate-50">Gorilla Safaris</a>
+            <a href="/expeditions/wildlife-safaris" class="rounded-lg px-3 py-2.5 text-slate-600 hover:bg-slate-50">Wildlife Safaris</a>
+            <a href="/expeditions/photography" class="rounded-lg px-3 py-2.5 text-slate-600 hover:bg-slate-50">Photography Tours</a>
+            <a href="/expeditions/mountain-adventures" class="rounded-lg px-3 py-2.5 text-slate-600 hover:bg-slate-50">Mountain Adventures</a>
+            <a href="/expeditions/conservation" class="rounded-lg px-3 py-2.5 text-slate-600 hover:bg-slate-50">Conservation</a>
+            <a href="/exchange" class="rounded-lg px-3 py-2.5 text-slate-600 hover:bg-slate-50">Volunteering Program</a>
+            <a href="/expeditions/cultural-immersion" class="rounded-lg px-3 py-2.5 text-slate-600 hover:bg-slate-50">Cultural Exchange</a>
+            <a href="/expeditions/private-journeys" class="rounded-lg px-3 py-2.5 text-slate-600 hover:bg-slate-50">Private Tours</a>
+          </div></details>
+          <details class="border-b border-slate-100 py-3"><summary class="cursor-pointer list-none">Exchange Programs <span class="float-right" aria-hidden="true">⌄</span></summary><div class="mt-2 flex flex-col">
+            <a href="/universities" class="rounded-lg px-3 py-2.5 text-slate-600 hover:bg-slate-50">University partnerships</a>
+            <a href="/students#student-pathways" class="rounded-lg px-3 py-2.5 text-slate-600 hover:bg-slate-50">Student pathways</a>
+            <a href="/students#student-pathways" class="rounded-lg px-3 py-2.5 text-slate-600 hover:bg-slate-50">Research access</a>
+            <a href="/contact" class="rounded-lg px-3 py-2.5 text-slate-600 hover:bg-slate-50">Faculty &amp; group enquiries</a>
+          </div></details>
+          <details class="border-b border-slate-100 py-3"><summary class="cursor-pointer list-none">Why Vild <span class="float-right" aria-hidden="true">⌄</span></summary><div class="mt-2 flex flex-col">
+            <a href="/why-wild" class="rounded-lg px-3 py-2.5 text-slate-600 hover:bg-slate-50">The Vild Standard</a>
+            <a href="/why-wild" class="rounded-lg px-3 py-2.5 text-slate-600 hover:bg-slate-50">Vild Verified</a>
+            <a href="/why-wild" class="rounded-lg px-3 py-2.5 text-slate-600 hover:bg-slate-50">Responsible Access</a>
+          </div></details>
+          <a href="/journal" class="border-b border-slate-100 py-4">Blog</a>
+          <a href="/contact" class="mt-5 rounded-xl bg-amber-300 px-4 py-3 text-center font-bold text-wild-navy">Get a Quote</a>
+        </div>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<script>
+  (() => {
+    const drawer = document.querySelector("[data-mobile-drawer]");
+    const panel = drawer?.querySelector("[data-mobile-panel]");
+    const backdrop = drawer?.querySelector("[data-mobile-backdrop]");
+    if (!drawer || !panel || !backdrop) return;
+
+    const setOpen = (open) => {
+      panel.inert = !open;
+      panel.setAttribute("aria-hidden", String(!open));
+      panel.classList.toggle("translate-x-full", !open);
+      panel.classList.toggle("translate-x-0", open);
+      backdrop.classList.toggle("hidden", !open);
+      document.body.classList.toggle("no-scroll", open);
+    };
+
+    drawer.addEventListener("toggle", () => setOpen(drawer.open));
+    backdrop.addEventListener("click", () => { drawer.open = false; });
+    drawer.querySelectorAll("[data-mobile-close]").forEach((button) => {
+      button.addEventListener("click", () => { drawer.open = false; });
+    });
+    panel.addEventListener("click", (event) => {
+      if (event.target.closest("a")) drawer.open = false;
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && drawer.open) {
+        drawer.open = false;
+        drawer.querySelector("summary").focus();
+      }
+    });
+  })();
+</script>

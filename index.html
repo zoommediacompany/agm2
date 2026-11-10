@@ -173,6 +173,7 @@
       .hero-photo-flash { display: none; }
     }
   </style>
+  <link rel="stylesheet" href="/static/css/site-theme.css" />
 </head>
 
 <body class="bg-white text-slate-900 antialiased">
@@ -191,30 +192,10 @@
       <a
         href="/"
         class="group flex items-center gap-3"
-        aria-label="WILD Home"
+        aria-label="Vild home"
       >
 
-        <div
-          class="flex h-11 w-11 items-center justify-center rounded-xl bg-wild-navy text-sm font-bold tracking-tight text-white shadow-lg transition group-hover:scale-105"
-        >
-          WILD
-        </div>
-
-        <div class="hidden sm:block">
-
-          <div
-            class="text-lg font-bold tracking-tight text-wild-navy"
-          >
-            WILD
-          </div>
-
-          <div
-            class="text-[9px] font-bold uppercase tracking-[0.22em] text-slate-500"
-          >
-            The African Access Company
-          </div>
-
-        </div>
+        <img src="/images/Vild%20Africa%20logo%20cropped.png" alt="Vild" class="site-logo" />
 
       </a>
 
@@ -258,11 +239,11 @@
             <!-- MEGA MENU -->
 
             <div
-              class="mega-menu absolute left-0 top-full z-50 w-[720px] pt-4"
+              class="mega-menu expedition-menu absolute left-0 top-full z-50 w-[820px] pt-4"
             >
 
               <div
-                class="overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-2xl"
+                class="expedition-menu-panel overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-2xl"
               >
 
                 <div class="grid grid-cols-3 gap-7">
@@ -278,7 +259,7 @@
                     </div>
 
                     <a
-                      href="/expeditions"
+                      href="/expeditions/wildlife-safaris"
                       class="group block rounded-xl p-3 transition hover:bg-slate-50"
                     >
 
@@ -294,20 +275,26 @@
 
                         <div>
                           <div class="font-bold">
-                            Wildlife Safaris
+                            Gorilla Safaris
                           </div>
 
                           <p class="mt-1 text-xs text-slate-500">
-                            Gorillas, chimpanzees and savannah species.
+                            Explore gorilla trekking possibilities in Bwindi Forest.
                           </p>
                         </div>
 
                       </div>
 
                     </a>
+<a href="/expeditions" class="group mt-2 block rounded-xl p-3 transition hover:bg-slate-50">
+  <div class="flex items-center gap-3">
+    <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-50"><i class="fa-solid fa-binoculars" aria-hidden="true"></i></span>
+    <div><div class="font-bold">Wildlife Safaris</div><p class="mt-1 text-xs text-slate-500">Explore savannah wildlife and diverse species with local guidance.</p></div>
+  </div>
+</a>
 
                     <a
-                      href="/expeditions"
+                      href="/expeditions/photography"
                       class="group mt-2 block rounded-xl p-3 transition hover:bg-slate-50"
                     >
 
@@ -323,7 +310,7 @@
 
                         <div>
                           <div class="font-bold">
-                            Photography
+                            Photography Tours
                           </div>
 
                           <p class="mt-1 text-xs text-slate-500">
@@ -349,7 +336,7 @@
                     </div>
 
                     <a
-                      href="/expeditions"
+                      href="/expeditions/mountain-adventures"
                       class="group block rounded-xl p-3 transition hover:bg-slate-50"
                     >
 
@@ -378,7 +365,7 @@
                     </a>
 
                     <a
-                      href="/expeditions"
+                      href="/expeditions/conservation"
                       class="group mt-2 block rounded-xl p-3 transition hover:bg-slate-50"
                     >
 
@@ -406,6 +393,21 @@
 
                     </a>
 
+                    <a
+                      href="/exchange"
+                      class="group mt-2 block rounded-xl p-3 transition hover:bg-slate-50"
+                    >
+                      <div class="flex items-center gap-3">
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-50">
+                          <i class="fa-solid fa-hands-holding-circle" aria-hidden="true"></i>
+                        </span>
+                        <div>
+                          <div class="font-bold">Volunteering Program</div>
+                          <p class="mt-1 text-xs text-slate-500">Explore locally guided exchange opportunities.</p>
+                        </div>
+                      </div>
+                    </a>
+
                   </div>
 
 
@@ -420,7 +422,7 @@
                     </div>
 
                     <a
-                      href="/expeditions"
+                      href="/expeditions/cultural-immersion"
                       class="group block rounded-xl p-3 transition hover:bg-slate-50"
                     >
 
@@ -436,11 +438,11 @@
 
                         <div>
                           <div class="font-bold">
-                            Cultural Immersion
+                            Cultural Exchange
                           </div>
 
                           <p class="mt-1 text-xs text-slate-500">
-                            Food, history and community connections.
+                            Food, heritage and community-led experiences.
                           </p>
                         </div>
 
@@ -449,7 +451,7 @@
                     </a>
 
                     <a
-                      href="/expeditions"
+                      href="/expeditions/private-journeys"
                       class="group mt-2 block rounded-xl p-3 transition hover:bg-slate-50"
                     >
 
@@ -465,7 +467,7 @@
 
                         <div>
                           <div class="font-bold">
-                            Private Journeys
+                            Private Tours
                           </div>
 
                           <p class="mt-1 text-xs text-slate-500">
@@ -483,7 +485,7 @@
                   <!-- FEATURED -->
 
                   <div
-                    class="relative col-span-3 overflow-hidden rounded-2xl bg-wild-navy p-6 text-white"
+                    class="expedition-menu-featured relative col-span-3 overflow-hidden rounded-2xl bg-wild-navy p-6 text-white"
                   >
 
                     <div
@@ -543,7 +545,7 @@
                       href="/contact"
                       class="text-xs font-bold text-blue-600"
                     >
-                      Talk to WILD →
+                      Talk to Vild →
                     </a>
 
                   </div>
@@ -557,86 +559,52 @@
           </li>
 
 
-          <!-- EXCHANGE -->
-
+          <!-- EXCHANGE PROGRAMS -->
           <li class="mega-parent relative">
-
             <button
               type="button"
               class="flex items-center gap-1 rounded-lg px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950"
+              aria-haspopup="true"
             >
-              Exchange
-
-              <svg
-                class="h-4 w-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.8"
-                  d="m6 9 6 6 6-6"
-                />
+              Exchange Programs
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="m6 9 6 6 6-6" />
               </svg>
-
             </button>
-
-
-            <div
-              class="mega-menu absolute left-0 top-full z-50 w-80 pt-4"
-            >
-
-              <div
-                class="rounded-2xl border border-slate-200 bg-white p-3 shadow-2xl"
-              >
-
-                <a
-                  href="/exchange"
-                  class="block rounded-xl p-4 transition hover:bg-slate-50"
-                >
-                  <div class="font-bold">
-                    University Programs
+            <div class="mega-menu exchange-menu absolute top-full z-50 pt-4">
+              <div class="exchange-menu-panel rounded-2xl border border-slate-200 bg-white p-6 shadow-2xl">
+                <div class="exchange-menu-heading">
+                  <p class="text-[11px] font-bold uppercase tracking-[0.2em]">Learning through local connection</p>
+                  <p class="mt-2 text-sm leading-6 text-slate-600">Explore thoughtful study, research and field-learning opportunities in Uganda.</p>
+                </div>
+                <div class="exchange-menu-layout mt-5">
+                  <div class="exchange-menu-cards">
+                    <a href="/universities" class="exchange-menu-card">
+                      <span class="exchange-menu-icon"><i class="fa-solid fa-building-columns" aria-hidden="true"></i></span>
+                      <span><strong>University partnerships</strong><small>Develop field learning and exchange ideas for your institution.</small></span>
+                    </a>
+                    <a href="/students#student-pathways" class="exchange-menu-card">
+                      <span class="exchange-menu-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></span>
+                      <span><strong>Student pathways</strong><small>Explore internships, study visits and locally grounded learning.</small></span>
+                    </a>
+                    <a href="/students#student-pathways" class="exchange-menu-card">
+                      <span class="exchange-menu-icon"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></span>
+                      <span><strong>Research access</strong><small>Discuss local coordination, field logistics and requirements.</small></span>
+                    </a>
+                    <a href="/contact" class="exchange-menu-card">
+                      <span class="exchange-menu-icon"><i class="fa-solid fa-comments" aria-hidden="true"></i></span>
+                      <span><strong>Faculty &amp; group enquiries</strong><small>Start a conversation about your group's goals and needs.</small></span>
+                    </a>
                   </div>
-
-                  <p class="mt-1 text-sm text-slate-500">
-                    Field learning and faculty-led exchange.
-                  </p>
-                </a>
-
-
-                <a
-                  href="/exchange"
-                  class="block rounded-xl p-4 transition hover:bg-slate-50"
-                >
-                  <div class="font-bold">
-                    Research Access
-                  </div>
-
-                  <p class="mt-1 text-sm text-slate-500">
-                    Field-based research coordination.
-                  </p>
-                </a>
-
-
-                <a
-                  href="/exchange"
-                  class="block rounded-xl p-4 transition hover:bg-slate-50"
-                >
-                  <div class="font-bold">
-                    Global Health
-                  </div>
-
-                  <p class="mt-1 text-sm text-slate-500">
-                    Structured health and care programs.
-                  </p>
-                </a>
-
+                  <aside class="exchange-menu-featured">
+                    <p class="text-[10px] font-bold uppercase tracking-[0.2em]">Start with your goals</p>
+                    <h3 class="mt-3 text-xl font-bold">Make learning meaningful.</h3>
+                    <p class="mt-3 text-sm leading-6">Share your interests, timing and learning objectives. We'll discuss what may be possible and the requirements to confirm.</p>
+                    <a href="/exchange" class="mt-5 inline-flex items-center gap-2 text-sm font-bold">Explore exchange programs <span aria-hidden="true">&rarr;</span></a>
+                  </aside>
+                </div>
               </div>
-
             </div>
-
           </li>
 
 
@@ -662,7 +630,7 @@
               type="button"
               class="flex items-center gap-1 rounded-lg px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950"
             >
-              Why WILD
+              Why Vild
 
               <svg
                 class="h-4 w-4"
@@ -694,7 +662,7 @@
                   class="block rounded-xl p-4 transition hover:bg-slate-50"
                 >
                   <div class="font-bold">
-                    The WILD Standard
+                    The Vild Standard
                   </div>
 
                   <p class="mt-1 text-sm text-slate-500">
@@ -708,7 +676,7 @@
                   class="block rounded-xl p-4 transition hover:bg-slate-50"
                 >
                   <div class="font-bold">
-                    WILD Verified
+                    Vild Verified
                   </div>
 
                   <p class="mt-1 text-sm text-slate-500">
@@ -745,7 +713,7 @@
               href="/journal"
               class="block rounded-lg px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950"
             >
-              Journal
+              Blog
             </a>
 
           </li>
@@ -877,38 +845,53 @@
                 >
 
                   <a
-                    href="/expeditions"
+                    href="/expeditions/wildlife-safaris"
                     class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
                   >
-                    Wildlife Safaris
+                    Gorilla Safaris
+                  </a>
+<a href="/expeditions" class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50">Wildlife Safaris</a>
+
+                  <a
+                    href="/expeditions/photography"
+                    class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
+                  >
+                    Photography Tours
                   </a>
 
                   <a
-                    href="/expeditions"
-                    class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
-                  >
-                    Photography
-                  </a>
-
-                  <a
-                    href="/expeditions"
+                    href="/expeditions/mountain-adventures"
                     class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
                   >
                     Mountain Adventures
                   </a>
 
                   <a
-                    href="/expeditions"
+                    href="/expeditions/conservation"
                     class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
                   >
-                    Cultural Immersion
+                    Conservation
                   </a>
 
                   <a
-                    href="/expeditions"
+                    href="/exchange"
                     class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
                   >
-                    Private Journeys
+                    Volunteering Program
+                  </a>
+
+                  <a
+                    href="/expeditions/cultural-immersion"
+                    class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
+                  >
+                    Cultural Exchange
+                  </a>
+
+                  <a
+                    href="/expeditions/private-journeys"
+                    class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
+                  >
+                    Private Tours
                   </a>
 
                 </div>
@@ -926,7 +909,7 @@
                   class="mobile-toggle flex w-full items-center justify-between py-4 text-left font-semibold"
                 >
 
-                  <span>Exchange</span>
+                  <span>Exchange Programs</span>
 
                   <svg
                     class="mobile-arrow h-5 w-5 transition-transform"
@@ -949,28 +932,10 @@
                   id="exchange-mobile"
                   class="mobile-submenu pb-4"
                 >
-
-                  <a
-                    href="/exchange"
-                    class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
-                  >
-                    University Programs
-                  </a>
-
-                  <a
-                    href="/exchange"
-                    class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
-                  >
-                    Research Access
-                  </a>
-
-                  <a
-                    href="/exchange"
-                    class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
-                  >
-                    Global Health
-                  </a>
-
+                  <a href="/universities" class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50">University partnerships</a>
+                  <a href="/students#student-pathways" class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50">Student pathways</a>
+                  <a href="/students#student-pathways" class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50">Research access</a>
+                  <a href="/exchange" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50">Explore exchange programs &rarr;</a>
                 </div>
 
               </div>
@@ -996,7 +961,7 @@
                   class="mobile-toggle flex w-full items-center justify-between py-4 text-left font-semibold"
                 >
 
-                  <span>Why WILD</span>
+                  <span>Why Vild</span>
 
                   <svg
                     class="mobile-arrow h-5 w-5 transition-transform"
@@ -1024,14 +989,14 @@
                     href="/why-wild"
                     class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
                   >
-                    The WILD Standard
+                    The Vild Standard
                   </a>
 
                   <a
                     href="/why-wild"
                     class="block rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
                   >
-                    WILD Verified
+                    Vild Verified
                   </a>
 
                   <a
@@ -1052,7 +1017,7 @@
                 href="/journal"
                 class="block border-b border-slate-100 py-4 font-semibold"
               >
-                Journal
+                Blog
               </a>
 
 
@@ -1161,7 +1126,7 @@
             href="/contact"
             class="font-bold text-slate-950 transition hover:text-blue-600"
           >
-            Talk to WILD →
+            Talk to Vild →
           </a>
 
         </div>
@@ -1358,7 +1323,7 @@
 
     </section>
 
-    <section class="border-y border-slate-200 bg-white py-16" aria-label="Why WILD">
+    <section class="border-y border-slate-200 bg-white py-16" aria-label="Why Vild">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="max-w-2xl">
           <p class="text-sm font-bold uppercase tracking-[0.2em] text-emerald-700">Africa, professionally connected</p>
@@ -1456,7 +1421,7 @@
               href="/contact"
               class="rounded-xl border border-white/30 px-6 py-4 text-center font-bold text-white transition hover:bg-white/10"
             >
-              Talk to WILD
+              Talk to Vild
             </a>
 
           </div>
@@ -1660,7 +1625,7 @@
         <div>
 
           <h3 class="font-bold">
-            Why WILD
+            Why Vild
           </h3>
 
           <ul
@@ -1669,7 +1634,7 @@
 
             <li>
               <a href="/why-wild" class="hover:text-white">
-                The WILD Standard
+                The Vild Standard
               </a>
             </li>
 
