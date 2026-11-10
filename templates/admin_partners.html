@@ -2,7 +2,7 @@
 <html lang="en">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>WILD | Partners</title><link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}"></head>
 <body class="dashboard-page">
-  <aside class="sidebar"><img class="brand-mark" src="/images/Vild%20Africa%20logo%20cropped.png" alt="Vild"><p class="sidebar-label">Management</p><nav><a href="{{ url_for('admin_dashboard') }}"><span>▦</span> Applications</a><a class="nav-active" href="{{ url_for('admin_partners') }}"><span>◇</span> Partners</a><a href="{{ url_for('home') }}"><span>↗</span> View website</a></nav><a class="logout" href="{{ url_for('admin_logout') }}">Sign out</a></aside>
+  <aside class="sidebar"><img class="brand-mark" src="/images/logo.png" alt="Vild"><p class="sidebar-label">Management</p><nav><a href="{{ url_for('admin_dashboard') }}"><span>▦</span> Applications</a><a class="nav-active" href="{{ url_for('admin_partners') }}"><span>◇</span> Partners</a><a href="{{ url_for('home') }}"><span>↗</span> View website</a></nav><a class="logout" href="{{ url_for('admin_logout') }}">Sign out</a></aside>
   <main class="dashboard-main">
     <header class="dashboard-header"><div><p class="eyebrow">Management portal</p><h1>Partners</h1><p class="muted">Add and maintain the organisations WILD can introduce to participants.</p></div></header>
     {% with messages = get_flashed_messages(with_categories=true) %}{% for category, message in messages %}<p class="alert {{ category }}">{{ message }}</p>{% endfor %}{% endwith %}
