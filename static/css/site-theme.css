@@ -127,14 +127,14 @@ select {
 header,
 header[class~="bg-white/95"],
 header.bg-white {
-  background-color: var(--vild-background) !important;
-  border-color: var(--vild-sand) !important;
+  background-color: var(--vild-forest) !important;
+  border-color: rgb(255 255 255 / 10%) !important;
 }
 
 header nav[aria-label="Main navigation"]:not([data-mobile-panel]) a,
 header nav[aria-label="Main navigation"]:not([data-mobile-panel]) summary,
 header nav[aria-label="Main navigation"]:not([data-mobile-panel]) button {
-  color: var(--vild-primary);
+  color: var(--vild-gold) !important;
 }
 
 footer,
@@ -190,7 +190,8 @@ header nav[aria-label="Main navigation"]:not([data-mobile-panel]) > ul > li > bu
 header nav[aria-label="Main navigation"]:not([data-mobile-panel]) a:hover,
 header nav[aria-label="Main navigation"]:not([data-mobile-panel]) summary:hover,
 header nav[aria-label="Main navigation"]:not([data-mobile-panel]) button:hover {
-  color: var(--vild-forest) !important;
+  color: #fff !important;
+  background-color: rgb(255 255 255 / 10%) !important;
 }
 
 .mega-menu {
@@ -473,4 +474,74 @@ body.no-scroll {
     line-height: 1.12 !important;
     text-wrap: balance;
   }
+}
+
+/* ── Header on forest-green: adjust action links & mobile button ── */
+header .hidden.items-center > a:not(.bg-amber-300):not(.bg-amber-400) {
+  color: var(--vild-gold) !important;
+}
+
+header .hidden.items-center > a:not(.bg-amber-300):not(.bg-amber-400):hover {
+  background-color: rgb(255 255 255 / 10%) !important;
+}
+
+/* Mobile hamburger / summary toggle on forest-green */
+header details > summary {
+  border-color: rgb(255 255 255 / 20%) !important;
+  color: var(--vild-gold) !important;
+}
+
+/* ── Why Vild mega menu ── */
+.mega-parent > .why-vild-menu {
+  position: fixed;
+  top: 60px;
+  left: 50vw;
+  width: min(780px, calc(100vw - 2rem));
+  transform: translate(-50%, 10px);
+}
+
+.mega-parent:hover > .why-vild-menu,
+.mega-parent:focus-within > .why-vild-menu {
+  transform: translate(-50%, 0);
+}
+
+.why-vild-menu-panel {
+  border-color: var(--vild-sand) !important;
+  background-color: var(--vild-surface) !important;
+  box-shadow: 0 24px 60px rgb(11 11 13 / 18%);
+}
+
+.why-vild-menu-panel .mb-4 {
+  margin: 0.5rem 0 0.75rem;
+  color: var(--vild-forest) !important;
+}
+
+.why-vild-menu-panel .text-blue-600 {
+  color: var(--vild-forest) !important;
+}
+
+.why-vild-menu-panel a.group:hover {
+  background-color: #eee5d6 !important;
+}
+
+.why-vild-menu-panel a.group > div > span {
+  flex: none;
+  color: var(--vild-forest);
+}
+
+.why-vild-featured {
+  min-height: 130px;
+  background-image:
+    linear-gradient(90deg, rgb(11 11 13 / 88%) 0%, rgb(30 42 35 / 68%) 55%, rgb(11 11 13 / 24%) 100%),
+    url("/images/JDR_0710a.jpg");
+  background-position: center 35%;
+  background-size: cover;
+}
+
+.why-vild-featured .text-blue-300 {
+  color: var(--vild-gold) !important;
+}
+
+.why-vild-featured a:hover {
+  color: var(--vild-gold) !important;
 }

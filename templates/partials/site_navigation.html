@@ -8,10 +8,10 @@
       <ul class="flex items-center text-sm font-semibold">
         <li><a href="/about" class="rounded-lg px-3 py-3 transition hover:bg-slate-50">About</a></li>
         <li class="mega-parent relative">
-          <button type="button" class="flex items-center gap-1 rounded-lg px-3 py-3 transition hover:bg-slate-50" aria-haspopup="true">
+          <a href="/destinations" class="flex items-center gap-1 rounded-lg px-3 py-3 transition hover:bg-slate-50" aria-haspopup="true">
             Destinations
             <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="m6 9 6 6 6-6" /></svg>
-          </button>
+          </a>
           <div class="destination-menu mega-menu z-50 w-[min(1200px,calc(100vw-2rem))] pt-4">
             <div class="grid grid-cols-5 gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-2xl">
               <a href="/destinations/uganda" class="group overflow-hidden rounded-xl border border-slate-200 bg-white transition hover:-translate-y-0.5 hover:shadow-lg">
@@ -110,11 +110,38 @@
             Why Vild
             <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="m6 9 6 6 6-6" /></svg>
           </button>
-          <div class="mega-menu absolute left-0 top-full z-50 w-72 pt-4">
-            <div class="rounded-2xl border border-slate-200 bg-white p-3 shadow-2xl">
-              <a href="/why-wild" class="block rounded-xl p-4 transition hover:bg-slate-50"><strong>The Vild Standard</strong><p class="mt-1 text-sm text-slate-500">Why Vild.</p></a>
-              <a href="/why-wild" class="block rounded-xl p-4 transition hover:bg-slate-50"><strong>Vild Verified</strong><p class="mt-1 text-sm text-slate-500">Partner verification and safety.</p></a>
-              <a href="/why-wild" class="block rounded-xl p-4 transition hover:bg-slate-50"><strong>Responsible Access</strong><p class="mt-1 text-sm text-slate-500">Our impact and ethics framework.</p></a>
+          <div class="why-vild-menu mega-menu absolute left-0 top-full z-50 pt-4" style="width:min(780px,calc(100vw - 2rem))">
+            <div class="why-vild-menu-panel overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-2xl">
+              <div class="grid grid-cols-3 gap-7">
+                <!-- Col 1: Our Story -->
+                <div>
+                  <p class="mb-4 text-[11px] font-bold uppercase tracking-[0.2em] text-blue-600">Our Story</p>
+                  <a href="/why-wild" class="group block rounded-xl p-3 transition hover:bg-slate-50"><div class="flex items-center gap-3"><span class="flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-emerald-50"><i class="fa-solid fa-seedling" aria-hidden="true"></i></span><div><strong class="font-bold">The Vild Standard</strong><p class="mt-1 text-xs text-slate-500">What sets us apart and how we operate.</p></div></div></a>
+                  <a href="/why-wild" class="group mt-2 block rounded-xl p-3 transition hover:bg-slate-50"><div class="flex items-center gap-3"><span class="flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-amber-50"><i class="fa-solid fa-people-group" aria-hidden="true"></i></span><div><strong class="font-bold">Local Partnerships</strong><p class="mt-1 text-xs text-slate-500">Rooted in community, guided by locals.</p></div></div></a>
+                </div>
+                <!-- Col 2: Our Standards -->
+                <div>
+                  <p class="mb-4 text-[11px] font-bold uppercase tracking-[0.2em] text-blue-600">Our Standards</p>
+                  <a href="/why-wild" class="group block rounded-xl p-3 transition hover:bg-slate-50"><div class="flex items-center gap-3"><span class="flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-blue-50"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span><div><strong class="font-bold">Vild Verified</strong><p class="mt-1 text-xs text-slate-500">Partner vetting, safety and accountability.</p></div></div></a>
+                  <a href="/why-wild" class="group mt-2 block rounded-xl p-3 transition hover:bg-slate-50"><div class="flex items-center gap-3"><span class="flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-indigo-50"><i class="fa-solid fa-star" aria-hidden="true"></i></span><div><strong class="font-bold">Quality Assurance</strong><p class="mt-1 text-xs text-slate-500">Consistent experience across every expedition.</p></div></div></a>
+                </div>
+                <!-- Col 3: Impact -->
+                <div>
+                  <p class="mb-4 text-[11px] font-bold uppercase tracking-[0.2em] text-blue-600">Impact</p>
+                  <a href="/why-wild" class="group block rounded-xl p-3 transition hover:bg-slate-50"><div class="flex items-center gap-3"><span class="flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-green-50"><i class="fa-solid fa-leaf" aria-hidden="true"></i></span><div><strong class="font-bold">Responsible Access</strong><p class="mt-1 text-xs text-slate-500">Our ethics and environmental framework.</p></div></div></a>
+                  <a href="/why-wild" class="group mt-2 block rounded-xl p-3 transition hover:bg-slate-50"><div class="flex items-center gap-3"><span class="flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-rose-50"><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i></span><div><strong class="font-bold">Community Impact</strong><p class="mt-1 text-xs text-slate-500">How your journey gives back.</p></div></div></a>
+                </div>
+                <!-- Featured panel -->
+                <aside class="why-vild-featured relative col-span-3 overflow-hidden rounded-2xl bg-wild-navy p-6 text-white">
+                  <div class="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-blue-500/20 blur-2xl"></div>
+                  <div class="relative">
+                    <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-blue-300">Why it matters</p>
+                    <h3 class="mt-2 text-xl font-bold">Travel with purpose.</h3>
+                    <p class="mt-2 text-sm leading-6 text-slate-300">Every Vild expedition is designed to create meaningful access — for travellers, for communities, and for the places we care about.</p>
+                    <a href="/why-wild" class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-white hover:text-blue-300">Discover why Vild <span aria-hidden="true">→</span></a>
+                  </div>
+                </aside>
+              </div>
             </div>
           </div>
         </li>
