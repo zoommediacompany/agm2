@@ -142,6 +142,18 @@
     .mega-parent:focus-within .destination-menu {
       transform: translate(-50%, 0);
     }
+    .about-menu {
+      position: fixed;
+      top: 60px;
+      left: 50vw;
+      width: min(780px, calc(100vw - 2rem));
+      transform: translate(-50%, 10px);
+    }
+
+    .mega-parent:hover .about-menu,
+    .mega-parent:focus-within .about-menu {
+      transform: translate(-50%, 0);
+    }
 
     .mobile-submenu {
       display: none;
@@ -331,9 +343,34 @@
             <a href="/journal" class="block rounded-lg px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950">Blog</a>
           </li>
 
-          <!-- ABOUT -->
-          <li class="order-first">
-            <a href="/about" class="block rounded-lg px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950">About</a>
+                    <!-- ABOUT -->
+          <li class="mega-parent relative">
+            <button type="button" class="flex items-center gap-1 rounded-lg px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950" aria-haspopup="true">
+              About
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="m6 9 6 6 6-6"></path></svg>
+            </button>
+            <div class="about-menu mega-menu absolute left-0 top-full z-50 pt-4">
+              <div class="about-menu-panel rounded-2xl border border-slate-200 bg-white p-6 shadow-2xl min-w-[600px]">
+                <div class="grid grid-cols-3 gap-6 items-start">
+                  <div class="border-r border-slate-100 pr-6 pb-4">
+                    <p class="mb-4 text-[11px] font-bold uppercase tracking-[0.2em] text-blue-600">Who We Are</p>
+                    <a href="/about" class="group block rounded-xl px-3 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950"><strong class="font-bold block mb-1">Our Story</strong><p class="mt-0 text-xs text-slate-500">How Vild began and why meaningful access matters.</p></a>
+                    <a href="/about" class="group mt-2 block rounded-xl px-3 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950"><strong class="font-bold block mb-1">Vision · Mission</strong><p class="mt-0 text-xs text-slate-500">What we believe and what we set out to change.</p></a>
+                    <a href="/about" class="group mt-2 block rounded-xl px-3 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950"><strong class="font-bold block mb-1">Founding Team</strong><p class="mt-0 text-xs text-slate-500">The people who started Vild.</p></a>
+                  </div>
+                  <div class="border-r border-slate-100 pr-6 pb-4">
+                    <p class="mb-4 text-[11px] font-bold uppercase tracking-[0.2em] text-blue-600">Leadership</p>
+                    <a href="/about" class="group block rounded-xl px-3 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950"><strong class="font-bold block mb-1">Leadership</strong><p class="mt-0 text-xs text-slate-500">Meet the team guiding Vild’s growth.</p></a>
+                    <a href="/about" class="group mt-2 block rounded-xl px-3 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950"><strong class="font-bold block mb-1">Our Team</strong><p class="mt-0 text-xs text-slate-500">The people behind every journey.</p></a>
+                  </div>
+                  <div class="pb-4">
+                    <p class="mb-4 text-[11px] font-bold uppercase tracking-[0.2em] text-blue-600">Our Work</p>
+                    <a href="/about" class="group block rounded-xl px-3 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950"><strong class="font-bold block mb-1">Our Divisions</strong><p class="mt-0 text-xs text-slate-500">Safaris, exchange and expeditions under one roof.</p></a>
+                    <a href="/about" class="group mt-2 block rounded-xl px-3 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950"><strong class="font-bold block mb-1">Vild Safaris · Vild</strong><p class="mt-0 text-xs text-slate-500">Wildlife journeys and local access.</p></a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
 
         </ul>

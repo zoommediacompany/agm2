@@ -545,3 +545,51 @@ header details > summary {
 .why-vild-featured a:hover {
   color: var(--vild-gold) !important;
 }
+.mega-parent > .about-menu {
+  position: fixed;
+  top: 60px;
+  left: 50vw;
+  width: min(780px, calc(100vw - 2rem));
+  transform: translate(-50%, 10px);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+}
+
+.mega-parent:hover > .about-menu,
+.mega-parent:focus-within > .about-menu {
+  transform: translate(-50%, 0);
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.about-menu-panel {
+  border-color: var(--vild-sand) !important;
+  background-color: var(--vild-surface) !important;
+  box-shadow: 0 24px 60px rgb(11 11 13 / 18%);
+}
+
+.about-menu-panel .grid.grid-cols-3 {
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.about-menu-panel .mb-4 {
+  margin: 0.5rem 0 0.75rem;
+  color: var(--vild-forest) !important;
+}
+
+.about-menu-panel .text-blue-600 {
+  color: var(--vild-forest) !important;
+}
+
+.about-menu-panel a.group {
+  min-height: 76px;
+  padding: 0.7rem;
+}
+
+.about-menu-panel a.group:hover {
+  background-color: #eee5d6 !important;
+}

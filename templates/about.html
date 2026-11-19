@@ -8,7 +8,7 @@
   <title>About Vild | Vild Africa Access</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -38,24 +38,23 @@
   {% include "partials/site_navigation.html" %}
 
   <main id="main-content">
-    <section class="relative overflow-hidden bg-wild-navy text-white">
-      <div class="absolute -right-32 -top-40 h-[34rem] w-[34rem] rounded-full border border-white/10"></div>
-      <div class="absolute -right-16 -top-24 h-[26rem] w-[26rem] rounded-full border border-white/10"></div>
-      <div class="relative mx-auto grid max-w-7xl gap-10 px-4 pb-16 pt-14 sm:px-6 sm:pb-20 sm:pt-20 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-16 lg:px-8 lg:py-24">
+    <!-- HERO -->
+    <section class="relative overflow-hidden bg-wild-navy text-white sm:px-6 sm:py-24 lg:px-8">
+      <div class="mx-auto grid max-w-7xl gap-10 sm:pb-20 sm:pt-20 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-16 lg:px-8 lg:py-24">
         <div class="relative z-10">
-          <p class="text-xs font-bold uppercase tracking-[0.25em] text-amber-300">Vild Africa Access</p>
-          <h1 class="mt-6 max-w-3xl font-display text-5xl leading-[1.06] sm:text-6xl lg:text-7xl">Access is not a shortcut. It is a relationship.</h1>
-          <p class="mt-7 max-w-2xl text-lg leading-8 text-slate-300">We help travellers, students, universities, researchers and organisations navigate meaningful access to African places, people, expertise and opportunities.</p>
+          <p class="text-xs font-bold uppercase tracking-[0.25em] text-amber-300">Rooted in Africa. Connected to the world.</p>
+          <h1 class="mt-6 max-w-3xl font-display text-5xl leading-[1.06] sm:text-6xl lg:text-7xl">Africa is extraordinary.<br class="hidden sm:block" />Getting closer to it should be exceptional.</h1>
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-300">We connect people, institutions and opportunities with Africa through exceptional experiences, trusted relationships and professionally coordinated access.</p>
           <div class="mt-9 flex flex-wrap gap-3">
-            <a href="#our-purpose" class="rounded-full bg-amber-300 px-6 py-3 font-bold text-wild-navy transition hover:bg-amber-200">What guides us <span aria-hidden="true">↓</span></a>
-            <a href="/contact" class="rounded-full border border-white/30 px-6 py-3 font-bold text-white transition hover:bg-white/10">Start a conversation <span aria-hidden="true">→</span></a>
+            <a href="#our-purpose" class="rounded-full bg-amber-300 px-6 py-3 font-bold text-wild-navy transition hover:bg-amber-200">What guides us <span aria-hidden="true">&#8595;</span></a>
+            <a href="/contact" class="rounded-full border border-white/30 px-6 py-3 font-bold text-white transition hover:bg-white/10">Start a conversation <span aria-hidden="true">&#8594;</span></a>
           </div>
+          <p class="mt-12 text-xs uppercase tracking-[0.2em] text-slate-400">An African company. An international ambition.</p>
         </div>
         <figure class="relative mx-auto w-full max-w-lg lg:max-w-none">
           <div class="absolute -bottom-5 -left-5 h-2/3 w-2/3 rounded-[2rem] bg-wild-green/50 sm:-bottom-7 sm:-left-7"></div>
-          <div class="relative h-[360px] overflow-hidden rounded-[2rem] sm:h-[480px] lg:h-[560px]">
+            <div class="relative h-[360px] overflow-hidden sm:h-[480px] lg:h-[560px]">
             <img src="/images/uganda-community-cultural-experience-volunteers.jpg" alt="Travelers and community members gathered outdoors in Uganda" class="h-full w-full object-cover" fetchpriority="high" />
-            <div class="absolute inset-0 bg-gradient-to-t from-wild-navy/75 via-transparent to-transparent"></div>
             <figcaption class="absolute bottom-6 left-6 right-6 text-white sm:bottom-8 sm:left-8">
               <span class="text-xs font-bold uppercase tracking-[0.2em] text-amber-300">Our starting point</span>
               <span class="mt-2 block font-display text-2xl sm:text-3xl">People, place and purpose.</span>
@@ -64,7 +63,7 @@
         </figure>
       </div>
       <div class="relative border-t border-white/10">
-        <div class="mx-auto grid max-w-7xl gap-5 px-4 py-6 text-sm sm:grid-cols-3 sm:px-6 lg:px-8">
+        <div class="mx-auto grid max-w-7xl gap-5 sm:grid-cols-3 sm:px-6 lg:px-8">
           <p><span class="font-bold text-amber-300">Our focus</span><span class="ml-2 text-slate-300">Meaningful access</span></p>
           <p><span class="font-bold text-amber-300">Our foundation</span><span class="ml-2 text-slate-300">Local relationships</span></p>
           <p><span class="font-bold text-amber-300">Our first base</span><span class="ml-2 text-slate-300">Uganda</span></p>
@@ -72,107 +71,281 @@
       </div>
     </section>
 
-    <section id="our-purpose" class="px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+    <!-- OUR STORY -->
+    <section id="our-story" class="px-4 py-20 sm:px-6 sm:py-24 lg:px-8 bg-[#e8e4d8]">
+
+      <div class="mx-auto max-w-7xl">
+
+        <!-- Image above text -->
+        <div class="relative overflow-hidden group aspect-[4/3] lg:aspect-[3/4] mb-12 lg:mb-16">
+          <img src="/images/JDR_3449A.jpg" alt="Uganda landscape" width="1000" height="750" loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+        </div>
+
+        <!-- Text content -->
+        <div class="mx-auto max-w-3xl text-center lg:text-left">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[0.22em] text-wild-green">Our story</p>
+            <h2 class="mt-4 font-display text-4xl leading-tight sm:text-5xl text-wild-navy">Africa has extraordinary possibilities.<br class="hidden sm:block" />Access has always been the challenge.</h2>
+          </div>
+          <div class="mt-8 lg:mt-10 leading-8 text-slate-700">
+            <p>Africa is home to remarkable wildlife, extraordinary landscapes, exceptional knowledge, vibrant cultures and institutions with the capacity to contribute to the world.</p>
+            <p class="mt-6">Yet discovering the right experience, finding trusted local expertise and coordinating everything required to make an opportunity happen can be complicated.</p>
+            <p class="mt-6">We believe there is a better way. VILD Africa Access was conceived around a simple idea: connect international ambition with African capability through a company built on trust, local knowledge and professional execution.</p>
+            <p class="mt-6">We bring together carefully selected partners, distinctive experiences and coordinated services to make discovering and accessing Africa more straightforward.</p>
+            <p class="mt-6">From a private gorilla trekking expedition in Uganda to an educational program connecting international institutions with African expertise, our approach remains the same.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMAGES ABOVE WHAT WE DO -->
+    <section class="px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-6 md:grid-cols-2">
+          <div class="relative overflow-hidden group aspect-[4/5]">
+            <img src="/images/JDR_1767a.jpg" alt="Wildlife in Uganda" width="800" height="1000" loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+          </div>
+          <div class="relative overflow-hidden group aspect-[4/5]">
+            <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=85" alt="People connecting in Africa" width="800" height="1000" loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT WE DO -->
+    <section id="what-we-do" class="px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="mx-auto max-w-3xl text-center">
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-wild-green">What we do</p>
+          <h2 class="mt-2 font-display text-4xl leading-tight sm:text-5xl text-wild-navy">One African vision. Two ways to experience it.</h2>
+          <p class="mt-6 max-w-2xl leading-8 text-slate-700">Our divisions serve different audiences, but share one philosophy: meaningful access begins with the right relationships and reliable execution.</p>
+        </div>
+        <div class="mt-16 grid gap-8 md:grid-cols-2">
+          <a href="/destinations" class="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-10 transition-all duration-300 hover:border-emerald-50/50 hover:shadow-2xl hover:-translate-y-1">
+            <div class="absolute inset-0 -z-10 bg-gradient-to-b from-emerald-50/40 via-white to-transparent transition-all duration-300 group-hover:from-emerald-50/60"></div>
+            <div class="relative z-10 flex items-start justify-between">
+              <div>
+                <div class="inline-flex items-center gap-2 mb-4">
+                  <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300"><i class="fa-solid fa-map-marked-alt text-xl"></i></span>
+                  <p class="text-xs font-bold uppercase tracking-[0.2em] text-emerald-700 group-hover:text-emerald-900 transition-colors duration-300">Vild Safaris</p>
+                </div>
+                <h3 class="text-4xl font-extrabold text-wild-navy leading-[1.1] mb-4 group-hover:text-emerald-900 transition-colors duration-300">Experience Africa</h3>
+                <p class="mt-2 leading-7 text-slate-700">Premium safaris, wildlife journeys, gorilla trekking, bespoke expeditions and exceptional African experiences.</p>
+              </div>
+              <span class="inline-flex items-center gap-2 font-bold text-wild-navy transition-colors duration-300 group-hover:text-emerald-900">Explore Vild Safaris <span class="ml-2">&#8594;</span></span>
+            </div>
+          </a>
+          <a href="/exchange" class="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-10 transition-all duration-300 hover:border-amber-50/50 hover:shadow-2xl hover:-translate-y-1">
+            <div class="absolute inset-0 -z-10 bg-gradient-to-b from-amber-50/40 via-white to-transparent transition-all duration-300 group-hover:from-amber-50/60"></div>
+            <div class="relative z-10 flex items-start justify-between">
+              <div>
+                <div class="inline-flex items-center gap-2 mb-4">
+                  <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-50 text-amber-700 group-hover:bg-amber-600 group-hover:text-white transition-colors duration-300"><i class="fa-solid fa-graduation-cap text-xl"></i></span>
+                  <p class="text-xs font-bold uppercase tracking-[0.2em] text-amber-700 group-hover:text-amber-900 transition-colors duration-300">Vild Exchange</p>
+                </div>
+                <h3 class="text-4xl font-extrabold text-wild-navy leading-[1.1] mb-4 group-hover:text-amber-900 transition-colors duration-300">Connect with Africa</h3>
+                <p class="mt-2 leading-7 text-slate-700">Educational programs, academic exchange, research coordination and professional opportunities.</p>
+              </div>
+              <span class="inline-flex items-center gap-2 font-bold text-wild-navy transition-colors duration-300 group-hover:text-amber-900">Explore Vild Exchange <span class="ml-2">&#8594;</span></span>
+            </div>
+          </a>
+        </div>
+        <div class="mt-16 border-t border-slate-200 pt-12 grid gap-8 md:grid-cols-2 text-center sm:text-left">
+          <div class="p-6 rounded-2xl border border-slate-100 bg-slate-50/50">
+            <p class="text-xs font-bold uppercase tracking-[0.2em] text-wild-green mb-2">Shared philosophy</p>
+            <p class="leading-7 text-slate-700">Meaningful access begins with the right relationships and reliable execution.</p>
+          </div>
+          <div class="p-6 rounded-2xl border border-slate-100 bg-white">
+            <p class="text-xs font-bold uppercase tracking-[0.2em] text-wild-green mb-2">One point of contact</p>
+            <p class="leading-7 text-slate-700">Safaris and exchange programs coordinated through a single, trusted relationship.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY VILD EXISTS -->
+    <img src="/images/JDR_3484.JPG" alt="Uganda landscape" width="1600" height="1067" loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+    <section id="why-vild-exists" class="px-4 py-20 sm:px-6 sm:py-24 lg:px-8 bg-[#e8e4d8]">
       <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20">
         <div>
           <p class="text-xs font-bold uppercase tracking-[0.22em] text-wild-green">Why Vild exists</p>
-          <h2 class="mt-4 font-display text-4xl leading-tight sm:text-5xl">Make meaningful access easier to navigate.</h2>
+          <h2 class="mt-4 font-display text-4xl leading-tight sm:text-5xl text-wild-navy">Access should come with trust.</h2>
         </div>
         <div class="max-w-3xl">
-          <p class="font-display text-2xl leading-snug text-wild-navy sm:text-3xl">Africa is not one destination or one story. It is a continent of people, institutions, landscapes, knowledge and opportunity.</p>
-          <p class="mt-6 leading-8 text-slate-600">Finding the right route takes relationships, local knowledge, preparation and clear expectations. Vild helps people explore those possibilities without treating access as a promise before the details are confirmed.</p>
-          <p class="mt-5 leading-8 text-slate-600">Our role is to help make the conversation clearer: understand what you hope to do, identify the questions that matter, and explore whether a suitable connection or arrangement can be made.</p>
+          <p class="leading-8 text-slate-700">Finding an experience is one thing. Knowing who to trust, what to expect and how everything will come together is another. We exist to close that gap.</p>
+          <p class="mt-6 leading-8 text-slate-700">Our role is to make complex experiences and programs easier to discover, plan and coordinate, while building meaningful connections with the African businesses, professionals and institutions that make them possible.</p>
+          <p class="mt-6 leading-8 text-slate-700">We don't believe in making promises simply to win business. We believe in understanding expectations, setting clear responsibilities and doing the work required to deliver.</p>
         </div>
       </div>
     </section>
 
-    <section class="bg-[#e8e4d8] px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+    <!-- WHAT MAKES VILD DIFFERENT -->
+    <section id="what-makes-vild-different" class="px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
       <div class="mx-auto max-w-7xl">
-        <div class="grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:items-end lg:gap-20">
-          <div>
-            <p class="text-xs font-bold uppercase tracking-[0.22em] text-wild-green">The WILD point of view</p>
-            <h2 class="mt-4 font-display text-4xl leading-tight sm:text-5xl">The way we connect matters.</h2>
+        <p class="text-xs font-bold uppercase tracking-[0.22em] text-wild-green">What makes Vild different?</p>
+        <h2 class="mt-2 font-display text-4xl leading-tight sm:text-5xl text-wild-navy">Commercially persuasive, not just passionate.</h2>
+        <p class="mt-6 max-w-2xl leading-8 text-slate-700">Don't just tell customers you're passionate. Show them what they can expect.</p>
+        <div class="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div class="bg-white p-8 rounded-2xl border border-slate-200">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-50"><i class="fa-solid fa-map-marked-alt text-white"></i></span>
+              <h3 class="text-xl font-bold text-wild-navy">African roots. International perspective.</h3>
+            </div>
+            <p class="leading-7 text-slate-700">We combine local knowledge and relationships with an understanding of international customer and institutional expectations.</p>
           </div>
-          <p class="max-w-2xl leading-7 text-slate-600">Access should create the conditions for better understanding, not turn people or places into products. These principles shape how we approach every enquiry.</p>
-        </div>
-        <div class="mt-12 grid gap-px overflow-hidden rounded-2xl border border-slate-300 bg-slate-300 md:grid-cols-3">
-          <article class="bg-white p-7 sm:p-9">
-            <span class="font-display text-5xl text-wild-green">01</span>
-            <p class="mt-8 text-xs font-bold uppercase tracking-[0.18em] text-slate-500">Start with purpose</p>
-            <h3 class="mt-3 text-2xl font-bold">Know why you are coming.</h3>
-            <p class="mt-4 leading-7 text-slate-600">Begin with a clear reason to travel, learn, research or connect. Good planning starts with listening to that purpose.</p>
-          </article>
-          <article class="bg-white p-7 sm:p-9">
-            <span class="font-display text-5xl text-wild-green">02</span>
-            <p class="mt-8 text-xs font-bold uppercase tracking-[0.18em] text-slate-500">Build relationships</p>
-            <h3 class="mt-3 text-2xl font-bold">People are partners.</h3>
-            <p class="mt-4 leading-7 text-slate-600">Local organisations and communities have agency and expertise. Treat them as partners, never as products or attractions.</p>
-          </article>
-          <article class="bg-white p-7 sm:p-9">
-            <span class="font-display text-5xl text-wild-green">03</span>
-            <p class="mt-8 text-xs font-bold uppercase tracking-[0.18em] text-slate-500">Be clear</p>
-            <h3 class="mt-3 text-2xl font-bold">Trust needs honesty.</h3>
-            <p class="mt-4 leading-7 text-slate-600">Set out what is known, what still needs agreement and who is responsible before expectations become commitments.</p>
-          </article>
+          <div class="bg-white p-8 rounded-2xl border border-slate-200">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-50"><i class="fa-solid fa-hands text-white"></i></span>
+              <h3 class="text-xl font-bold text-wild-navy">Relationships that matter.</h3>
+            </div>
+            <p class="leading-7 text-slate-700">We work to establish trusted relationships with local operators, guides, businesses, specialists and institutions.</p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl border border-slate-200">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-50"><i class="fa-solid fa-clipboard-check text-white"></i></span>
+              <h3 class="text-xl font-bold text-wild-navy">Thoughtful coordination.</h3>
+            </div>
+            <p class="leading-7 text-slate-700">We bring together the right services, people and logistics around each customer's requirements.</p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl border border-slate-200">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-50"><i class="fa-solid fa-shield-halved text-white"></i></span>
+              <h3 class="text-xl font-bold text-wild-navy">Accountability at every stage.</h3>
+            </div>
+            <p class="leading-7 text-slate-700">Clear expectations, defined responsibilities, transparent commercial terms and appropriate operational safeguards.</p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl border border-slate-200">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-rose-50"><i class="fa-solid fa-seedling text-white"></i></span>
+              <h3 class="text-xl font-bold text-wild-navy">African value creation.</h3>
+            </div>
+            <p class="leading-7 text-slate-700">We aim to create meaningful commercial opportunities for African businesses, professionals and communities.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="overflow-hidden bg-white">
-      <div class="mx-auto grid max-w-7xl lg:grid-cols-[0.9fr_1.1fr]">
-        <div class="relative min-h-[380px] lg:min-h-[620px]">
-          <img src="/images/JDR_1668a.jpg" alt="Mountain gorilla in a forest in Uganda" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
-          <div class="absolute inset-0 bg-gradient-to-t from-wild-navy/60 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-white/10"></div>
-          <div class="absolute bottom-6 left-6 rounded-xl bg-white/95 px-5 py-4 sm:bottom-8 sm:left-8">
-            <p class="text-xs font-bold uppercase tracking-[0.18em] text-wild-green">Grounded in place</p>
-            <p class="mt-1 font-display text-xl">Uganda is our first focus.</p>
-          </div>
-        </div>
-        <div class="flex flex-col justify-center px-5 py-16 sm:px-10 lg:px-16 lg:py-24">
-          <p class="text-xs font-bold uppercase tracking-[0.22em] text-wild-green">Our beginning</p>
-          <h2 class="mt-4 font-display text-4xl leading-tight sm:text-5xl">Uganda first. Build with care.</h2>
-          <p class="mt-6 leading-8 text-slate-600">Uganda is Vild’s first operating focus. We aim to build strong local relationships here before expanding into additional countries.</p>
-          <p class="mt-5 leading-8 text-slate-600">That means describing opportunities carefully, confirming practical details individually and not presenting future plans as services already available.</p>
-          <a href="/destinations" class="mt-8 inline-flex font-bold text-wild-green transition hover:text-emerald-800">Explore Uganda <span class="ml-2" aria-hidden="true">→</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-wild-navy px-4 py-20 text-white sm:px-6 sm:py-24 lg:px-8">
+    <!-- OUR PHILOSOPHY -->
+    <section id="our-philosophy" class="px-4 py-20 sm:px-6 sm:py-24 lg:px-8 bg-[#e8e4d8]">
       <div class="mx-auto max-w-7xl">
-        <div class="grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20">
-          <div>
-            <p class="text-xs font-bold uppercase tracking-[0.22em] text-amber-300">How we work</p>
-            <h2 class="mt-4 font-display text-4xl leading-tight sm:text-5xl">Possibility, with practical clarity.</h2>
+        <p class="text-xs font-bold uppercase tracking-[0.22em] text-wild-green">Our philosophy</p>
+        <h2 class="mt-2 font-display text-4xl leading-tight sm:text-5xl text-wild-navy">The Vild Philosophy</h2>
+        <p class="mt-4 max-w-2xl leading-8 text-slate-700">Make Africa easier to access without making Africa less authentic. We believe the best experiences are built on genuine relationships, local expertise and respect for the places and people that make them possible.</p>
+        <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-5">
+          <div class="bg-white p-6 rounded-xl border border-slate-200 text-center">
+            <p class="text-xs font-bold uppercase tracking-[0.2em] text-wild-green">Authenticity</p>
+            <p class="mt-2 font-semibold text-wild-navy">We value authenticity over artificial experiences.</p>
           </div>
-          <div class="grid gap-8 sm:grid-cols-2">
-            <div>
-              <span class="text-2xl text-amber-300" aria-hidden="true">+</span>
-              <h3 class="mt-4 text-xl font-bold">What we help with</h3>
-              <p class="mt-3 leading-7 text-slate-300">We help people explore connections to places, hosts, learning, research and travel possibilities, and clarify the questions that need answering.</p>
-            </div>
-            <div>
-              <span class="text-2xl text-amber-300" aria-hidden="true">−</span>
-              <h3 class="mt-4 text-xl font-bold">What we do not assume</h3>
-              <p class="mt-3 leading-7 text-slate-300">An enquiry does not guarantee a host, permit, placement, itinerary or booking. Availability, suitability, responsibilities and costs must be discussed and confirmed.</p>
-            </div>
+          <div class="bg-white p-6 rounded-xl border border-slate-200 text-center">
+            <p class="text-xs font-bold uppercase tracking-[0.2em] text-wild-green">Trust</p>
+            <p class="mt-2 font-semibold text-wild-navy">We prioritize trust over exaggerated promises.</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl border border-slate-200 text-center">
+            <p class="text-xs font-bold uppercase tracking-[0.2em] text-wild-green">Respect</p>
+            <p class="mt-2 font-semibold text-wild-navy">We respect local expertise and relationships.</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl border border-slate-200 text-center">
+            <p class="text-xs font-bold uppercase tracking-[0.2em] text-wild-green">Commercial success</p>
+            <p class="mt-2 font-semibold text-wild-navy">We believe commercial success and responsible practices should reinforce each other.</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl border border-slate-200 text-center">
+            <p class="text-xs font-bold uppercase tracking-[0.2em] text-wild-green">Quality</p>
+            <p class="mt-2 font-semibold text-wild-navy">We measure our work through the quality of what we deliver.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+    <!-- OUR VALUES -->
+    <section id="our-values" class="px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <p class="text-xs font-bold uppercase tracking-[0.22em] text-wild-green">Our values</p>
+        <h2 class="mt-2 font-display text-4xl leading-tight sm:text-5xl text-wild-navy">What it means at Vild</h2>
+        <div class="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div class="bg-white p-8 rounded-2xl border border-slate-200">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-50"><i class="fa-solid fa-check-circle text-white"></i></span>
+              <h3 class="text-xl font-bold text-wild-navy">Truth</h3>
+            </div>
+            <p class="leading-7 text-slate-700">Honest communication and transparent commitments.</p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl border border-slate-200">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-50"><i class="fa-solid fa-star text-white"></i></span>
+              <h3 class="text-xl font-bold text-wild-navy">Excellence</h3>
+            </div>
+            <p class="leading-7 text-slate-700">Consistent attention to quality and detail.</p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl border border-slate-200">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-50"><i class="fa-solid fa-hand-holding-heart text-white"></i></span>
+              <h3 class="text-xl font-bold text-wild-navy">Ownership</h3>
+            </div>
+            <p class="leading-7 text-slate-700">Taking responsibility for what we undertake.</p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl border border-slate-200">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-50"><i class="fa-solid fa-heart text-white"></i></span>
+              <h3 class="text-xl font-bold text-wild-navy">Respect</h3>
+            </div>
+            <p class="leading-7 text-slate-700">Valuing people, cultures and partnerships.</p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl border border-slate-200">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-rose-50"><i class="fa-solid fa-shield-halved text-white"></i></span>
+              <h3 class="text-xl font-bold text-wild-navy">Responsibility</h3>
+            </div>
+            <p class="leading-7 text-slate-700">Making thoughtful commercial and operational decisions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UGANDA IMAGES -->
+    <section id="uganda-journey" class="px-4 py-20 sm:px-6 sm:py-24 lg:px-8 bg-[#e8e4d8]">
+      <div class="mx-auto max-w-7xl">
+        <p class="text-xs font-bold uppercase tracking-[0.22em] text-wild-green">Our journey</p>
+        <h2 class="mt-2 font-display text-4xl leading-tight sm:text-5xl text-wild-navy">Rooted in Uganda. Looking across Africa.</h2>
+        <p class="mt-6 max-w-2xl leading-8 text-slate-700">Uganda is where our journey begins. Its extraordinary biodiversity, wildlife, landscapes and people provide the foundation for our initial experiences and partnerships.</p>
+        <div class="mt-16 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div class="relative overflow-hidden aspect-[4/5] group">
+            <img src="/images/JDR_3449A.jpg" alt="Uganda landscape" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" />
+          </div>
+          <div class="relative overflow-hidden aspect-[4/5] group">
+            <img src="/images/JDR_1668a.jpg" alt="Uganda wildlife" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" />
+          </div>
+          <div class="relative overflow-hidden aspect-[4/5] group">
+            <img src="/images/uganda-community-cultural-experience-volunteers.jpg" alt="Uganda people" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" />
+          </div>
+        </div>
+        <div class="mt-12 max-w-2xl leading-8 text-slate-700">We are building our understanding, developing our operating relationships and establishing standards that can support long-term growth. Our geographical ambition extends beyond Uganda, across East Africa and eventually into other African markets&#8212;but expansion is not simply about reaching more destinations. It is about ensuring that the quality, relationships and accountability associated with Vild remain consistent wherever we operate.</div>
+      </div>
+    </section>
+
+    <!-- OUR VISION -->
+    <section id="our-vision" class="px-4 py-20 sm:px-6 sm:py-24 lg:px-8 bg-wild-navy text-white">
+      <div class="mx-auto max-w-7xl">
+        <p class="text-xs font-bold uppercase tracking-[0.22em] text-amber-300">Our vision</p>
+        <h2 class="mt-2 font-display text-4xl leading-tight sm:text-5xl">A more connected Africa.</h2>
+        <p class="mt-6 max-w-2xl leading-8 text-slate-200">We envision an internationally respected African company connecting people, institutions and businesses with the experiences, expertise and opportunities that make Africa extraordinary.</p>
+        <p class="mt-6 leading-8 text-slate-200">Our ambition is to build a lasting network founded on trust, meaningful partnerships and professional execution. We are not interested in becoming the biggest simply for the sake of size. We want to become a company whose name means something.</p>
+      </div>
+    </section>
+
+    <!-- CLOSING CTA -->
+    <section id="closing-cta" class="px-4 py-20 sm:px-6 sm:py-24 lg:px-8 bg-[#e8e4d8]">
       <div class="mx-auto flex max-w-7xl flex-col gap-8 rounded-3xl border border-slate-200 bg-white p-7 shadow-sm sm:p-10 md:flex-row md:items-center md:justify-between lg:p-14">
         <div class="max-w-2xl">
-          <p class="text-xs font-bold uppercase tracking-[0.22em] text-wild-green">Who we connect with</p>
-          <h2 class="mt-4 font-display text-3xl leading-tight sm:text-4xl">Different starting points. One thoughtful approach.</h2>
-          <p class="mt-4 leading-7 text-slate-600">Travellers, students, universities, researchers, organisations and potential local partners can all start with a question.</p>
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-wild-green">Closing call to action</p>
+          <h2 class="mt-4 font-display text-3xl leading-tight sm:text-4xl text-wild-navy">You bring the ambition. We build the way in.</h2>
+          <p class="mt-4 leading-7 text-slate-700">Whether you're planning an extraordinary African journey or exploring meaningful opportunities through Africa, your next step starts with a conversation.</p>
         </div>
         <div class="flex shrink-0 flex-wrap gap-3">
-          <a href="/apply" class="rounded-full bg-wild-green px-6 py-3 font-bold text-white transition hover:bg-emerald-800">Send an enquiry <span aria-hidden="true">→</span></a>
-          <a href="/contact" class="rounded-full border border-slate-300 px-6 py-3 font-bold transition hover:border-wild-green hover:text-wild-green">Contact Vild</a>
+          <a href="/destinations" class="rounded-full bg-wild-green px-6 py-3 font-bold text-white transition hover:bg-emerald-800">Explore Vild Safaris <span aria-hidden="true">&#8594;</span></a>
+          <a href="/exchange" class="rounded-full border border-slate-300 px-6 py-3 font-bold transition hover:border-wild-green hover:text-wild-green">Discover Vild Exchange <span aria-hidden="true">&#8594;</span></a>
         </div>
       </div>
+      <div class="mt-12 text-center text-xs uppercase tracking-[0.2em] text-slate-400">Vild Africa Access &#183; An African company. An international ambition.</div>
     </section>
   </main>
 
@@ -210,7 +383,7 @@
         </nav>
       </div>
       <div class="mt-10 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-slate-400 sm:flex-row sm:justify-between">
-        <p>© 2026 Vild. All rights reserved.</p>
+        <p>&#169; 2026 Vild. All rights reserved.</p>
         <p>Africa, accessed differently.</p>
       </div>
     </div>

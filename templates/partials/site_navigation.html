@@ -6,7 +6,34 @@
 
     <nav class="hidden justify-self-center lg:block" aria-label="Main navigation">
       <ul class="flex items-center text-sm font-semibold">
-        <li><a href="/about" class="rounded-lg px-3 py-3 transition hover:bg-slate-50">About</a></li>
+        <li class="mega-parent relative">
+          <button type="button" class="flex items-center gap-1 rounded-lg px-3 py-3 transition hover:bg-slate-50" aria-haspopup="true">
+            About
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="m6 9 6 6 6-6" /></svg>
+          </button>
+          <div class="about-menu mega-menu absolute left-0 top-full z-50 pt-4">
+            <div class="about-menu-panel rounded-2xl border border-slate-200 bg-white p-6 shadow-2xl min-w-[600px]">
+              <div class="grid grid-cols-3 gap-6 items-start">
+                <div class="border-r border-slate-100 pr-6 pb-4">
+                  <p class="mb-4 text-[11px] font-bold uppercase tracking-[0.2em] text-blue-600">Who We Are</p>
+                  <a href="/about" class="group block rounded-xl px-3 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950"><strong class="font-bold block mb-1">Our Story</strong><p class="mt-0 text-xs text-slate-500">How Vild began and why meaningful access matters.</p></a>
+                  <a href="/about" class="group mt-2 block rounded-xl px-3 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950"><strong class="font-bold block mb-1">Vision · Mission</strong><p class="mt-0 text-xs text-slate-500">What we believe and what we set out to change.</p></a>
+                  <a href="/about" class="group mt-2 block rounded-xl px-3 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950"><strong class="font-bold block mb-1">Founding Team</strong><p class="mt-0 text-xs text-slate-500">The people who started Vild.</p></a>
+                </div>
+                <div class="border-r border-slate-100 pr-6 pb-4">
+                  <p class="mb-4 text-[11px] font-bold uppercase tracking-[0.2em] text-blue-600">Leadership</p>
+                  <a href="/about" class="group block rounded-xl px-3 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950"><strong class="font-bold block mb-1">Leadership</strong><p class="mt-0 text-xs text-slate-500">Meet the team guiding Vild's growth.</p></a>
+                  <a href="/about" class="group mt-2 block rounded-xl px-3 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950"><strong class="font-bold block mb-1">Our Team</strong><p class="mt-0 text-xs text-slate-500">The people behind every journey.</p></a>
+                </div>
+                <div class="pb-4">
+                  <p class="mb-4 text-[11px] font-bold uppercase tracking-[0.2em] text-blue-600">Our Work</p>
+                  <a href="/about" class="group block rounded-xl px-3 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950"><strong class="font-bold block mb-1">Our Divisions</strong><p class="mt-0 text-xs text-slate-500">Safaris, exchange and expeditions under one roof.</p></a>
+                  <a href="/about" class="group mt-2 block rounded-xl px-3 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950"><strong class="font-bold block mb-1">Vild Safaris · Vild</strong><p class="mt-0 text-xs text-slate-500">Wildlife journeys and local access.</p></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
         <li class="mega-parent relative">
           <a href="/destinations" class="flex items-center gap-1 rounded-lg px-3 py-3 transition hover:bg-slate-50" aria-haspopup="true">
             Destinations
@@ -16,23 +43,23 @@
             <div class="grid grid-cols-5 gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-2xl">
               <a href="/destinations/uganda" class="group overflow-hidden rounded-xl border border-slate-200 bg-white transition hover:-translate-y-0.5 hover:shadow-lg">
                 <div class="h-24 overflow-hidden"><img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Magherita_Peak_on_Mountain_Rwenzori.jpg" alt="Margherita Peak in the Rwenzori Mountains" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" /></div>
-                <div class="p-3"><h3 class="font-bold text-slate-900">Uganda 🇺🇬</h3><p class="mt-1 text-xs leading-5 text-slate-600">Kampala · Entebbe · Rwenzori</p><p class="mt-1 text-[9px] leading-4 text-slate-500">Peak image: Rebeccananonof / Wikimedia Commons (CC0)</p></div>
+                <div class="p-3"><h3 class="font-bold text-slate-900">Uganda 🇺🇬</h3><p class="mt-1 text-xs leading-5 text-slate-700">Kampala · Entebbe · Rwenzori</p><p class="mt-1 text-[9px] leading-4 text-slate-500">Peak image: Rebeccananonof / Wikimedia Commons (CC0)</p></div>
               </a>
               <a href="/destinations/kenya" class="group overflow-hidden rounded-xl border border-slate-200 bg-white transition hover:-translate-y-0.5 hover:shadow-lg">
                 <div class="h-24 overflow-hidden"><img src="/images/desitationscover.JPG" alt="East African savannah and wildlife" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" /></div>
-                <div class="p-3"><h3 class="font-bold text-slate-900">Kenya 🇰🇪</h3><p class="mt-1 text-xs leading-5 text-slate-600">Nairobi · Mombasa · Maasai Mara</p></div>
+                <div class="p-3"><h3 class="font-bold text-slate-900">Kenya 🇰🇪</h3><p class="mt-1 text-xs leading-5 text-slate-700">Nairobi · Mombasa · Maasai Mara</p></div>
               </a>
               <a href="/destinations/tanzania" class="group overflow-hidden rounded-xl border border-slate-200 bg-white transition hover:-translate-y-0.5 hover:shadow-lg">
                 <div class="h-24 overflow-hidden"><img src="/images/JDR_1501.JPG" alt="African wildlife landscape" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" /></div>
-                <div class="p-3"><h3 class="font-bold text-slate-900">Tanzania 🇹🇿</h3><p class="mt-1 text-xs leading-5 text-slate-600">Arusha · Dar es Salaam · Mwanza</p></div>
+                <div class="p-3"><h3 class="font-bold text-slate-900">Tanzania 🇹🇿</h3><p class="mt-1 text-xs leading-5 text-slate-700">Arusha · Dar es Salaam · Mwanza</p></div>
               </a>
               <a href="/destinations/rwanda" class="group overflow-hidden rounded-xl border border-slate-200 bg-white transition hover:-translate-y-0.5 hover:shadow-lg">
                 <div class="h-24 overflow-hidden"><img src="/images/JDR_1668a.jpg" alt="Mountain gorilla in a forest" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" /></div>
-                <div class="p-3"><h3 class="font-bold text-slate-900">Rwanda 🇷🇼</h3><p class="mt-1 text-xs leading-5 text-slate-600">Kigali · Musanze · Rubavu</p></div>
+                <div class="p-3"><h3 class="font-bold text-slate-900">Rwanda 🇷🇼</h3><p class="mt-1 text-xs leading-5 text-slate-700">Kigali · Musanze · Rubavu</p></div>
               </a>
               <a href="/destinations/zanzibar" class="group overflow-hidden rounded-xl border border-slate-200 bg-white transition hover:-translate-y-0.5 hover:shadow-lg">
                 <div class="h-24 overflow-hidden"><img src="/images/JDR_3403A.jpg" alt="East African landscape" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" /></div>
-                <div class="p-3"><h3 class="font-bold text-slate-900">Zanzibar 🇹🇿</h3><p class="mt-1 text-xs leading-5 text-slate-600">Stone Town · Nungwi · Paje</p></div>
+                <div class="p-3"><h3 class="font-bold text-slate-900">Zanzibar 🇹🇿</h3><p class="mt-1 text-xs leading-5 text-slate-700">Stone Town · Nungwi · Paje</p></div>
               </a>
             </div>
           </div>
@@ -85,7 +112,7 @@
             <div class="exchange-menu-panel rounded-2xl border border-slate-200 bg-white p-6 shadow-2xl">
               <div class="exchange-menu-heading">
                 <p class="text-[11px] font-bold uppercase tracking-[0.2em]">Learning through local connection</p>
-                <p class="mt-2 text-sm leading-6 text-slate-600">Explore thoughtful study, research and field-learning opportunities in Uganda.</p>
+                <p class="mt-2 text-sm leading-6 text-slate-700">Explore thoughtful study, research and field-learning opportunities in Uganda.</p>
               </div>
               <div class="exchange-menu-layout mt-5">
                 <div class="exchange-menu-cards">
@@ -171,25 +198,25 @@
             <a href="/destinations/zanzibar" class="overflow-hidden rounded-lg border border-slate-200"><img src="/images/JDR_3403A.jpg" alt="East African landscape" class="h-16 w-full object-cover" loading="lazy" /><span class="block p-2 text-xs font-bold">Zanzibar 🇹🇿</span></a>
           </div></details>
           <details class="border-b border-slate-100 py-3"><summary class="cursor-pointer list-none">Expeditions <span class="float-right" aria-hidden="true">⌄</span></summary><div class="mt-2 flex flex-col">
-            <a href="/expeditions/wildlife-safaris" class="rounded-lg px-3 py-2.5 text-slate-600 hover:bg-slate-50">Gorilla Safaris</a>
-            <a href="/expeditions/wildlife-safaris" class="rounded-lg px-3 py-2.5 text-slate-600 hover:bg-slate-50">Wildlife Safaris</a>
-            <a href="/expeditions/photography" class="rounded-lg px-3 py-2.5 text-slate-600 hover:bg-slate-50">Photography Tours</a>
-            <a href="/expeditions/mountain-adventures" class="rounded-lg px-3 py-2.5 text-slate-600 hover:bg-slate-50">Mountain Adventures</a>
-            <a href="/expeditions/conservation" class="rounded-lg px-3 py-2.5 text-slate-600 hover:bg-slate-50">Conservation</a>
-            <a href="/exchange" class="rounded-lg px-3 py-2.5 text-slate-600 hover:bg-slate-50">Volunteering Program</a>
-            <a href="/expeditions/cultural-immersion" class="rounded-lg px-3 py-2.5 text-slate-600 hover:bg-slate-50">Cultural Exchange</a>
-            <a href="/expeditions/private-journeys" class="rounded-lg px-3 py-2.5 text-slate-600 hover:bg-slate-50">Private Tours</a>
+            <a href="/expeditions/wildlife-safaris" class="rounded-lg px-3 py-2.5 text-slate-700 hover:bg-slate-50">Gorilla Safaris</a>
+            <a href="/expeditions/wildlife-safaris" class="rounded-lg px-3 py-2.5 text-slate-700 hover:bg-slate-50">Wildlife Safaris</a>
+            <a href="/expeditions/photography" class="rounded-lg px-3 py-2.5 text-slate-700 hover:bg-slate-50">Photography Tours</a>
+            <a href="/expeditions/mountain-adventures" class="rounded-lg px-3 py-2.5 text-slate-700 hover:bg-slate-50">Mountain Adventures</a>
+            <a href="/expeditions/conservation" class="rounded-lg px-3 py-2.5 text-slate-700 hover:bg-slate-50">Conservation</a>
+            <a href="/exchange" class="rounded-lg px-3 py-2.5 text-slate-700 hover:bg-slate-50">Volunteering Program</a>
+            <a href="/expeditions/cultural-immersion" class="rounded-lg px-3 py-2.5 text-slate-700 hover:bg-slate-50">Cultural Exchange</a>
+            <a href="/expeditions/private-journeys" class="rounded-lg px-3 py-2.5 text-slate-700 hover:bg-slate-50">Private Tours</a>
           </div></details>
           <details class="border-b border-slate-100 py-3"><summary class="cursor-pointer list-none">Exchange Programs <span class="float-right" aria-hidden="true">⌄</span></summary><div class="mt-2 flex flex-col">
-            <a href="/universities" class="rounded-lg px-3 py-2.5 text-slate-600 hover:bg-slate-50">University partnerships</a>
-            <a href="/students#student-pathways" class="rounded-lg px-3 py-2.5 text-slate-600 hover:bg-slate-50">Student pathways</a>
-            <a href="/students#student-pathways" class="rounded-lg px-3 py-2.5 text-slate-600 hover:bg-slate-50">Research access</a>
-            <a href="/contact" class="rounded-lg px-3 py-2.5 text-slate-600 hover:bg-slate-50">Faculty &amp; group enquiries</a>
+            <a href="/universities" class="rounded-lg px-3 py-2.5 text-slate-700 hover:bg-slate-50">University partnerships</a>
+            <a href="/students#student-pathways" class="rounded-lg px-3 py-2.5 text-slate-700 hover:bg-slate-50">Student pathways</a>
+            <a href="/students#student-pathways" class="rounded-lg px-3 py-2.5 text-slate-700 hover:bg-slate-50">Research access</a>
+            <a href="/contact" class="rounded-lg px-3 py-2.5 text-slate-700 hover:bg-slate-50">Faculty &amp; group enquiries</a>
           </div></details>
           <details class="border-b border-slate-100 py-3"><summary class="cursor-pointer list-none">Why Vild <span class="float-right" aria-hidden="true">⌄</span></summary><div class="mt-2 flex flex-col">
-            <a href="/why-wild" class="rounded-lg px-3 py-2.5 text-slate-600 hover:bg-slate-50">The Vild Standard</a>
-            <a href="/why-wild" class="rounded-lg px-3 py-2.5 text-slate-600 hover:bg-slate-50">Vild Verified</a>
-            <a href="/why-wild" class="rounded-lg px-3 py-2.5 text-slate-600 hover:bg-slate-50">Responsible Access</a>
+            <a href="/why-wild" class="rounded-lg px-3 py-2.5 text-slate-700 hover:bg-slate-50">The Vild Standard</a>
+            <a href="/why-wild" class="rounded-lg px-3 py-2.5 text-slate-700 hover:bg-slate-50">Vild Verified</a>
+            <a href="/why-wild" class="rounded-lg px-3 py-2.5 text-slate-700 hover:bg-slate-50">Responsible Access</a>
           </div></details>
           <a href="/journal" class="border-b border-slate-100 py-4">Blog</a>
           <a href="/contact" class="mt-5 rounded-xl bg-amber-300 px-4 py-3 text-center font-bold text-wild-navy">Get a Quote</a>
