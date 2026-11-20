@@ -251,7 +251,7 @@ def travel():
 
 @app.route("/about")
 def about():
-    return send_file(BASE_DIR / "pages" / "about.html")
+    return render_template("about.html")
 
 
 @app.route("/contact")
