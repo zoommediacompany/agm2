@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Contact | Vild{% endblock %}
+{% block description %}Contact Vild about journey, university, research or partnership enquiries. Share your goals and we'll clarify what may be possible.{% endblock %}
+{% block theme_color %}#020617{% endblock %}
+
+{% block content %}
+<section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+  <div class="max-w-3xl">
+    <p class="text-sm font-bold uppercase tracking-[0.2em] text-wild-green">Vild · Vild Africa Access</p>
+    <h1 class="mt-4 text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl">Start a conversation.</h1>
+    <p class="mt-6 text-lg leading-8 text-slate-600">Planning a journey, university program or research enquiry? Tell us what you are working on. We will clarify what information is needed and what can be confirmed.</p>
+  </div>
+  <div class="mt-12 grid gap-6 md:grid-cols-3">
+    <article class="rounded-2xl border border-slate-200 bg-white p-7">
+      <h2 class="text-xl font-bold text-slate-950">Journey enquiry</h2>
+      <p class="mt-3 leading-7 text-slate-600">Share your interests, destination ideas, dates, group size and activity level.</p>
+      <a href="/travel" class="mt-6 inline-flex font-bold text-blue-600">Explore travel possibilities <span class="ml-2" aria-hidden="true">→</span></a>
+    </article>
+    <article class="rounded-2xl border border-slate-200 bg-white p-7">
+      <h2 class="text-xl font-bold text-slate-950">University or research enquiry</h2>
+      <p class="mt-3 leading-7 text-slate-600">Include your institution, learning objectives, dates, participants and any approval requirements.</p>
+      <a href="/universities" class="mt-6 inline-flex font-bold text-blue-600">Explore university programs <span class="ml-2" aria-hidden="true">→</span></a>
+    </article>
+    <article class="rounded-2xl border border-slate-200 bg-white p-7">
+      <h2 class="text-xl font-bold text-slate-950">Enquiry form</h2>
+      <p class="mt-3 leading-7 text-slate-600">Share your details and the area you are interested in exploring. This is an enquiry, not confirmation of a program or placement.</p>
+      <a href="/apply" class="mt-6 inline-flex font-bold text-blue-600">Send an enquiry <span class="ml-2" aria-hidden="true">→</span></a>
+    </article>
+  </div>
+  <p class="mt-10 max-w-3xl text-sm leading-6 text-slate-500">We publish contact details only when they have been confirmed by Vild. Availability, hosts, prices and logistics are discussed and confirmed individually.</p>
+</section>
+{% endblock %}

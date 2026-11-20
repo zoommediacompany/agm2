@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Destinations | Vild{% endblock %}
+{% block description %}Uganda is the first operating focus for Vild. Explore places to ask about; routes and availability must be confirmed individually.{% endblock %}
+{% block theme_color %}#020617{% endblock %}
+
+{% block content %}
+<section class="text-center" aria-labelledby="page-title">
+      <p class="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-wild-green">Start with Uganda</p>
+      <h1 id="page-title" class="hero-title font-display text-4xl font-bold text-wild-navy sm:text-5xl">Explore places with local context.</h1>
+      <p class="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600">Uganda is Vild’s first operating focus. Tell us what you hope to experience or study; routes, hosts and availability are confirmed for each enquiry.</p>
+    </section>
+    <section class="mt-14" aria-labelledby="destination-list-title">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-wild-green">Explore the region</p>
+        <h2 id="destination-list-title" class="mt-3 font-display text-3xl text-wild-navy sm:text-4xl">Choose a destination to explore.</h2>
+        <p class="mt-4 leading-7 text-slate-600">Browse each destination for places, interests and useful starting points for an enquiry.</p>
+      </div>
+      <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <a href="/destinations/uganda" class="group overflow-hidden rounded-2xl border border-slate-200 bg-white transition hover:-translate-y-1 hover:shadow-lg">
+          <img src="/images/JDR_3685A.jpg" alt="Mountain landscape in East Africa" class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+          <div class="p-5"><h3 class="font-display text-xl text-wild-navy">Uganda &#x1F1FA;&#x1F1EC;</h3><p class="mt-2 text-sm leading-6 text-slate-600">Kampala · Entebbe · Bwindi · Rwenzori</p></div>
+        </a>
+        <a href="/destinations/kenya" class="group overflow-hidden rounded-2xl border border-slate-200 bg-white transition hover:-translate-y-1 hover:shadow-lg">
+          <img src="/images/desitationscover.JPG" alt="East African savannah landscape" class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+          <div class="p-5"><h3 class="font-display text-xl text-wild-navy">Kenya &#x1F1F0;&#x1F1EA;</h3><p class="mt-2 text-sm leading-6 text-slate-600">Nairobi · Mombasa · Maasai Mara</p></div>
+        </a>
+        <a href="/destinations/tanzania" class="group overflow-hidden rounded-2xl border border-slate-200 bg-white transition hover:-translate-y-1 hover:shadow-lg">
+          <img src="/images/JDR_1501.JPG" alt="Wildlife and landscape in East Africa" class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+          <div class="p-5"><h3 class="font-display text-xl text-wild-navy">Tanzania &#x1F1F9;&#x1F1FF;</h3><p class="mt-2 text-sm leading-6 text-slate-600">Arusha · Dar es Salaam · Mwanza</p></div>
+        </a>
+        <a href="/destinations/rwanda" class="group overflow-hidden rounded-2xl border border-slate-200 bg-white transition hover:-translate-y-1 hover:shadow-lg">
+          <img src="/images/JDR_1668a.jpg" alt="Mountain gorilla in a forest" class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+          <div class="p-5"><h3 class="font-display text-xl text-wild-navy">Rwanda &#x1F1F7;&#x1F1FC;</h3><p class="mt-2 text-sm leading-6 text-slate-600">Kigali · Musanze · Rubavu</p></div>
+        </a>
+        <a href="/destinations/zanzibar" class="group overflow-hidden rounded-2xl border border-slate-200 bg-white transition hover:-translate-y-1 hover:shadow-lg">
+          <img src="/images/JDR_3403A.jpg" alt="Coastal landscape in East Africa" class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+          <div class="p-5"><h3 class="font-display text-xl text-wild-navy">Zanzibar</h3><p class="mt-2 text-sm leading-6 text-slate-600">Stone Town · Nungwi · Paje</p></div>
+        </a>
+      </div>
+    </section>
+    <section id="uganda" class="mt-16" aria-labelledby="uganda-places-title">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-wild-green">Uganda</p>
+        <h2 id="uganda-places-title" class="mt-3 font-display text-3xl text-wild-navy sm:text-4xl">Places to ask about</h2>
+        <p class="mt-4 leading-7 text-slate-600">These locations are starting points for a conversation, not a statement that a particular journey or service is currently available.</p>
+      </div>
+      <ul class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <li class="rounded-2xl border border-slate-200 bg-white p-6"><h3 class="font-bold text-wild-navy">Bwindi</h3><p class="mt-2 text-sm leading-6 text-slate-600">Ask about forest and wildlife experiences, including the requirements for any permitted activity.</p></li>
+        <li class="rounded-2xl border border-slate-200 bg-white p-6"><h3 class="font-bold text-wild-navy">Mgahinga</h3><p class="mt-2 text-sm leading-6 text-slate-600">Discuss mountain and conservation interests and confirm what can be arranged.</p></li>
+        <li class="rounded-2xl border border-slate-200 bg-white p-6"><h3 class="font-bold text-wild-navy">Kibale</h3><p class="mt-2 text-sm leading-6 text-slate-600">Share your interest in forest ecology and wildlife learning.</p></li>
+        <li class="rounded-2xl border border-slate-200 bg-white p-6"><h3 class="font-bold text-wild-navy">Queen Elizabeth</h3><p class="mt-2 text-sm leading-6 text-slate-600">Ask about wildlife, landscape and conservation learning possibilities.</p></li>
+        <li class="rounded-2xl border border-slate-200 bg-white p-6"><h3 class="font-bold text-wild-navy">Murchison Falls</h3><p class="mt-2 text-sm leading-6 text-slate-600">Discuss whether this region fits your interests and travel requirements.</p></li>
+        <li class="rounded-2xl border border-slate-200 bg-white p-6"><h3 class="font-bold text-wild-navy">Kidepo</h3><p class="mt-2 text-sm leading-6 text-slate-600">Tell us what draws you to this region and ask about practical access.</p></li>
+        <li class="rounded-2xl border border-slate-200 bg-white p-6"><h3 class="font-bold text-wild-navy">Rwenzori</h3><p class="mt-2 text-sm leading-6 text-slate-600">Share your trekking interests, experience and activity level for discussion.</p></li>
+        <li class="rounded-2xl border border-slate-200 bg-white p-6"><h3 class="font-bold text-wild-navy">Kampala</h3><p class="mt-2 text-sm leading-6 text-slate-600">Ask about city, culture, institutions and professional learning interests.</p></li>
+        <li class="rounded-2xl border border-slate-200 bg-white p-6"><h3 class="font-bold text-wild-navy">Entebbe</h3><p class="mt-2 text-sm leading-6 text-slate-600">Include arrival or departure needs when discussing your possible route.</p></li>
+      </ul>
+    </section>
+    <div class="mt-12 text-center"><a href="/build-my-wild" class="inline-flex rounded-full bg-wild-navy px-6 py-3 font-bold text-white transition hover:bg-wild-green">Share your interests <span class="ml-2" aria-hidden="true">→</span></a></div>
+{% endblock %}

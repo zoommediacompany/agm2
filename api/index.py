@@ -106,7 +106,7 @@ def admin_required(view):
 
 @app.route("/")
 def home():
-    return send_file(BASE_DIR / "pages" / "travel.html")
+    return render_template("travel.html")
 
 
 @app.route("/images/<path:filename>")
@@ -116,12 +116,12 @@ def image_file(filename):
 
 @app.route("/programs")
 def programs():
-    return send_file(BASE_DIR / "pages" / "programs.html")
+    return render_template("programs.html")
 
 
 @app.route("/expeditions")
 def expeditions():
-    return send_file(BASE_DIR / "pages" / "programs.html")
+    return render_template("programs.html")
 
 
 EXPEDITION_PAGES = {
@@ -226,27 +226,27 @@ def expedition_detail(slug):
 
 @app.route("/universities")
 def universities():
-    return send_file(BASE_DIR / "pages" / "universities.html")
+    return render_template("universities.html")
 
 
 @app.route("/exchange")
 def exchange():
-    return send_file(BASE_DIR / "pages" / "universities.html")
+    return render_template("universities.html")
 
 
 @app.route("/build-my-wild")
 def build_my_wild():
-    return send_file(BASE_DIR / "pages" / "travel.html")
+    return render_template("travel.html")
 
 
 @app.route("/students")
 def students():
-    return send_file(BASE_DIR / "pages" / "students.html")
+    return render_template("students.html")
 
 
 @app.route("/travel")
 def travel():
-    return send_file(BASE_DIR / "pages" / "travel.html")
+    return render_template("travel.html")
 
 
 @app.route("/about")
@@ -254,24 +254,34 @@ def about():
     return render_template("about.html")
 
 
+@app.route("/leadership")
+def leadership():
+    return render_template("leadership.html")
+
+
+@app.route("/work")
+def work():
+    return render_template("work.html")
+
+
 @app.route("/contact")
 def contact():
-    return send_file(BASE_DIR / "pages" / "contact.html")
+    return render_template("contact.html")
 
 
 @app.route("/safety")
 def safety():
-    return send_file(BASE_DIR / "pages" / "safety.html")
+    return render_template("safety.html")
 
 
 @app.route("/why-wild")
 def why_wild():
-    return send_file(BASE_DIR / "pages" / "safety.html")
+    return render_template("safety.html")
 
 
 @app.route("/destinations")
 def destinations():
-    return send_file(BASE_DIR / "pages" / "destinations.html")
+    return render_template("destinations.html")
 
 
 DESTINATION_PAGES = {
@@ -362,7 +372,7 @@ def destination_detail(slug):
 
 @app.route("/journal")
 def journal():
-    return send_file(BASE_DIR / "pages" / "safety.html")
+    return render_template("safety.html")
 
 
 @app.route("/apply", methods=["GET", "POST"])

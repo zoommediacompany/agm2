@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="{% block description %}Vild Africa Access — African experiences, expeditions and exchange programs.{% endblock %}" />
+  <meta name="theme-color" content="{% block theme_color %}#020617{% endblock %}" />
+  <title>{% block title %}Vild{% endblock %}</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["DM Sans", "sans-serif"],
+            display: ["Playfair Display", "serif"],
+          },
+          colors: {
+            wild: {
+              navy: "#071426",
+              blue: "#2563EB",
+              green: "#16803C",
+              gold: "#D6A84F",
+              cream: "#F7F5EF",
+            },
+          },
+          boxShadow: {
+            premium: "0 25px 80px rgba(2, 6, 23, 0.12)",
+          },
+          animation: {
+            float: "float 6s ease-in-out infinite",
+            fadeUp: "fadeUp .8s ease-out both",
+          },
+          keyframes: {
+            float: {
+              "0%, 100%": { transform: "translateY(0)" },
+              "50%": { transform: "translateY(-10px)" },
+            },
+            fadeUp: {
+              "0%": { opacity: 0, transform: "translateY(20px)" },
+              "100%": { opacity: 1, transform: "translateY(0)" },
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+  <style>
+    body {
+      font-family: "DM Sans", sans-serif;
+    }
+
+    .hero-title {
+      text-wrap: balance;
+    }
+
+    .mega-menu {
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+    }
+
+    .mega-parent:hover .mega-menu,
+    .mega-parent:focus-within .mega-menu {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .destination-menu {
+      position: fixed;
+      top: 76px;
+      left: 50vw;
+      transform: translate(-50%, 10px);
+    }
+
+    .mega-parent:hover .destination-menu,
+    .mega-parent:focus-within .destination-menu {
+      transform: translate(-50%, 0);
+    }
+
+    .about-menu {
+      position: fixed;
+      top: 60px;
+      left: 50vw;
+      width: min(780px, calc(100vw - 2rem));
+      transform: translate(-50%, 10px);
+    }
+
+    .mega-parent:hover .about-menu,
+    .mega-parent:focus-within .about-menu {
+      transform: translate(-50%, 0);
+    }
+
+    .mobile-submenu {
+      display: none;
+    }
+
+    .mobile-submenu.open {
+      display: block;
+    }
+
+    .no-scroll {
+      overflow: hidden;
+    }
+  </style>
+  <link rel="stylesheet" href="/static/css/site-theme.css" />
+</head>
+
+<body class="bg-white text-slate-900 antialiased overflow-x-clip">
+
+{% include "partials/site_navigation.html" %}
+
+<main id="main-content">
+  {% block content %}{% endblock %}
+</main>
+
+{% include "partials/site_footer.html" %}
+
+<!-- JAVASCRIPT -->
+<script>
+  const mobileMenuButton = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const openIcon = document.getElementById("menu-open-icon");
+  const closeIcon = document.getElementById("menu-close-icon");
+  const mobileMenuBackdrop = document.getElementById("mobile-menu-backdrop");
+  const mobileMenuClose = document.getElementById("mobile-menu-close");
+
+  function setMobileMenuOpen(isOpen) {
+    mobileMenu.classList.toggle("translate-x-full", !isOpen);
+    mobileMenu.inert = !isOpen;
+    mobileMenu.setAttribute("aria-hidden", String(!isOpen));
+    mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
+    mobileMenuButton.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+    openIcon.classList.toggle("hidden", isOpen);
+    closeIcon.classList.toggle("hidden", !isOpen);
+    document.body.classList.toggle("no-scroll", isOpen);
+
+    if (isOpen) {
+      mobileMenuBackdrop.classList.remove("hidden");
+      requestAnimationFrame(() => mobileMenuBackdrop.classList.remove("opacity-0"));
+    } else {
+      mobileMenuBackdrop.classList.add("opacity-0");
+      window.setTimeout(() => {
+        if (mobileMenuButton.getAttribute("aria-expanded") === "false") {
+          mobileMenuBackdrop.classList.add("hidden");
+        }
+      }, 300);
+    }
+  }
+
+  function toggleMobileMenu() {
+    setMobileMenuOpen(mobileMenuButton.getAttribute("aria-expanded") !== "true");
+  }
+
+  mobileMenuButton.addEventListener("click", toggleMobileMenu);
+  mobileMenuBackdrop.addEventListener("click", () => setMobileMenuOpen(false));
+  mobileMenuClose.addEventListener("click", () => setMobileMenuOpen(false));
+
+  document.querySelectorAll(".mobile-toggle").forEach((button) => {
+    button.addEventListener("click", () => {
+      const targetId = button.dataset.mobileToggle;
+      const submenu = document.getElementById(targetId);
+      const arrow = button.querySelector(".mobile-arrow");
+      submenu.classList.toggle("open");
+      arrow.classList.toggle("rotate-180");
+    });
+  });
+
+  mobileMenu.addEventListener("click", (event) => {
+    if (event.target.closest("a")) setMobileMenuOpen(false);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && mobileMenuButton.getAttribute("aria-expanded") === "true") {
+      setMobileMenuOpen(false);
+      mobileMenuButton.focus();
+    }
+  });
+</script>
+
+</body>
+</html>
